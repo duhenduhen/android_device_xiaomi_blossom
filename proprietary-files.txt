@@ -785,9 +785,6 @@ vendor/etc/ipsec/ipsec.d/cacerts/VeriSignUniversalRootCertification.der
 vendor/etc/ipsec/ipsec.d/cacerts/gold.cer
 vendor/etc/ipsec/ipsec.d/cacerts/thawte.der
 
-# Charge Logger
-vendor/bin/charge_logger
-
 # Configstore
 vendor/bin/hw/android.hardware.configstore@1.1-service
 vendor/etc/init/android.hardware.configstore@1.1-service.rc

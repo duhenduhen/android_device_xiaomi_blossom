@@ -159,8 +159,6 @@ on charger
     write /proc/bootprof "0"
 
 	start mi_thermald
-	mkdir /data/vendor/charge_logger 0775 system system
-	start charge_logger
 
 on early-fs
     write /proc/bootprof "INIT:early-fs"
@@ -240,17 +238,6 @@ on late-fs
     mount_all /vendor/etc/fstab.mt6765 --late
     write /sys/kernel/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END --late"
-
-# add charge_logger service for dump charge message
-service charge_logger /vendor/bin/charge_logger
-   class last_start
-   user system
-   group system system wakelock
-   disabled
-   oneshot
-
-on property:sys.boot_completed=1
-    start charge_logger
 
 on post-fs-data
     write /proc/bootprof "INIT:post-fs-data"
@@ -788,9 +775,6 @@ on post-fs-data
 
 # End of adding by MTK drivers
 # -----------------------
-
-#Creat charger log
-    mkdir /data/vendor/charge_logger 0775 system system
 
 #Creat qr_code
     mkdir /data/vendor/mac_addr 0771 system system
