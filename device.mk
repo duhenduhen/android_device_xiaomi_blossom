@@ -299,6 +299,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
+    libunwindstack-v30 \
     libutils-v32
 
 # WiFi
