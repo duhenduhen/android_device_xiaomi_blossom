@@ -123,6 +123,7 @@ TARGET_BOARD_PLATFORM := mt6765
 
 # Power
 TARGET_POWERHAL_AIDL_VERSION := 1
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/aidl/power/power-mode.cpp
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
