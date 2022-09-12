@@ -83,3 +83,7 @@ TARGET_COPY_OUT_PRODUCT := product
 
 # Vendor Security Patch
 VENDOR_SECURITY_PATCH := 2021-08-01
+
+# Verified Boot
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
