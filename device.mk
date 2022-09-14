@@ -62,10 +62,6 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     libbluetooth_audio_session
 
-# Configstore
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.1-service
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -77,6 +73,10 @@ PRODUCT_PACKAGES += \
 # DTB
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
+
+# Disable configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # Display
 PRODUCT_PACKAGES += \
