@@ -1208,7 +1208,6 @@ vendor/bin/sensors_test
 vendor/lib/hw/sensors.mt6765.so
 vendor/lib/libksensor.so
 vendor/lib/libsensor_custom.so
-vendor/lib/libsensorndkbridge.so
 
 # Sensors (Hardware)
 vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
