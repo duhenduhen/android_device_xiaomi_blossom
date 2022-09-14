@@ -116,6 +116,10 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.dandelion
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
