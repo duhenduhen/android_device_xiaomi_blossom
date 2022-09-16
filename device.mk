@@ -287,7 +287,8 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_audio
+    libshim_audio \
+    libshim_beanpod
 
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
