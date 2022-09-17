@@ -822,6 +822,12 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.4.so|ffd3113659fec1fdcd08d7b5b380160a
 vendor/lib64/vendor.mediatek.hardware.pq@2.5.so|850548786fa99ba4275db1f69d59f329ca07b1cb
 vendor/lib64/vendor.mediatek.hardware.pq@2.6.so|b8bfc80ede29d22b1a92ba25990fbcf62fb40c01
 
+# Charger
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+lib/libshowlogo.so
+lib/libsysenv_system.so
+
 # DRM - from hawaiipl
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine|8307cea32c20bdc6e7456a6060ebefcfe743b02c
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
