@@ -90,6 +90,14 @@ prebuilt_etc {
     recovery: true,
 }
 
+// system_ext sided init scripts
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "etc/init.target.rc",
+    sub_dir: "init",
+    system_ext_specific: true,
+}
+
 // Ueventd
 prebuilt_etc {
     name: "ueventd.mt6765.rc",

@@ -240,6 +240,9 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc
 
 PRODUCT_PACKAGES += \
+    init.target.rc
+
+PRODUCT_PACKAGES += \
     ueventd.mt6765.rc
 
 PRODUCT_PACKAGES += \
