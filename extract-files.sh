@@ -84,6 +84,9 @@ function blob_fixup {
 	vendor/lib*/libwifi-hal-mtk.so)
             "$PATCHELF" --set-soname libwifi-hal-mtk.so "${2}"
             ;;
+	lib/libshowlogo.so)
+            "${PATCHELF}" --add-needed "libshim_showlogo.so" "${2}"
+            ;;
     esac
 }
 
