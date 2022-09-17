@@ -54,6 +54,15 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+# Patch/fix Blobs
+function blob_fixup {
+    case "$1" in
+	vendor/lib*/libwifi-hal-mtk.so)
+            "$PATCHELF" --set-soname libwifi-hal-mtk.so "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 

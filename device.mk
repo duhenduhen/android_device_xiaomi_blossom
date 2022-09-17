@@ -190,7 +190,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy
+    android.hardware.wifi@1.0-service-lazy.dandelion
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
