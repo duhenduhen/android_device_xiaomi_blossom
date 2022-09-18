@@ -257,6 +257,7 @@ PRODUCT_PACKAGES += \
 
 # Resource Runtime Overlays (RROs)
 PRODUCT_PACKAGES += \
+    DialerOverlayBlossom \
     FrameworksResOverlayBlossom \
     SettingsProviderOverlayBlossom
 
