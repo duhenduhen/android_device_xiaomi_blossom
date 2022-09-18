@@ -279,7 +279,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DialerOverlayBlossom \
     FrameworksResOverlayBlossom \
-    SettingsProviderOverlayBlossom
+    SettingsProviderOverlayBlossom \
+    TelephonyOverlayBlossom
 
 # Rootdir
 PRODUCT_PACKAGES += \
