@@ -10,8 +10,7 @@ Build.BRAND=MTK
 ro.camera.sound.forced=0
 
 # Dalvik
-dalvik.vm.dexopt.secondary=true
-persist.bg.dexopt.enable=true
+dalvik.vm.dex2oat64.enabled=true
 
 # Display
 persist.sys.df.extcolor.proc=0
