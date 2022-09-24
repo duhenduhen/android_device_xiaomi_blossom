@@ -188,6 +188,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.nonblocking_ffs=0 \
     persist.adb.nonblocking_ffs=0
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libutils-v32
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service-lazy.dandelion
