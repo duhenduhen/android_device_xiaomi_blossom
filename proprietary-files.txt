@@ -939,9 +939,6 @@ vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 # Lights
 vendor/lib/hw/lights.mt6765.so
 
-# Log
-vendor/lib/liblogwrap_vendor.so
-
 # Media
 vendor/etc/mtk_omx_core.cfg
 vendor/lib/libHEVCdec_sa.ca7.android.so
@@ -1313,14 +1310,8 @@ vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.1.so
 vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.2.so
 
 # Xiaomi
-vendor/bin/mlipayd@1.1
-vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.vsimapp@1.0-service.rc
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
 -vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.vsimapp.xml
-vendor/lib/libmlipay@1.1.so
-vendor/lib/vendor.xiaomi.hardware.mlipay@1.0.so
-vendor/lib/vendor.xiaomi.hardware.mlipay@1.1.so
 vendor/lib/vendor.xiaomi.hardware.vsimapp@1.0.so
 
 # Misc
