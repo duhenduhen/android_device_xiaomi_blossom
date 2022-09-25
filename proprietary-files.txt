@@ -1149,7 +1149,6 @@ vendor/lib/libstorage_otp.so
 vendor/lib/libsysenv.so
 vendor/lib/libutinterface_custom_md.so
 vendor/lib/libutinterface_md.so
-vendor/lib/libvsim.so
 vendor/lib/libwo.so
 
 # Radio (Hardware)
@@ -1177,7 +1176,6 @@ vendor/bin/volte_imsm_93
 vendor/bin/volte_md_status
 vendor/bin/volte_stack
 vendor/bin/volte_ua
-vendor/bin/vsimd
 vendor/bin/wfca
 vendor/etc/init/dmc_core.rc
 vendor/etc/init/gsm0710muxd.rc
@@ -1308,11 +1306,6 @@ vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.0.so
 vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.1.so
 vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.2.so
-
-# Xiaomi
-vendor/etc/init/vendor.xiaomi.hardware.vsimapp@1.0-service.rc
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.vsimapp.xml
-vendor/lib/vendor.xiaomi.hardware.vsimapp@1.0.so
 
 # Misc
 vendor/bin/MI_IC
