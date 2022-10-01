@@ -301,6 +301,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     DialerOverlayBlossom \
     FrameworksResOverlayBlossom \
+    SettingsOverlayBlossom \
     SettingsProviderOverlayBlossom \
     TelephonyOverlayBlossom
 
