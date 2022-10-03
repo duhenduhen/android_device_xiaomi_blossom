@@ -32,9 +32,6 @@ vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libstereoinfoaccessor_vsdof.so
 
-# Audio (SoundFX)
-vendor/lib/soundfx/libaudiopreprocessing_mtk.so
-
 # Audio (Hardware)
 vendor/lib/hw/audio.primary.mt6765.so
 vendor/lib/hw/audio.r_submix.mt6765.so
