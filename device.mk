@@ -13,6 +13,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/dandelion/dandelion-vendor.mk)
 
+# Silence vendor logspam
+include $(LOCAL_PATH)/configs/props/vendor_logtag.mk
+
 # API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
