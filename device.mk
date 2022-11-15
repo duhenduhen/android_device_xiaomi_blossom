@@ -299,6 +299,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
+    libui-v32 \
     libunwindstack-v30 \
     libutils-v30 \
     libutils-v32

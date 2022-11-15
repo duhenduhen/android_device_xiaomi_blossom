@@ -69,6 +69,9 @@ function blob_fixup {
 	vendor/lib*/libmtkcam_stdutils.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v30.so" "$2"
             ;;
+	vendor/lib/libMtkOmxVdecEx.so)
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v32.so" "$2"
+            ;;
 	vendor/lib*/libudf.so)
             "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
             ;;
