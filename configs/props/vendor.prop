@@ -209,5 +209,8 @@ ro.vendor.wlan.gen=gen4m
 vendor.connsys.driver.ready=no
 wifi.concurrent.interface=ap0
 
+# Zygote
+zygote.critical_window.minute=10
+
 # SKU Specific props
 import /vendor/build_${ro.boot.product.hw.sku}.prop
