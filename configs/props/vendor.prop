@@ -190,6 +190,7 @@ debug.sf.earlyGl.app.duration=24000000
 debug.sf.hwc.min.duration=21000000
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_gl_backpressure=1
+debug.sf.enable_transaction_tracing=false
 
 # TEE
 ro.vendor.mtk_microtrust_tee_support=1
