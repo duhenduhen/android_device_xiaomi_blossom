@@ -66,6 +66,9 @@ function blob_fixup {
 	vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service)
             "$PATCHELF" --replace-needed "android.hardware.power-V1-ndk_platform.so" "android.hardware.power-V1-ndk.so" "${2}"
             ;;
+	vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc)
+            echo "$(cat ${2}) input" > "${2}"
+            ;;
 	vendor/lib*/hw/audio.primary.mt6765.so)
             "${PATCHELF}" --add-needed "libshim_audio.so" "${2}"
             "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
