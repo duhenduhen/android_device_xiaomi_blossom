@@ -60,8 +60,14 @@ function blob_fixup {
 	vendor/bin/hw/android.hardware.thermal@2.0-service.mtk)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
+	vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service)
+            "$PATCHELF" --replace-needed "android.hardware.power-V1-ndk_platform.so" "android.hardware.power-V1-ndk.so" "${2}"
+            ;;
 	vendor/lib*/hw/audio.primary.mt6765.so)
             "${PATCHELF}" --add-needed "libshim_audio.so" "${2}"
+            ;;
+	vendor/lib*/android.hardware.power-service-mediatek.so)
+            "$PATCHELF" --replace-needed "android.hardware.power-V1-ndk_platform.so" "android.hardware.power-V1-ndk.so" "${2}"
             ;;
 	vendor/lib*/hw/vendor.mediatek.hardware.pq@2.6-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
