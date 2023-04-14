@@ -29,6 +29,29 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl.custom \
     fastbootd
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    init.ago.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6762.rc \
+    init.mt6765.rc \
+    init.mt6765.usb.rc \
+    init.project.rc \
+    init.sensor_1_0.rc
+
+PRODUCT_PACKAGES += \
+    ueventd.mt6765.rc
+
+PRODUCT_PACKAGES += \
+    fstab.enableswap \
+    fstab.mt6762 \
+    fstab.mt6765
+
+PRODUCT_PACKAGES += \
+    fstab.mt6762.ramdisk \
+    fstab.mt6765.ramdisk
+
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
