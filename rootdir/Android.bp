@@ -82,6 +82,14 @@ prebuilt_etc {
     vendor: true,
 }
 
+// Recovery
+prebuilt_etc {
+    name: "init.recovery.mt6765.rc",
+    src: "etc/init.recovery.mt6765.rc",
+    sub_dir: "init",
+    recovery: true,
+}
+
 // Ueventd
 prebuilt_etc {
     name: "ueventd.mt6765.rc",

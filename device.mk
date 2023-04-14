@@ -52,6 +52,9 @@ PRODUCT_PACKAGES += \
     fstab.mt6762.ramdisk \
     fstab.mt6765.ramdisk
 
+PRODUCT_PACKAGES += \
+    init.recovery.mt6765.rc
+
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
