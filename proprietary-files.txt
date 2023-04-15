@@ -975,6 +975,7 @@ vendor/lib/libmemtrack_GL.so
 # Graphics (Hardware)
 vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service
 vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc
+-vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml
 vendor/lib/vendor.mediatek.hardware.gpu@1.0.so
 
 # Health
@@ -1111,6 +1112,7 @@ vendor/lib/libpowerhalwrap_vendor.so
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
+-vendor/etc/vintf/manifest/power-default.xml:vendor/etc/vintf/manifest/power-mediatek.xml
 vendor/lib/android.hardware.power-service-mediatek.so
 vendor/lib/hw/power.default.so
 vendor/lib/hw/power.mt6765.so
