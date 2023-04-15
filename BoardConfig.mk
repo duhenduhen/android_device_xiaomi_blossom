@@ -131,3 +131,6 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
 # VNDK
 BOARD_VNDK_VERSION := current
+
+# Inherit the proprietary files
+include vendor/xiaomi/dandelion/BoardConfigVendor.mk
