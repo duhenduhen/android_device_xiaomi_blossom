@@ -8,6 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Arrow stuff.
+TARGET_BOOT_ANIMATION_RES := 720
 $(call inherit-product, vendor/arrow/config/common.mk)
 
 # Inherit from dandelion device
