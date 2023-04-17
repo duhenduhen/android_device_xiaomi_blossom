@@ -774,20 +774,12 @@ vendor/lib/librgbwlightsensor.so
 
 # Display (Hardware)
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
-vendor/bin/hw/android.hardware.graphics.composer@2.1-service
-vendor/bin/hw/android.hardware.memtrack@1.0-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/android.hardware.graphics.composer@2.1-service.rc
-vendor/etc/init/android.hardware.memtrack@1.0-service.rc
-vendor/lib/android.hardware.graphics.composer@2.1-resources.so
-vendor/lib/hw/android.hardware.graphics.composer@2.1-impl.so
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib/hw/android.hardware.memtrack@1.0-impl.so
 vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/gralloc.rogue.so
 vendor/lib/hw/hwcomposer.mt6765.so
 vendor/lib/hw/memtrack.mt6765.so
-vendor/lib/libdrm.so
 
 # Dplanner
 vendor/bin/hw/vendor.mediatek.hardware.dplanner@2.0-service
