@@ -928,12 +928,6 @@ vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc
 -vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml
 vendor/lib/vendor.mediatek.hardware.gpu@1.0.so
 
-# Health
-vendor/bin/hw/android.hardware.health@2.1-service
-vendor/etc/init/android.hardware.health@2.1-service.rc
--vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
-vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
-
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
