@@ -59,6 +59,10 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     libbluetooth_audio_session
 
+# Configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service
+
 # DTB
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
