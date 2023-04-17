@@ -970,7 +970,6 @@ vendor/lib/libMtkOmxGsmDec.so
 vendor/lib/libMtkOmxMp3Dec.so
 vendor/lib/libMtkOmxVdecEx.so
 vendor/lib/libMtkOmxVenc.so
-vendor/lib/libavservices_minijail.so
 vendor/lib/libbwc.so
 vendor/lib/libh264dec_customize.so
 vendor/lib/libh264dec_sa.ca7.so
