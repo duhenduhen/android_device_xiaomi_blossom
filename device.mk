@@ -171,6 +171,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.adb.nonblocking_ffs=0
 
 # WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service-lazy
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
