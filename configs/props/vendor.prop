@@ -165,7 +165,6 @@ telephony.active_modems.max_count=2
 
 # Rootdir
 ro.vendor.init.sensor.rc=init.sensor_1_0.rc
-ro.vendor.rc=/vendor/etc/init/hw/
 
 # SurfaceFlinger
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
