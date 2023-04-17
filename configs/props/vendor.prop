@@ -2,7 +2,7 @@
 ro.vendor.mtk_aal_support=1
 
 # AEE
-ro.vendor.have_aeev_feature=1
+ro.vendor.have_aeev_feature=0
 
 # APU
 debug.mtk_tflite.target_nnapi=29

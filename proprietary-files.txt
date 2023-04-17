@@ -7,20 +7,9 @@ vendor/lib/libaal_mtk.so
 vendor/lib/libaalservice.so
 
 # AEE
-vendor/bin/aee_aedv
-vendor/bin/aee_archivev
-vendor/bin/aee_dumpstatev
-vendor/bin/aeev
-vendor/etc/aee-config
-vendor/etc/init/aee_aedv.rc
 vendor/lib/libaedv.so
 vendor/lib/libladder.so
 vendor/lib/libudf.so
-
-# AEE (Hardware)
-vendor/bin/hw/vendor.mediatek.hardware.aee@1.0-service
-vendor/etc/init/vendor.mediatek.hardware.aee@1.0-service.rc
-vendor/lib/vendor.mediatek.hardware.aee@1.0.so
 
 # Audio
 vendor/lib/lib_iir.so
