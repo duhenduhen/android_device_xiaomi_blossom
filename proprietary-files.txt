@@ -929,7 +929,6 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service
 vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib/hw/gatekeeper.beanpod.so
-vendor/lib/hw/gatekeeper.default.so
 vendor/lib/hw/libSoftGatekeeper.so
 
 # Graphics
