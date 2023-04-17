@@ -97,6 +97,9 @@ BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDOR := xiaomi
 TARGET_BOARD_PLATFORM := mt6765
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6765
 TARGET_USERIMAGES_USE_EXT4 := true
