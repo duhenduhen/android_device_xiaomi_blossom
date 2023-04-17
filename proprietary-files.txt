@@ -1396,8 +1396,6 @@ vendor/lib/libhwminijail.so
 vendor/lib/libmpvr.so
 vendor/lib/libopus.so
 vendor/lib/libpcap.so
-vendor/lib/libprotobuf-cpp-full-3.9.1.so
-vendor/lib/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib/libsrv_um.so
 vendor/lib/libtqvalidate.so
 vendor/lib/libufwriter.so
