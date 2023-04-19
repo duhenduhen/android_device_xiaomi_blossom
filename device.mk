@@ -63,12 +63,23 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl
 
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1.vendor
+
+PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     libbluetooth_audio_session
+
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.device@3.6.vendor \
+    android.hardware.camera.provider@2.6.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
+
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3.vendor
 
 PRODUCT_PACKAGES += \
     libdrmclearkeyplugin \
@@ -91,6 +102,11 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl
 
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.common@1.2.vendor \
+    android.hardware.graphics.mapper@4.0.vendor \
+    android.hardware.graphics.allocator@4.0.vendor
+
+PRODUCT_PACKAGES += \
     libdrm.vendor
 
 # Fastbootd
@@ -102,6 +118,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0-impl
+
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.1.vendor \
+    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -119,6 +142,10 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder \
     libhwbinder.vendor
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0.vendor
 
 # Light
 PRODUCT_PACKAGES += \
@@ -178,9 +205,21 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-V1-ndk_platform \
+    android.hardware.power@1.3.vendor
+
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio-V1.4-java
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -217,6 +256,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/configs/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     $(LOCAL_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0.vendor \
+    android.frameworks.sensorservice@1.0
 
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
