@@ -39,7 +39,8 @@ PRODUCT_PACKAGES += \
     audio_policy.stub \
     libaudiofoundation.vendor \
     libaudiopreprocessing \
-    libtinycompress
+    libtinycompress \
+    libtinyxml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
