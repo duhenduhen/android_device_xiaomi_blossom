@@ -770,12 +770,6 @@ vendor/lib/hw/gralloc.rogue.so
 vendor/lib/hw/hwcomposer.mt6765.so
 vendor/lib/hw/memtrack.mt6765.so
 
-# Dplanner
-vendor/bin/hw/vendor.mediatek.hardware.dplanner@2.0-service
-vendor/etc/init/vendor.mediatek.hardware.dplanner@2.0-service.rc
--vendor/etc/vintf/manifest/vendor.mediatek.hardware.dplanner@2.0-service.xml
-vendor/lib/vendor.mediatek.hardware.dplanner@2.0.so
-
 # Engineer Mode
 vendor/bin/em_hidl
 vendor/etc/init/em_hidl_user.rc
@@ -1311,10 +1305,6 @@ vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.2.so
 vendor/bin/MI_IC
 vendor/bin/MI_RIC
 vendor/bin/cal_tool
-vendor/bin/dexecutor
-vendor/bin/doeapp-memtester
-vendor/bin/doeapp-sat
-vendor/bin/dtc_vendor
 vendor/bin/getgameserver
 vendor/bin/jpegtool
 vendor/bin/meta_tst
