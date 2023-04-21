@@ -1258,7 +1258,6 @@ vendor/etc/init/init.thermal.rc
 vendor/etc/init/init.thermal_manager.rc
 vendor/etc/init/init.thermalloadalgod.rc
 vendor/lib/hw/android.hardware.thermal@2.0-impl.so
-vendor/lib/libmt@1.2.so
 vendor/lib/libmtcloader.so
 vendor/lib/libthermalalgo.so
 
@@ -1315,19 +1314,13 @@ vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.2.so
 
 # Xiaomi
 vendor/bin/mlipayd@1.1
-vendor/bin/mtd@1.2
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.2-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.vsimapp@1.0-service.rc
 -vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mtdservice.xml
 -vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.vsimapp.xml
 vendor/lib/libmlipay@1.1.so
 vendor/lib/vendor.xiaomi.hardware.mlipay@1.0.so
 vendor/lib/vendor.xiaomi.hardware.mlipay@1.1.so
-vendor/lib/vendor.xiaomi.hardware.mtdservice@1.0.so
-vendor/lib/vendor.xiaomi.hardware.mtdservice@1.1.so
-vendor/lib/vendor.xiaomi.hardware.mtdservice@1.2.so
 vendor/lib/vendor.xiaomi.hardware.vsimapp@1.0.so
 
 # Misc
