@@ -23,6 +23,15 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# ADB
+ifneq (eng,$(TARGET_BUILD_VARIANT))
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.usb.config=adb
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.adb.secure=0
+endif
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
