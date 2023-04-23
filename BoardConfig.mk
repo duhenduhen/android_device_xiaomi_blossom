@@ -16,6 +16,9 @@ TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
 TARGET_USES_64_BIT_BINDER := true
 
+# Asserts
+TARGET_OTA_ASSERT_DEVICE := angelica,angelicain,angelican,cattail,dandelion
+
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
