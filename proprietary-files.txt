@@ -1270,12 +1270,6 @@ vendor/etc/thermal-tgame.conf
 vendor/etc/thermal-youtube.conf
 vendor/etc/thermald-devices.conf
 
-# Vibrator
-vendor/bin/hw/android.hardware.vibrator-service.mediatek
-vendor/etc/init/vibrator-mtk-default.rc
--vendor/etc/vintf/manifest/vibrator-mtk-default.xml
-vendor/lib/hw/vibrator.default.so
-
 # WiFi
 vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher

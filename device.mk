@@ -304,6 +304,10 @@ PRODUCT_PACKAGES += \
     libutils-v30 \
     libutils-v32
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service-lazy.dandelion
