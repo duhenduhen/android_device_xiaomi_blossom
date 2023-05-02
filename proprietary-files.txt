@@ -1219,13 +1219,17 @@ vendor/lib/libsensor_custom.so
 vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
 vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc
 
-# TEE
-vendor/bin/bp_kmsetkey_ca
-vendor/bin/teei_daemon
-vendor/lib/libTEECommon.so
-vendor/lib/libimsg_log.so
-vendor/lib/libteeclientjni@1.1.so
-vendor/lib/libthha.so
+# TEE - from merlin-11
+vendor/bin/bp_kmsetkey_ca|a1a519c74556f2b2498f7b2f804103e1ddd0ed59
+vendor/bin/teei_daemon|94b1e3693856ac14ea9747940afe72c38ea7b976
+vendor/lib/libTEECommon.so|e992223c6c1700d5653b4ff1baa0358a9548d0d3
+vendor/lib/libimsg_log.so|a1a240d5f47e223a09a7c2432cbf3343ad209783
+vendor/lib/libteeclientjni.so|a5a259c03b59cc9af654d67938a3f8705df17146
+vendor/lib/libteeclientjni@1.1.so|71451e8ca89fa4da72757064f463c45af1278cb1
+vendor/lib64/libTEECommon.so|f1cfd2ea06ebef9111b70fa14762414e2ae8c1ca
+vendor/lib64/libimsg_log.so|60c0a1294c2c0c5d3552d47b5704b99e4ce80ada
+vendor/lib64/libteeclientjni.so|4a4827b095102935cec9b037c28d5b5566fce38e
+vendor/lib64/libteeclientjni@1.1.so|3bc0c8492dcdd1dddd70c5d9d2e206c29b7d6ae1
 
 # TEE (TA)
 vendor/thh/ta/08010203000000000000000000000000.ta
