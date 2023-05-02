@@ -1,4 +1,5 @@
 # All blobs from dandelion-user 11 RP1A.200720.011 V12.5.9.0.RCDINXM release-keys, unless pinned
+# Teracube 2e blobs from Teracube/Teracube_2e/Teracube_2e:11/RP1A.200720.011/202111011925:user/release-keys
 
 # AAL
 vendor/lib/libaal_cust.so
@@ -1179,6 +1180,8 @@ vendor/etc/init/init.volte_md_status.rc
 vendor/etc/init/init.volte_stack.rc
 vendor/etc/init/init.volte_ua.rc
 vendor/etc/init/init.vtservice_hidl.rc
+vendor/etc/init/init.wfca.rc
+vendor/etc/init/init.wod.rc
 vendor/etc/init/mtk_pkm_service.rc
 vendor/etc/init/muxreport.rc
 vendor/lib/libasn1c_core.so
@@ -1270,29 +1273,23 @@ vendor/etc/thermal-tgame.conf
 vendor/etc/thermal-youtube.conf
 vendor/etc/thermald-devices.conf
 
-# WiFi
-vendor/bin/wlan_assistant
-vendor/bin/wmt_launcher
-vendor/bin/wmt_loader
-vendor/etc/init/init.wfca.rc
-vendor/etc/init/init.wod.rc
-vendor/etc/init/init_connectivity.rc
-vendor/etc/init/wlan_assistant.rc
-vendor/lib/libapmonitor_vendor.so
-vendor/lib/libwifitest.so
-
-# WiFi (Hardware)
-vendor/bin/hw/hostapd
-vendor/bin/hw/wpa_supplicant
-vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-vendor/etc/init/hostapd.android.rc
--vendor/etc/vintf/manifest/manifest.xml:vendor/etc/vintf/manifest/wpa_supplicant.xml
--vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
--vendor/lib/libwifi-hal.so:vendor/lib/libwifi-hal-mtk.so
-vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
-vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.0.so
-vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.1.so
-vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.2.so
+# WiFi - from Teracube 2e
+vendor/bin/hw/hostapd|659e9a2cb387515151e8a31447c50e4a0d01e5ca
+vendor/bin/hw/wpa_supplicant|6619c5bf14f0efb2e29657d0871ba97b4653584e
+vendor/bin/wlan_assistant|79b03b7525d0cd46f1235787d532acfc628951f4
+vendor/bin/wmt_launcher|d11c065c19a322f61821ad78ba7d27e8ded3dacb
+vendor/bin/wmt_loader|e095e09057aab66d5d59200189a01e7247c3fabe
+vendor/etc/init/android.hardware.wifi.supplicant-service.rc|72d2b6a5e0f74bb1b8bceb5d11935b15c09814cb
+vendor/etc/init/hostapd.android.rc|a11c6ea552094117e9c5a65ffafa2820a949f638
+vendor/etc/init/init_connectivity.rc|504eb6339024e86d4b14c2640c991eec4075b5b6
+vendor/etc/init/wlan_assistant.rc|32ed0c40b58acc747c83bf467dde7f72634e9732
+-vendor/etc/vintf/manifest/manifest.xml:vendor/etc/vintf/manifest/wpa_supplicant.xml|7d001b90cd039d1ecd49c9e33bc08794665d1c8c
+-vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml|c24278b7f19b7a46c5c58c9522db6a5f9aeffcdf
+-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so|f7901400aab44ed813d8f3a3425c8001c4849134
+vendor/lib64/libwifitest.so|257a8b6ab49ce42f7c771567a5d4513dcd65b3c4
+vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so|cbf9bd9a24c96e9af056b02ee4752a5a05e3bd47
+vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so|a2d1f545a8372a4812a5c075b8138b605c893cdd
+vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.2.so|b6acab0d0c927a7cda5955e336b0879ecc0925d2
 
 # Misc
 vendor/bin/MI_IC
