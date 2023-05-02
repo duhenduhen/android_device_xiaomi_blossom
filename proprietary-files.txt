@@ -1,5 +1,6 @@
 # All blobs from dandelion-user 11 RP1A.200720.011 V12.5.9.0.RCDINXM release-keys, unless pinned
 # Teracube 2e blobs from Teracube/Teracube_2e/Teracube_2e:11/RP1A.200720.011/202111011925:user/release-keys
+# merlin-11 blobs from Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.6.0.RJOINXM:user/release-keys
 
 # AAL
 vendor/lib/libaal_cust.so
@@ -876,9 +877,11 @@ vendor/etc/ipsec/ipsec.conf
 vendor/etc/ipsec/ssl/openssl.cnf
 vendor/etc/ipsec/strongswan.conf
 
-# Gatekeeper
-vendor/lib/hw/gatekeeper.beanpod.so
-vendor/lib/hw/libSoftGatekeeper.so
+# Gatekeeper - from merlin-11
+vendor/lib/hw/gatekeeper.beanpod.so|50ecee638835be73863125bcc03198b10ff5f10f
+vendor/lib/hw/libSoftGatekeeper.so|86d13f4097659098f9f337b40221a25b25ea0d0b
+vendor/lib64/hw/gatekeeper.beanpod.so|8b19e982a760fbbc01124bf33ac94c7a452a71cb
+vendor/lib64/hw/libSoftGatekeeper.so|13f388a6e20cb3e696ee53d444a0e2042834c021
 
 # Graphics
 vendor/lib/egl/egl.cfg
