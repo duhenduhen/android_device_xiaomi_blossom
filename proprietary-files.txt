@@ -915,24 +915,20 @@ vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc
 -vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml
 vendor/lib/vendor.mediatek.hardware.gpu@1.0.so
 
-# Keymaster
-vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod
-vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
-vendor/etc/init/android.hardware.keymaster@4.0-service.beanpod.rc
-vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
-vendor/lib/hw/kmsetkey.beanpod.so
-vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
-vendor/lib/libkeymaster4.so
-vendor/lib/libkeymaster4support.so
-vendor/lib/libkeymaster_messages.so
-vendor/lib/libkeymaster_portable.so
-vendor/lib/libkeystore-engine-wifi-hidl.so
-vendor/lib/libkeystore-wifi-hidl.so
-vendor/lib/libkmsetkey.so
-vendor/lib/libpuresoftkeymasterdevice.so
-vendor/lib/libsoft_attestation_cert.so
-vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
-vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
+# Keymaster - from merlin-11
+vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod|f01a08c86d12db23fccf3b681f4c9c57ea805d42
+vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service|62fded90be71e5522b6028a7198f0d00a3f2acc6
+vendor/etc/init/android.hardware.keymaster@4.0-service.beanpod.rc|8319b159f1021b009443c44a606c28319d7a05f6
+vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc|ffc5e689e8953d3eb1ec0e3a06ac1c0ff51fc914
+vendor/lib/hw/kmsetkey.beanpod.so|fa44693a697f5a139d4448a83f69d0abb38c4f5a
+vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so|732a75f7bf080c3de7abdd1ad3bb8d23a03b72c1
+vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so|4166c629b41455471b39181ddb9c43edd07d66a8
+vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so|6827d765cd9c68d5f54a1a34048d0e9184dc545c
+vendor/lib64/hw/kmsetkey.beanpod.so|fa51a5d0d45821fcc65340a309c5b43b5412c444
+vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so|29955a71cfbc26cedb5dff1499259e59a6598d0a
+vendor/lib64/libkmsetkey.so|61ca0b6d0f7cb17c84e63b2e0aaf1bff96a431f3
+vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so|556da2b5299f03dbe564e0fda7b0f4d87108e543
+vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so|3522e59a12e9ef7703bf2d282bbb5b8c5567a377
 
 # Lights
 vendor/lib/hw/lights.mt6765.so

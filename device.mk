@@ -154,6 +154,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0.vendor
 
+PRODUCT_PACKAGES += \
+    libkeymaster4.vendor \
+    libkeymaster4support.vendor \
+    libpuresoftkeymasterdevice.vendor \
+    libsoft_attestation_cert.vendor
+
+PRODUCT_PACKAGES += \
+    libkeystore-wifi-hidl \
+    libkeystore-engine-wifi-hidl
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.dandelion
