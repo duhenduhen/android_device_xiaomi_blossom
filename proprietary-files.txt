@@ -929,13 +929,10 @@ vendor/lib64/hw/gatekeeper.beanpod.so|8b19e982a760fbbc01124bf33ac94c7a452a71cb
 vendor/lib64/hw/libSoftGatekeeper.so|13f388a6e20cb3e696ee53d444a0e2042834c021
 
 # Graphics - from Teracube 2e
-vendor/lib/libdpframework.so|abba513ad5e21c4fb353fb342dc06a15ed6661d1
-vendor/lib64/libglslcompiler.so|865edf0b4d6f5f1b18eefb76085bf8d72b35ad0f
-vendor/lib64/libdpframework.so|10504ac52fe373593160a3f7ec1c766d57d44f1e
-vendor/lib64/libglslcompiler.so|865edf0b4d6f5f1b18eefb76085bf8d72b35ad0f
 vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service|3c2bb2fceddbdf327772faa8542548809854d32f
 vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc|6940f9990a4d771397dc8c41a31df2df4b6d0790
 vendor/etc/meow.cfg|59b2389725cc6805794fc4d1febbb5d6aa88e042
+-vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml|0c9f825551d32de14ca3d0515b545ea71300c5bb
 vendor/lib/egl/egl.cfg|e9cf0173f529306ae3bf95a91d8ac221745968d0
 vendor/lib/egl/libEGL_mtk.so|4c0ad8d2fcc44e857bd05a5f7262c52ea821e22a
 vendor/lib/egl/libGLES_meow.so|23d829a3ab2332070cec62939f897dfa5d37d346
@@ -949,6 +946,7 @@ vendor/lib/libOpenCL.so|bc79d4699a666d11a8b4a78e35f4dcafb5128eff
 vendor/lib/libPVRMtkutils.so|680d645aabb534c0dcac534938d4702c8cf56759
 vendor/lib/libPVROCL.so|c024b3f26faca484c575f7128c6a2ef13bde3720
 vendor/lib/libPVRScopeServices.so|2d3012fb8023a9538b82fc951dd23d0aecb54e38
+vendor/lib/libdpframework.so|abba513ad5e21c4fb353fb342dc06a15ed6661d1
 vendor/lib/libged.so|a8698981d8bd437073ea1d26e110f3bd01f6fe29
 vendor/lib/libgpu_aux.so|6f8bada392baba53934a1edad5cda6ce59fa78a2
 vendor/lib/libgpud.so|7f0c04dfd9db12d9501a9fd5ef8cc92310e70349
@@ -968,15 +966,17 @@ vendor/lib64/libOpenCL.so|5e54d0bb437bf0bd9eafc51738dd4bbb5fb138c1
 vendor/lib64/libPVRMtkutils.so|d9d6ef3e17e74d0286b3d56d210c5ce2e90d1fca
 vendor/lib64/libPVROCL.so|f5fe309e13dc58f9c194204df21f46a4a0a1453b
 vendor/lib64/libPVRScopeServices.so|b33353f7bb973bb4289e0dc9a4db153947822162
+vendor/lib64/libdpframework.so|10504ac52fe373593160a3f7ec1c766d57d44f1e
 vendor/lib64/libged.so|a5c6cb15ae077a198602b44fc33b94fb34536e19
+vendor/lib64/libglslcompiler.so|865edf0b4d6f5f1b18eefb76085bf8d72b35ad0f
+vendor/lib64/libglslcompiler.so|865edf0b4d6f5f1b18eefb76085bf8d72b35ad0f
 vendor/lib64/libgpu_aux.so|60f62146024454cb49f488845c0596b9ba9b09c4
 vendor/lib64/libgpud.so|dbacbef299d69f3ca942730efe3b11076f270a6a
 vendor/lib64/libmpvr.so|1c20d05b6b79b755f52173d0843b70f64044d82b
 vendor/lib64/libpixelflinger.so|3d932eec45e4133f91c47fb0d4dd92282cedee0b
 vendor/lib64/libsrv_um.so|9ad413c5176a3c7d2fd30f092058c2562980f3e2
-vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so|0cbbf054f6476f8b6ee5a84da57dc388ce4b207a
--vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml|0c9f825551d32de14ca3d0515b545ea71300c5bb
 vendor/lib64/libusc.so|8bee5fe51f8f38eb90141c67955162e77d9755d8
+vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so|0cbbf054f6476f8b6ee5a84da57dc388ce4b207a
 
 # Keymaster - from merlin-11
 vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod|f01a08c86d12db23fccf3b681f4c9c57ea805d42
