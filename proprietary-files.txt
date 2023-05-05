@@ -2,11 +2,15 @@
 # Teracube 2e blobs from Teracube/Teracube_2e/Teracube_2e:11/RP1A.200720.011/202111011925:user/release-keys
 # merlin-11 blobs from Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.6.0.RJOINXM:user/release-keys
 
-# AAL
-vendor/lib/libaal_cust.so
-vendor/lib/libaal_key.so
-vendor/lib/libaal_mtk.so
-vendor/lib/libaalservice.so
+# AAL - from Teracube 2e
+vendor/lib/libaal_cust.so|914aa03da49a56873c50d8062f0946ff85a09de9
+vendor/lib/libaal_key.so|a167159cc3a281ca14cc1f052e2b42abe740dad3
+vendor/lib/libaal_mtk.so|e9787993232b64da09d39b459ce1c9da5afd5d61
+vendor/lib/libaalservice.so|b001b535b28905de3635ca6ae23a7ddc4bf13707
+vendor/lib64/libaal_cust.so|2d53a972e31d61084b5c55cd2b1f8a8449db6089
+vendor/lib64/libaal_key.so|02f1a6a1e7a474d8a6e9ff1655c5b4f34c386879
+vendor/lib64/libaal_mtk.so|294041d1baa32e865d633e16b2e1faee8d1c97be
+vendor/lib64/libaalservice.so|f0502ef5411fce7e65d0b532ab5cbf686d9bc364
 
 # AEE
 vendor/lib/libaedv.so
