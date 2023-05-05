@@ -254,22 +254,29 @@ vendor/etc/audio_param_x/Volume_ParamUnitDesc.xml
 vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_param/Speech_AudioParam.xml
 
-# Bluetooth
-vendor/bin/autobt
-vendor/lib/libbluetooth_audio_session_mediatek.so
-vendor/lib/libbluetooth_hw_test.so
-vendor/lib/libbluetooth_mtk.so
-vendor/lib/libbluetooth_mtk_pure.so
-vendor/lib/libbluetooth_relayer.so
-vendor/lib/libbluetoothem_mtk.so
-vendor/lib/libbt-vendor.so
-
-# Bluetooth (Hardware)
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek
-vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
-vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+# Bluetooth - from Teracube 2e
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek|ae6de4f6016d9afc899095bd53237ba95733cd8b
+vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc|5fb4f5770050301cb53382538a582be389db08b4
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so|00ec76841f0a3370e39980f8d9a8d2ee7020bc00
+vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so|97286546b9acf877999cd1b4b411342c846daaa0
+vendor/lib/libbluetooth_audio_session_mediatek.so|e38d4074443463fa891a1925e01ca8e26053aabc
+vendor/lib/libbluetooth_hw_test.so|8a4be274cb85eeb4da4ff16d655f46a9bcd149f8
+vendor/lib/libbluetooth_mtk.so|0e7b8070033248830bba0968db1f7bf44270f1ff
+vendor/lib/libbluetooth_mtk_pure.so|640c23d3106dccac57cdefa075e42fc6951afa42
+vendor/lib/libbluetooth_relayer.so|0b82684f7f9401ff6bf9add26c1f37880cd92e5f
+vendor/lib/libbluetoothem_mtk.so|8610de7ae4363a12d261afdaf52d116146e5f009
+vendor/lib/libbt-vendor.so|9c3a061d4c55f1caa8d1681f9bce5a7eee5f6803
+vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so|af66d4f56de69b5f67e6b8769771e017a810eec2
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-mediatek.so|0d0cec62fe0668adb7d25d1d837a012c02e94991
+vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so|a86b8ce83207dd02537ddf97670040692310ffc7
+vendor/lib64/libbluetooth_audio_session_mediatek.so|7959ca93174be0bbb5c0ea04261aee42b7c3eb84
+vendor/lib64/libbluetooth_hw_test.so|15cb4fd337f988bd0df5759a67076dc2f54dd56d
+vendor/lib64/libbluetooth_mtk.so|720ceebc0b78a14e47638336e272da93934c9b67
+vendor/lib64/libbluetooth_mtk_pure.so|8bc642b8c920cf8cbf6603ead17e6c35e2219940
+vendor/lib64/libbluetooth_relayer.so|cbefce9ebc5c9d3d404f7eba3932670184bac336
+vendor/lib64/libbluetoothem_mtk.so|e4ab9e57779b3c061c27c0c7e10ad56da975d79c
+vendor/lib64/libbt-vendor.so|b046a797432801caf400eb319cbff77f7caa798a
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so|d62dc09391d59363e1b78aebed4d05e7103b87ac
 
 # Camera
 vendor/bin/lib3a.ccu.dm
