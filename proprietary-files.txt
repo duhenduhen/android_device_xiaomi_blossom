@@ -986,7 +986,7 @@ vendor/lib64/libusc.so|8bee5fe51f8f38eb90141c67955162e77d9755d8
 vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so|0cbbf054f6476f8b6ee5a84da57dc388ce4b207a
 
 # Keymaster - from merlin-11
-vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod|f01a08c86d12db23fccf3b681f4c9c57ea805d42
+vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod|675414391deeddc3ce3b83d64371c9f316a7ceef
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service|62fded90be71e5522b6028a7198f0d00a3f2acc6
 vendor/etc/init/android.hardware.keymaster@4.0-service.beanpod.rc|8319b159f1021b009443c44a606c28319d7a05f6
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc|ffc5e689e8953d3eb1ec0e3a06ac1c0ff51fc914
@@ -1071,31 +1071,40 @@ vendor/etc/init/init.wmt_drv.rc
 # Neural Networks
 vendor/lib/libneuropilot_hal_utils.so
 
-# NVRAM
-vendor/bin/atcid
+# NVRAM - from Teracube 2e
+vendor/bin/atcid|c0137c01d46704fe0b7432a0257160245ffa51d6
+vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service|8f8b1c931ce4859f58867bf4bf320fcae47bb22b
+vendor/bin/nvram_daemon|930d853e4d9b8eb0231ce0a8a721d1cca18e7025
+vendor/etc/init/atcid.rc|001abe08dd220ae80e5ed4df3ef57ac90b98034f
+vendor/etc/init/nvram_daemon.rc|02c739c622f871b7ec801755f64d063eee91ba77
+vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc|328d76546b36b7f67f48dff0fad46a419188a7f7
+vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|6ce8eb984e7f821c79ea1fde8bd1470641b881fd
+vendor/lib/libcustom_nvram.so|6086130f374dcd2fa466ac63526dbfb18bef66ec
+vendor/lib/libfile_op.so|60874fc5d25b6ac06cc83cd5fd05be4e2c06b854
+vendor/lib/libhwm.so|24d8eb708653d5a976ed4d88257e3fd57d22b051
+vendor/lib/libnvram.so|a13182a5e7fe16b485524983ef2d0becbd107b1b
+vendor/lib/libnvram_daemon_callback.so|c5b93e48668d419573c7e9da0d72707575189ab5
+vendor/lib/libnvram_platform.so|e891cc275475987b1f95cf40dc86ac1845570caa
+vendor/lib/libnvram_sec.so|664c662ddd716ba9988608d11b17b1c5f7131e46
+vendor/lib/vendor.mediatek.hardware.nvram@1.0.so|50f11bde5ef568117b73307af88970ed290ddbf2
+vendor/lib/vendor.mediatek.hardware.nvram@1.1.so|8e888c2f7f317062f2f4e71c75903b82fd1819a4
+vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|f35f6ccad0584f3de90dce80fbf6a3fba75d8a66
+vendor/lib64/libcustom_nvram.so|fe7c01e1936f8853309c6f9fe203939dbe03a8c9
+vendor/lib64/libfile_op.so|468ca25aef90a2ff889499d48662ec6328df8be6
+vendor/lib64/libhwm.so|6184978dedaed7e3520904cbb2d5ae4fc7dc6d66
+vendor/lib64/libnvram.so|31d858956ba1a630b3ebbf2dfa961202db5db103
+vendor/lib64/libnvram_daemon_callback.so|b828b4d80ce2c48d8f42e5b6b96cf7750c0f567c
+vendor/lib64/libnvram_platform.so|e025a7c974bdfacd2e8746c673ee3b740822c452
+vendor/lib64/libnvram_sec.so|afd74aedc4e105488aeeaf309b076be1631eeb34
+vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so|d6fc7f16b33aa8a89ad5ab1c6e8f11ff00e7fadb
+vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so|59f418dad1e81a243873f60e73ff801c7445acde
+
+# NVRAM (Fuelgauged)
 vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram
-vendor/bin/lc_nvram_prinfo
-vendor/bin/nvram_daemon
-vendor/etc/init/atcid.rc
 vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/fuelgauged_nvram_init.rc
-vendor/etc/init/nvram_daemon.rc
-vendor/lib/libcustom_nvram.so
 vendor/lib/libfgauge_gm30.so
-vendor/lib/libfile_op.so
-vendor/lib/libnvram.so
-vendor/lib/libnvram_daemon_callback.so
-vendor/lib/libnvram_platform.so
-vendor/lib/libnvram_sec.so
-
-# NVRAM (Hardware)
-vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
-vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
-vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
-vendor/lib/vendor.mediatek.hardware.atci@1.0.so
-vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
-vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
 
 # Perf
 vendor/lib/libmtkperf_client_vendor.so
