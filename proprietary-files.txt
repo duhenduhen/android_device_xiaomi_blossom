@@ -1000,9 +1000,6 @@ vendor/lib64/libkmsetkey.so|61ca0b6d0f7cb17c84e63b2e0aaf1bff96a431f3
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so|556da2b5299f03dbe564e0fda7b0f4d87108e543
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so|3522e59a12e9ef7703bf2d282bbb5b8c5567a377
 
-# Lights
-vendor/lib/hw/lights.mt6765.so
-
 # Media
 vendor/etc/mtk_omx_core.cfg
 vendor/lib/libHEVCdec_sa.ca7.android.so
