@@ -1377,7 +1377,6 @@ vendor/etc/MNL_Config.xml
 vendor/etc/device_features/dandelion.xml
 vendor/etc/fstb.cfg
 vendor/etc/init/bootperf.rc
-vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/getgameserver.rc
 vendor/etc/init/mi_ic.rc
 vendor/etc/init/mi_ric.rc
