@@ -1047,7 +1047,6 @@ vendor/lib/modules/fpsgo.ko
 vendor/lib/modules/gps_drv.ko
 vendor/lib/modules/kheaders.ko
 vendor/lib/modules/met.ko
-vendor/lib/modules/mi_memory.ko
 vendor/lib/modules/mt6357-accdet.ko
 vendor/lib/modules/trace_mmstat.ko
 vendor/lib/modules/wlan_drv_gen4m.ko
