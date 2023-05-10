@@ -834,10 +834,6 @@ vendor/lib/vendor.mediatek.hardware.engineermode@1.1.so
 vendor/lib/vendor.mediatek.hardware.engineermode@1.2.so
 vendor/lib/vendor.mediatek.hardware.engineermode@1.3.so
 
-# Factory
-vendor/bin/factory
-vendor/etc/factory.ini
-
 # Firmware
 vendor/firmware/BT_FW.cfg
 vendor/firmware/Conf_MultipleTest_aa.ini
@@ -1362,27 +1358,19 @@ vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so|a2d1f545a8372a4812a
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.2.so|b6acab0d0c927a7cda5955e336b0879ecc0925d2
 
 # Misc
-vendor/bin/MI_IC
-vendor/bin/MI_RIC
 vendor/bin/cal_tool
 vendor/bin/getgameserver
 vendor/bin/jpegtool
-vendor/bin/meta_tst
 vendor/bin/mnld
 vendor/bin/mrdump_tool
 vendor/bin/rttv
 vendor/bin/stp_dump3
 vendor/bin/testgameserver
 vendor/etc/MNL_Config.xml
-vendor/etc/device_features/dandelion.xml
 vendor/etc/fstb.cfg
 vendor/etc/init/bootperf.rc
 vendor/etc/init/getgameserver.rc
-vendor/etc/init/mi_ic.rc
-vendor/etc/init/mi_ric.rc
-vendor/etc/partition_permission.sh
 vendor/etc/pm_test_item_config.xml
-vendor/etc/throttle.sh
 vendor/lib/libSwJpgCodec.so
 vendor/lib/libhwminijail.so
 vendor/lib/libopus.so

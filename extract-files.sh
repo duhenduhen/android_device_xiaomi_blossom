@@ -63,9 +63,6 @@ function blob_fixup {
 	vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
             "${PATCHELF}" --add-needed "libshim_beanpod.so" "${2}"
             ;;
-	vendor/etc/init/mi_*.rc)
-            sed -i '/seclabel/d' "${2}"
-            ;;
 	vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service)
             "$PATCHELF" --replace-needed "android.hardware.power-V1-ndk_platform.so" "android.hardware.power-V1-ndk.so" "${2}"
             ;;
