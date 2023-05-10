@@ -156,8 +156,6 @@ on charger
     # Stop bootprof
     write /proc/bootprof "0"
 
-	start mi_thermald
-
 on early-fs
     write /proc/bootprof "INIT:early-fs"
 
@@ -1226,12 +1224,6 @@ on property:sys.camera.sensormode.apk=0
 # start meta_tst for ATM
 on property:sys.boot_completed=1 && property:ro.boot.atm=enable
     start meta_tst
-
-# add mi_thermald for thermal
-service mi_thermald /system/vendor/bin/mi_thermald
-    class main
-    user root
-    group system
 
 on property:sys.camera.ctsverify.apk=1
     setprop vendor.camera.ctsverify.apk 5
