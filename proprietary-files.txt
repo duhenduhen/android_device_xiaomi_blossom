@@ -1,5 +1,6 @@
 # All blobs from dandelion-user 11 RP1A.200720.011 V12.5.9.0.RCDINXM release-keys, unless pinned
 # Teracube 2e blobs from Teracube/Teracube_2e/Teracube_2e:11/RP1A.200720.011/202111011925:user/release-keys
+# hawaiipl blobs from motorola/hawaiipl_g/hawaiipl:12/STB32.36-99-1/99-1:user/release-keys
 # merlin-11 blobs from Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.6.0.RJOINXM:user/release-keys
 
 # AAL - from Teracube 2e
@@ -817,12 +818,16 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.4.so|ffd3113659fec1fdcd08d7b5b380160a
 vendor/lib64/vendor.mediatek.hardware.pq@2.5.so|850548786fa99ba4275db1f69d59f329ca07b1cb
 vendor/lib64/vendor.mediatek.hardware.pq@2.6.so|b8bfc80ede29d22b1a92ba25990fbcf62fb40c01
 
-# DRM
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib/libwvhidl.so
-vendor/lib/mediadrm/libwvdrmengine.so
+# DRM - from hawaiipl
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|8307cea32c20bdc6e7456a6060ebefcfe743b02c
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
+vendor/lib/liboemcrypto.so|49f1b78492ecd106d6f7ad61a5385ac185e555a5
+vendor/lib/libwvhidl.so|fcce40157d5298d3254caee583a340d4e4f7baa6
+vendor/lib/mediadrm/libwvdrmengine.so|a488ce03a1e956691a8956bfadb169e96cb1d959
+vendor/lib64/liboemcrypto.so|936a3b3ab6df239a0a36f36635749c2c78786225
+vendor/lib64/libwvhidl.so|b6b56aa9ae936b79c2a15f904ebf4923d9988e38
+vendor/lib64/mediadrm/libwvdrmengine.so|b197d579899dac2d6a8dff2a98d44b7a61aa1b95
 
 # Engineer Mode
 vendor/bin/em_hidl
