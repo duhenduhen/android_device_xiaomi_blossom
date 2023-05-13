@@ -1308,29 +1308,29 @@ vendor/thh/ta/e5140b3376fa4c63ab18062caab2fb5c.ta
 vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 vendor/etc/init/microtrust.rc
 
-# Thermal
+# Thermal - from hawaiipl
 vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
 vendor/bin/thermal
-vendor/bin/thermal_manager
 vendor/bin/thermalloadalgod
-vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
-vendor/etc/init/init.thermal.rc
-vendor/etc/init/init.thermal_manager.rc
-vendor/etc/init/init.thermalloadalgod.rc
-vendor/lib/hw/android.hardware.thermal@2.0-impl.so
-vendor/lib/libmtcloader.so
-vendor/lib/libthermalalgo.so
-
-# Thermal (Hardware)
-vendor/lib/hw/thermal.mt6765.so
-
-# Thermal (Configs)
+vendor/bin/thermal_manager
 vendor/etc/.tp/.ht120.mtc
 vendor/etc/.tp/.thermal_policy_00
 vendor/etc/.tp/.thermal_policy_03
 vendor/etc/.tp/.thermal_policy_05
 vendor/etc/.tp/thermal.conf
 vendor/etc/.tp/thermal.off.conf
+vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
+vendor/etc/init/init.thermal.rc
+vendor/etc/init/init.thermalloadalgod.rc
+vendor/etc/init/init.thermal_manager.rc
+vendor/lib/hw/android.hardware.thermal@2.0-impl.so
+vendor/lib/hw/thermal_hal.so
+vendor/lib/libmtcloader.so
+vendor/lib/libthermalalgo.so
+vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
+vendor/lib64/hw/thermal_hal.so
+vendor/lib64/libifcutils_mtk.so
+vendor/lib64/libmtcloader.so
 
 # WiFi - from Teracube 2e
 vendor/bin/hw/hostapd|659e9a2cb387515151e8a31447c50e4a0d01e5ca
