@@ -243,6 +243,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.radio-V1.4-java
 
+# Resource Runtime Overlays (RROs)
+PRODUCT_PACKAGES += \
+    FrameworksResOverlayDandelion
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.ago.rc \
