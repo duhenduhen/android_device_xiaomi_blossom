@@ -14,9 +14,9 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.light-service.dandelion",
-    init_rc: ["android.hardware.light-service.dandelion.rc"],
-    vintf_fragments: ["android.hardware.light-service.dandelion.xml"],
+    name: "android.hardware.light-service.blossom",
+    init_rc: ["android.hardware.light-service.blossom.rc"],
+    vintf_fragments: ["android.hardware.light-service.blossom.xml"],
     relative_install_path: "hw",
     srcs: [
         "main.cpp",

@@ -13,18 +13,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit from dandelion device
-$(call inherit-product, device/xiaomi/dandelion/device.mk)
+# Inherit from blossom device
+$(call inherit-product, device/xiaomi/blossom/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := dandelion
-PRODUCT_NAME := lineage_dandelion
+PRODUCT_DEVICE := blossom
+PRODUCT_NAME := lineage_blossom
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2006C3LI
 PRODUCT_MANUFACTURER := xiaomi
 
 # Build info
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="dandelion-user 11 RP1A.200720.011 V12.5.9.0.RCDINXM release-keys"

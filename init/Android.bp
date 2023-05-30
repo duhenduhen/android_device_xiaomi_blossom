@@ -15,7 +15,7 @@
 //
 
 cc_library_static {
-    name: "libinit_xiaomi_dandelion",
+    name: "libinit_xiaomi_blossom",
     recovery_available: true,
     srcs: [
         "init.cpp"

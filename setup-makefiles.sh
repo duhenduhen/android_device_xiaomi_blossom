@@ -9,7 +9,7 @@
 set -e
 
 # Device info
-DEVICE=dandelion
+DEVICE=blossom
 VENDOR=xiaomi
 
 # Initial Copyright year

@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/dandelion
+DEVICE_PATH := device/xiaomi/blossom
 
 # Architecture
 TARGET_ARCH := arm64
@@ -22,13 +22,13 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := angelica,angelicain,angelican,cattail,dandelion
+TARGET_OTA_ASSERT_DEVICE := angelica,angelicain,angelican,blossom,cattail,dandelion
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := dandelion
+TARGET_BOOTLOADER_BOARD_NAME := blossom
 TARGET_NO_BOOTLOADER := true
 
 # Build
@@ -41,8 +41,8 @@ BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 TARGET_SCREEN_DENSITY := 320
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_dandelion
-TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_dandelion
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_blossom
+TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_blossom
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
@@ -68,8 +68,8 @@ TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_KERNEL_CONFIG := dandelion_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/dandelion
+TARGET_KERNEL_CONFIG := blossom_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/blossom
 
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
@@ -168,4 +168,4 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 BOARD_VNDK_VERSION := current
 
 # Inherit the proprietary files
-include vendor/xiaomi/dandelion/BoardConfigVendor.mk
+include vendor/xiaomi/blossom/BoardConfigVendor.mk

@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),dandelion)
+ifeq ($(TARGET_DEVICE),blossom)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
 VENDOR_SYMLINK := \

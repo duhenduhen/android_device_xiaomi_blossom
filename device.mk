@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/dandelion/dandelion-vendor.mk)
+$(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
 
 # Silence vendor logspam
 include $(LOCAL_PATH)/configs/props/vendor_logtag.mk
@@ -166,7 +166,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.dandelion
+    android.hardware.light-service.blossom
 
 # Media
 PRODUCT_PACKAGES += \
@@ -245,7 +245,7 @@ PRODUCT_PACKAGES += \
 
 # Resource Runtime Overlays (RROs)
 PRODUCT_PACKAGES += \
-    FrameworksResOverlayDandelion
+    FrameworksResOverlayBlossom
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -331,7 +331,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy.dandelion
+    android.hardware.wifi@1.0-service-lazy.blossom
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.3.vendor \
