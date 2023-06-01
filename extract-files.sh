@@ -81,9 +81,6 @@ function blob_fixup {
 	vendor/lib/libMtkOmxVdecEx.so)
             "${PATCHELF}" --replace-needed "libui.so" "libui-v32.so" "$2"
             ;;
-	vendor/lib*/libudf.so)
-            "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
-            ;;
 	vendor/lib*/libwifi-hal-mtk.so)
             "$PATCHELF" --set-soname libwifi-hal-mtk.so "${2}"
             ;;

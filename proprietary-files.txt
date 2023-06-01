@@ -2,6 +2,7 @@
 # Teracube 2e blobs from Teracube/Teracube_2e/Teracube_2e:11/RP1A.200720.011/202111011925:user/release-keys
 # hawaiipl blobs from motorola/hawaiipl_g/hawaiipl:12/STB32.36-99-1/99-1:user/release-keys
 # merlin-11 blobs from Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.6.0.RJOINXM:user/release-keys
+# merlin-12 blobs from Redmi/merlin/merlin:12/SP1A.210812.016/V13.0.1.0.SJOCNXM:user/release-keys
 
 # AAL - from Teracube 2e
 vendor/lib/libaal_cust.so|914aa03da49a56873c50d8062f0946ff85a09de9
@@ -13,9 +14,15 @@ vendor/lib64/libaal_key.so|02f1a6a1e7a474d8a6e9ff1655c5b4f34c386879
 vendor/lib64/libaal_mtk.so|294041d1baa32e865d633e16b2e1faee8d1c97be
 vendor/lib64/libaalservice.so|f0502ef5411fce7e65d0b532ab5cbf686d9bc364
 
-# AEE
-vendor/lib/libaedv.so
-vendor/lib/libudf.so
+# AEE - from merlin-11
+vendor/lib/libaedv.so|0338e7a75ab3727f1f2345e31c09809e0b1acc0c
+vendor/lib/libladder.so|b3161af9c1ae115b467ed6d210355348717145c8
+vendor/lib64/libaedv.so|283f2df71e8ecf26e56d4a8fd478cdf6e1a67413
+vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
+
+# AEE (UDF) - from merlin-12
+vendor/lib/libudf.so|7cdbb5c5c616dbbec6afcd75d5cc41f915ff82d6
+vendor/lib64/libudf.so|66324571c3f69057b250bce3b0d58c386da0c25b
 
 # Audio
 vendor/lib/lib_iir.so
@@ -781,7 +788,6 @@ vendor/lib/libgralloc_metadata.so|2a48a8166a939b473de5eb79e03328f7c15adccf
 vendor/lib/libgralloctypes_mtk.so|e235e44c2090f433a28b0bcf89ca206b25b75c8b
 vendor/lib/libion_mtk.so|4531c4a0fa16f4795a7427cb53a6d84d33653bc8
 vendor/lib/libion_ulit.so|b042f83ad1d5c869f3c5615a4d78961de0ad5a37
-vendor/lib/libladder.so|b3161af9c1ae115b467ed6d210355348717145c8
 vendor/lib/libmemtrack_GL.so|a4ee5cecc85c294ac7f09e1ba33d98c51d1baba2
 vendor/lib/libminiui.so|6bd8a996273818ebec5c9ff043cf03ef3ce5e661
 vendor/lib/libpq_cust_base.so|4c778041121cde62449e361fc5fc6c4cbcfb7e00
@@ -805,7 +811,6 @@ vendor/lib64/libgralloc_metadata.so|2a917aff4b1e9144c2d6a71fa3af4e2ca989f591
 vendor/lib64/libgralloctypes_mtk.so|1bde7985b9b2c23de613c77f1fce00592778a6b3
 vendor/lib64/libion_mtk.so|0f05253320add31338ba567427e1ccf0d5a5aafb
 vendor/lib64/libion_ulit.so|77cf7d32fe4381254fb7ee1df35cd1228c01d63b
-vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
 vendor/lib64/libmemtrack_GL.so|322d42fe82e6765d990d95b7541df78ae6c39ac5
 vendor/lib64/libminiui.so|f215c3bc3da5ddc341397843a6621fdccc09a05e
 vendor/lib64/libpq_cust_base.so|b87ee98ca30403466dace9a1a6968a01f5b40fac
