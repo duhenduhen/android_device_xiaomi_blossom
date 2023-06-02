@@ -331,6 +331,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayBlossom \
     SettingsOverlayBlossom \
     SettingsProviderOverlayBlossom \
+    SimpleDeviceConfigOverlayBlossom \
     SystemUIOverlayBlossom \
     TelephonyOverlayBlossom
 
