@@ -405,7 +405,6 @@ vendor/lib/lib3a.gma.so
 vendor/lib/lib3a.lce.so
 vendor/lib/lib3a.log.so
 vendor/lib/lib3a.n3d3a.so
-vendor/lib/libFrameRecord.so
 vendor/lib/libSonyIMX230PdafLibrary.so
 vendor/lib/libSonyIMX230PdafLibraryWrapper.so
 vendor/lib/libSonyIMX338PdafLibrary.so
@@ -954,6 +953,7 @@ vendor/lib/egl/libGLESv2_mtk.so|b98f6c374fab1a0eeda6a5bde391a206f0104151
 vendor/lib/egl/libMEOW_gift.so|6c65872935d0d981bac8da64f12e49fa274a39ec
 vendor/lib/egl/libMEOW_trace.so|fdb9fafc379afdadb830c9e8ffaac4b7c369ad27
 vendor/lib/hw/vulkan.mt6765.so|9724c4c8a719bada9988a9dee22969bb1b0ab1af
+vendor/lib/libFrameRecord.so|6ed7e98b423edb6367a8b0a92ef2d44d9ecc449e
 vendor/lib/libIMGegl.so|88f1f9686a09e0026f0116a1ed05848031c13db9
 vendor/lib/libOpenCL.so|bc79d4699a666d11a8b4a78e35f4dcafb5128eff
 vendor/lib/libPVRMtkutils.so|680d645aabb534c0dcac534938d4702c8cf56759
@@ -974,6 +974,7 @@ vendor/lib64/egl/libGLESv2_mtk.so|3e4be56b935e80827beb2741366fb81b306d6f75
 vendor/lib64/egl/libMEOW_gift.so|98ddf8ce6fe2111b47aa71eceee4479f3533627f
 vendor/lib64/egl/libMEOW_trace.so|7c6ef311cf4ffba7af7e660e936427820d0767c8
 vendor/lib64/hw/vulkan.mt6765.so|de4e51dee92d9a91b20052ec95406160dfa3d7f8
+vendor/lib64/libFrameRecord.so|6d463d238bd52fc35218c864610be3bfebda4951
 vendor/lib64/libIMGegl.so|7bd53f6a9228cc25042bbb9040033ca2e5221956
 vendor/lib64/libOpenCL.so|5e54d0bb437bf0bd9eafc51738dd4bbb5fb138c1
 vendor/lib64/libPVRMtkutils.so|d9d6ef3e17e74d0286b3d56d210c5ce2e90d1fca
