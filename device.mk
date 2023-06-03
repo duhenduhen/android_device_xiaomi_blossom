@@ -232,6 +232,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powercontable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.xml \
     $(LOCAL_PATH)/configs/power/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml
 
+# Properties
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/odm,$(TARGET_COPY_OUT_ODM)/etc) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/product,$(TARGET_COPY_OUT_PRODUCT)/etc) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/system,$(TARGET_COPY_OUT_SYSTEM)/etc) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/system_ext,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/vendor,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
