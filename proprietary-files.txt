@@ -1375,7 +1375,6 @@ vendor/etc/pm_test_item_config.xml
 vendor/lib/libSwJpgCodec.so
 vendor/lib/libhwminijail.so
 vendor/lib/libopus.so
-vendor/lib/libpcap.so
 vendor/lib/libtqvalidate.so
 vendor/lib/libufwriter.so
 vendor/lib/libusc.so
