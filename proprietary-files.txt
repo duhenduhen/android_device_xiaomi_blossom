@@ -940,12 +940,14 @@ vendor/lib/hw/libSoftGatekeeper.so|86d13f4097659098f9f337b40221a25b25ea0d0b
 vendor/lib64/hw/gatekeeper.beanpod.so|8b19e982a760fbbc01124bf33ac94c7a452a71cb
 vendor/lib64/hw/libSoftGatekeeper.so|13f388a6e20cb3e696ee53d444a0e2042834c021
 
+# Graphics
+vendor/etc/meow.cfg
+vendor/lib/egl/egl.cfg
+
 # Graphics - from Teracube 2e
 vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service|3c2bb2fceddbdf327772faa8542548809854d32f
 vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc|6940f9990a4d771397dc8c41a31df2df4b6d0790
-vendor/etc/meow.cfg|59b2389725cc6805794fc4d1febbb5d6aa88e042
 -vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml|0c9f825551d32de14ca3d0515b545ea71300c5bb
-vendor/lib/egl/egl.cfg|e9cf0173f529306ae3bf95a91d8ac221745968d0
 vendor/lib/egl/libEGL_mtk.so|4c0ad8d2fcc44e857bd05a5f7262c52ea821e22a
 vendor/lib/egl/libGLES_meow.so|23d829a3ab2332070cec62939f897dfa5d37d346
 vendor/lib/egl/libGLESv1_CM_mtk.so|8f17889b3e3210c1473fa6e7d2a002d5592033e7
