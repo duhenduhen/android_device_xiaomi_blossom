@@ -55,6 +55,13 @@ vendor.camera.mdp.dre.enable=0
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+# DRM
+drm.service.enabled=true
+ro.vendor.mtk_widevine_drm_l3_support=1
+
+# Dalvik
+dalvik.vm.foreground-heap-growth-multiplier=2.0
+
 # Data
 ro.vendor.mtk_emmc_support=1
 ro.vendor.mtk_f2fs_enable=1
@@ -65,10 +72,6 @@ persist.sys.mcd_config_file=/system/etc/mcd_default.conf
 persist.vendor.max.brightness=413
 ro.hardware.egl=meow
 ro.opengles.version=196610
-
-# DRM
-drm.service.enabled=true
-ro.vendor.mtk_widevine_drm_l3_support=1
 
 # FM Radio
 persist.vendor.connsys.fm_chipid=mt6631
