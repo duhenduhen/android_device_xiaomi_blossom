@@ -257,7 +257,8 @@ PRODUCT_PACKAGES += \
 
 # Resource Runtime Overlays (RROs)
 PRODUCT_PACKAGES += \
-    FrameworksResOverlayBlossom
+    FrameworksResOverlayBlossom \
+    SettingsProviderOverlayBlossom
 
 # Rootdir
 PRODUCT_PACKAGES += \
