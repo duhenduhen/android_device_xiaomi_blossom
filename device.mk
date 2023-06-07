@@ -104,6 +104,9 @@ PRODUCT_PACKAGES += \
     libdrmclearkeyplugin \
     libmockdrmcryptoplugin
 
+# Dex
+PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
