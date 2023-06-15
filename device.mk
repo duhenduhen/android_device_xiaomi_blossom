@@ -104,10 +104,6 @@ PRODUCT_PACKAGES += \
     libdrmclearkeyplugin \
     libmockdrmcryptoplugin
 
-# DTB
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
