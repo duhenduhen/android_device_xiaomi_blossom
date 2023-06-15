@@ -68,6 +68,8 @@ ro.vendor.mtk_f2fs_enable=1
 ro.vendor.mtk_fd_support=1
 
 # Display
+debug.renderengine.backend=skiaglthreaded
+debug.hwui.skia_atrace_enabled=false
 persist.sys.mcd_config_file=/system/etc/mcd_default.conf
 persist.vendor.max.brightness=413
 ro.hardware.egl=meow
