@@ -1005,8 +1005,8 @@ vendor/lib64/libusc.so|8bee5fe51f8f38eb90141c67955162e77d9755d8
 vendor/lib64/libwifitest.so|257a8b6ab49ce42f7c771567a5d4513dcd65b3c4
 vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so|0cbbf054f6476f8b6ee5a84da57dc388ce4b207a
 
-# IMS (APK)
--priv-app/ImsService/ImsService.apk
+# IMS (APK) - from https://github.com/xiaomi-mt6765-dev/ImsService/releases/tag/12.5.9.0
+-priv-app/ImsService/ImsService.apk|699ed3fc70e2c8f1482dce2a136d5a37b6beff9c
 
 # IMS (System)
 bin/vtservice
