@@ -278,6 +278,21 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.radio-V1.4-java
 
+# Recovery
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/focaltech_aa_ts_fw_helitai.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/focaltech_aa_ts_fw_helitai.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/focaltech_ab_ts_fw_helitai.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/focaltech_ab_ts_fw_helitai.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/mt6631_fm_v1_coeff.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/mt6631_fm_v1_coeff.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/mt6631_fm_v1_patch.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/mt6631_fm_v1_patch.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_djn_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_djn_fw.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_djn_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_djn_mp.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_ebbg_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_ebbg_fw.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_ebbg_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_ebbg_mp.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_hlt_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_hlt_fw.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_hlt_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_hlt_mp.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_truly_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_truly_fw.bin \
+    vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_truly_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_truly_mp.bin
+
 # Resource Runtime Overlays (RROs)
 PRODUCT_PACKAGES += \
     DialerOverlayBlossom \
