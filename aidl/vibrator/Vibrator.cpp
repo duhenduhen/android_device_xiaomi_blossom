@@ -1,11 +1,20 @@
 /*
  * Copyright (C) 2019 The Android Open Source Project
- * Copyright (C) 2023 The LineageOS Project
  *
- * SPDX-License-Identifier: Apache-2.0
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
-#include "vibrator-impl/Vibrator.h"
+#include "Vibrator.h"
 
 #include <android-base/logging.h>
 #include <thread>
@@ -15,9 +24,25 @@ namespace android {
 namespace hardware {
 namespace vibrator {
 
+#ifdef VIBRATOR_SUPPORTS_EFFECTS
+Vibrator::Vibrator() {
+    if (exists(kVibratorStrength)) {
+        mVibratorStrengthSupported = true;
+        mVibratorStrengthMax = getNode(kVibratorStrengthMax, 9);
+    }
+}
+#endif
+
 ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
     LOG(VERBOSE) << "Vibrator reporting capabilities";
     *_aidl_return = IVibrator::CAP_ON_CALLBACK;
+
+    #ifdef VIBRATOR_SUPPORTS_EFFECTS
+    *_aidl_return |= IVibrator::CAP_PERFORM_CALLBACK;
+
+    if (mVibratorStrengthSupported)
+        *_aidl_return |= IVibrator::CAP_AMPLITUDE_CONTROL;
+    #endif
 
     return ndk::ScopedAStatus::ok();
 }
@@ -50,18 +75,77 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::perform(Effect effect __unused, EffectStrength strength __unused,
-                                     const std::shared_ptr<IVibratorCallback>& callback __unused,
-                                     int32_t* _aidl_return __unused) {
+#ifdef VIBRATOR_SUPPORTS_EFFECTS
+ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
+                                     const std::shared_ptr<IVibratorCallback>& callback,
+                                     int32_t* _aidl_return) {
+    ndk::ScopedAStatus status;
+    int32_t timeoutMs;
+
+    if (vibEffects.find(effect) == vibEffects.end())
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+
+    if (vibStrengths.find(strength) == vibStrengths.end())
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+
+    setAmplitude(vibStrengths[strength]);
+
+    timeoutMs = vibEffects[effect];
+
+    status = activate(timeoutMs);
+    if (!status.isOk())
+        return status;
+
+    if (callback != nullptr) {
+        std::thread([=] {
+            LOG(VERBOSE) << "Starting perform on another thread";
+            usleep(timeoutMs * 1000);
+            LOG(VERBOSE) << "Notifying perform complete";
+            callback->onComplete();
+        }).detach();
+    }
+
+    *_aidl_return = timeoutMs;
+    return ndk::ScopedAStatus::ok();
+#else
+ndk::ScopedAStatus Vibrator::perform(Effect /* effect */, EffectStrength /* strength */,
+                                     const std::shared_ptr<IVibratorCallback>& /* callback */,
+                                     int32_t* /* _aidl_return */) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+#endif
 }
 
-ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_return __unused) {
+#ifdef VIBRATOR_SUPPORTS_EFFECTS
+ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_return) {
+    for (auto const& pair : vibEffects)
+        _aidl_return->push_back(pair.first);
+#else
+ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* /* _aidl_return */) {
+#endif
     return ndk::ScopedAStatus::ok();
 }
 
+#ifdef VIBRATOR_SUPPORTS_EFFECTS
+ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
+    int32_t intensity;
+
+    if (amplitude <= 0.0f || amplitude > 1.0f)
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_ILLEGAL_ARGUMENT));
+
+    LOG(VERBOSE) << "Setting amplitude: " << amplitude;
+
+    intensity = amplitude * mVibratorStrengthMax;
+
+    LOG(VERBOSE) << "Setting intensity: " << intensity;
+
+    if (mVibratorStrengthSupported)
+        setNode(kVibratorStrength, intensity);
+
+    return ndk::ScopedAStatus::ok();
+#else
 ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+#endif
 }
 
 ndk::ScopedAStatus Vibrator::setExternalControl(bool enabled __unused) {
