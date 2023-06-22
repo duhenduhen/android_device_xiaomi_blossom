@@ -1046,6 +1046,10 @@ on boot
 #Power Manager
     write /sys/power/pm_freeze_timeout 2000
 
+#SELinux nodes, hide permissive state
+    chmod 0640 /sys/fs/selinux/enforce
+    chmod 0440 /sys/fs/selinux/policy
+
 on property:ro.board.platform=mt6753
     chown system system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
     chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
