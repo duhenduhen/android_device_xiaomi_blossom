@@ -40,6 +40,9 @@ BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 # Display
 TARGET_SCREEN_DENSITY := 320
 
+# FM Radio
+BOARD_HAVE_MTK_FM := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_blossom
 TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_blossom
