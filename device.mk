@@ -303,6 +303,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayBlossom \
     SettingsOverlayBlossom \
     SettingsProviderOverlayBlossom \
+    SystemUIOverlayBlossom \
     TelephonyOverlayBlossom
 
 # Rootdir
