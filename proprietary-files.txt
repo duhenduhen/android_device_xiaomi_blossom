@@ -39,6 +39,7 @@ vendor/lib/libaudioloudc.so
 vendor/lib/libaudioprimarydevicehalifclient.so
 vendor/lib/libaudiotoolkit_vendor.so
 vendor/lib/libaurisysdemo.so
+-vendor/lib/libalsautils.so:vendor/lib/libalsautils-v30.so
 vendor/lib/libblisrc32_vendor.so
 vendor/lib/libmsnr.so
 vendor/lib/libspeech_enh_lib.so
