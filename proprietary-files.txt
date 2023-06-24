@@ -1,4 +1,4 @@
-# All blobs from dandelion-user 11 RP1A.200720.011 V12.5.9.0.RCDINXM release-keys, unless pinned
+# All blobs from angelican-user 11 RP1A.200720.011 V12.5.3.0.RCSMIXM release-keys, unless pinned
 # Teracube 2e blobs from Teracube/Teracube_2e/Teracube_2e:11/RP1A.200720.011/202111011925:user/release-keys
 # hawaiipl blobs from motorola/hawaiipl_g/hawaiipl:12/STB32.36-99-1/99-1:user/release-keys
 # merlin-11 blobs from Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.6.0.RJOINXM:user/release-keys
@@ -1298,7 +1298,6 @@ vendor/lib/libverno.so
 vendor/lib/libvolte_core_shr.so
 vendor/lib/libvolte_xdmc_shr.so
 vendor/lib/libvt_custom.so
-vendor/lib/libwapi.so
 
 # Radio (IMS - Hardware)
 vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
@@ -1339,10 +1338,13 @@ vendor/lib64/libteeclientjni.so|4a4827b095102935cec9b037c28d5b5566fce38e
 vendor/lib64/libteeclientjni@1.1.so|3bc0c8492dcdd1dddd70c5d9d2e206c29b7d6ae1
 
 # TEE (TA)
+vendor/thh/ta/04190000000000000000000000000000.ta
 vendor/thh/ta/08010203000000000000000000000000.ta
 vendor/thh/ta/14498ace2a8f11e880c8509a4c146f4c.ta
 vendor/thh/ta/3d08821c33a611e6a1fa089e01c83aa2.ta
+vendor/thh/ta/7778c03fc30c4dd0a319ea29643d4d4b.ta
 vendor/thh/ta/86f623f6a2994dfdb560ffd3e5a62c29.ta
+vendor/thh/ta/93feffccd8ca11e796c7c7a21acb4932.ta
 vendor/thh/ta/c09c9c5daa504b78b0e46eda61556c3a.ta
 vendor/thh/ta/c1882f2d885e4e13a8c8e2622461b2fa.ta
 vendor/thh/ta/d91f322ad5a441d5955110eda3272fc0.ta
