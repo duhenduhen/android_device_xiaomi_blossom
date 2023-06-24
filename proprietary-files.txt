@@ -1174,8 +1174,6 @@ vendor/lib/libpowerhalwrap_vendor.so
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
--vendor/etc/vintf/manifest/power-default.xml:vendor/etc/vintf/manifest/power-mediatek.xml
-vendor/lib/android.hardware.power-service-mediatek.so
 vendor/lib/hw/power.default.so
 vendor/lib/hw/power.mt6765.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.1-impl.so
