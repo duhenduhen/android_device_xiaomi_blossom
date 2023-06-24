@@ -388,6 +388,11 @@ on post-fs-data
     chmod 0775 /vendor/xbin/MPED
     chmod 0660 /dev/gps_emi
 
+# Fingerprint
+    mkdir /data/vendor/focaltech 0760 system system
+    mkdir /data/vendor/fpc 0777 system system
+    restorecon /data/vendor/focaltech
+
 # -----------------------
 # Add by MTK
     # SCP log
@@ -1050,6 +1055,21 @@ on boot
     chmod 0640 /sys/fs/selinux/enforce
     chmod 0440 /sys/fs/selinux/policy
 
+# Fingerprint
+    chown system system /sys/devices/platform/11010000.spi/spi_master/spi1/spi1.0/irq
+    chown system system /sys/devices/platform/11010000.spi/spi_master/spi1/spi1.0/wakeup_enable
+    chown system system /sys/devices/platform/11010000.spi/spi_master/spi1/spi1.0/modalias
+    chown system system /sys/devices/platform/11010000.spi/spi_master/spi1/spi1.0/clk_enable
+    chown system system /sys/devices/platform/11010000.spi/spi_master/spi1/spi1.0/authen_fd/performance
+    chown system system /dev/focaltech_fp
+    chmod 0660 /dev/focaltech_fp
+    chmod 664 /proc/ppm/enabled
+    chown system system /proc/ppm/enabled
+    chmod 664 /proc/ppm/policy/ut_fix_core_num
+    chown system system /proc/ppm/policy/ut_fix_core_num
+    chmod 664 /proc/ppm/policy/ut_fix_freq_idx
+    chown system system /proc/ppm/policy/ut_fix_freq_idx
+
 on property:ro.board.platform=mt6753
     chown system system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
     chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
@@ -1250,4 +1270,20 @@ service osi /system/bin/osi
     oneshot
     #seclabel u:r:osi:s0
 
+# Fingerprint
+service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
+    # "class hal" causes a race condition on some devices due to files created
+    # in /data. As a workaround, postpone startup until later in boot once
+    # /data is mounted.
+    class late_start
+    user system
+    group system input uhid
+    # writepid /dev/cpuset/system-background/tasks
 
+service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.fingerprint@1.0-service
+    class late_start
+    user system
+    group system
+
+on property:ro.hardware.fp.restartimes=max
+    stop vendor.fps_hal
