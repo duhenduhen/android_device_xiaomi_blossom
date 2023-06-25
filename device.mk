@@ -276,11 +276,11 @@ PRODUCT_COPY_FILES += \
 
 # Properties
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/odm,$(TARGET_COPY_OUT_ODM)/etc) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/product,$(TARGET_COPY_OUT_PRODUCT)/etc) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/system,$(TARGET_COPY_OUT_SYSTEM)/etc) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/system_ext,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/vendor,$(TARGET_COPY_OUT_VENDOR)/etc)
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/odm,$(TARGET_COPY_OUT_ODM)/etc/properties) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/product,$(TARGET_COPY_OUT_PRODUCT)/etc/properties) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/system,$(TARGET_COPY_OUT_SYSTEM)/etc/properties) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/system_ext,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/properties) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/hwname/vendor,$(TARGET_COPY_OUT_VENDOR)/etc/properties)
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
