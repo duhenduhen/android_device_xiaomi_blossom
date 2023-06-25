@@ -891,6 +891,7 @@ vendor/firmware/novatek_ts_truly_fw.bin
 vendor/firmware/novatek_ts_truly_mp.bin
 vendor/firmware/rgx.fw
 vendor/firmware/rgx.sh
+vendor/firmware/sec_s3nrn82_firmware.bin
 vendor/firmware/soc1_0_patch_mcu_1_1_hdr.bin
 vendor/firmware/soc1_0_ram_bt_1_1_hdr.bin
 vendor/firmware/soc1_0_ram_mcu_1_1_hdr.bin
@@ -1133,6 +1134,16 @@ vendor/etc/init/init.wmt_drv.rc
 
 # Neural Networks
 vendor/lib/libneuropilot_hal_utils.so
+
+# NFC
+vendor/bin/hw/android.hardware.nfc@1.2-service.sec
+vendor/etc/init/android.hardware.nfc@1.2-service.sec.rc
+vendor/etc/init/init.nfc.sec.rc
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-sec-vendor.conf
+vendor/etc/nfc/nfc_whitelist.properties
+vendor/etc/sec_s3nrn82_rfreg.bin
+vendor/lib/nfc_nci_sec.so
 
 # NVRAM - from Teracube 2e
 vendor/bin/atcid|c0137c01d46704fe0b7432a0257160245ffa51d6
