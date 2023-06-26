@@ -1,7 +1,5 @@
 # MTK project .rc configure
 
-import init.mt6765.usb.rc
-
 on early-init
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules helloworld.ko mt6357-accdet.ko trace_mmstat.ko
 
