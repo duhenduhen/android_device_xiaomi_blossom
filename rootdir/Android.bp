@@ -69,6 +69,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.mt6765.volte.rc",
+    src: "etc/init.mt6765.volte.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.project.rc",
     src: "etc/init.project.rc",
     sub_dir: "init/hw",

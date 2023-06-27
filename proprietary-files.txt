@@ -1282,6 +1282,11 @@ vendor/lib/vendor.mediatek.hardware.mms@1.5.so|7cd498effd2be064fb034bcf23ec77f9c
 vendor/lib/vendor.mediatek.hardware.mtkradioex@2.0.so|0692f60324bcc873a044b16e2f5991826289abb1
 vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so|30864b505d66438cb0ae06c8a0e02488c02d187a
 
+# Radio (IMS)
+vendor/bin/volte_imcb:vendor/bin/volte_imcb.mt6765
+vendor/bin/volte_stack:vendor/bin/volte_stack.mt6765
+vendor/bin/volte_ua:vendor/bin/volte_ua.mt6765
+
 # Radio (IMS) - from dandelion
 vendor/bin/dmc_core|ff85e28cc6f98224a6344be52b2247bf25503dae
 vendor/bin/epdg_wod|ef9b7972d60b6958e3250907d6ab78f6f224a59d
