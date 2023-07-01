@@ -353,7 +353,6 @@ PRODUCT_PACKAGES += \
     ueventd.mt6765.rc
 
 PRODUCT_PACKAGES += \
-    fstab.enableswap \
     fstab.mt6762 \
     fstab.mt6765
 
