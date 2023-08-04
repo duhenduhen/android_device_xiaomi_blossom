@@ -26,8 +26,15 @@ vendor/lib/libudf.so|7cdbb5c5c616dbbec6afcd75d5cc41f915ff82d6
 vendor/lib64/libudf.so|66324571c3f69057b250bce3b0d58c386da0c25b
 
 # Audio
+vendor/bin/audiocmdservice_atci
+vendor/etc/init/audiocmdservice_atci.rc
+vendor/lib/hw/audio.primary.mt6765.so
+vendor/lib/hw/audio.r_submix.mt6765.so
+vendor/lib/hw/audio.usb.mt6765.so
+vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
+-vendor/lib/libalsautils.so:vendor/lib/libalsautils-v30.so
 vendor/lib/libaudio_param_parser-vnd.so
 vendor/lib/libaudiocompensationfilter_vendor.so
 vendor/lib/libaudiocompensationfilterc.so
@@ -40,31 +47,18 @@ vendor/lib/libaudioloudc.so
 vendor/lib/libaudioprimarydevicehalifclient.so
 vendor/lib/libaudiotoolkit_vendor.so
 vendor/lib/libaurisysdemo.so
--vendor/lib/libalsautils.so:vendor/lib/libalsautils-v30.so
+vendor/lib/libbessound_hd_mtk_vendor.so
 vendor/lib/libblisrc32_vendor.so
+vendor/lib/libcvsd_mtk.so
+vendor/lib/libifcutils_mtk.so
+vendor/lib/libmsbc_mtk.so
 vendor/lib/libmsnr.so
 vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libstereoinfoaccessor_vsdof.so
-
-# Audio (Hardware)
-vendor/lib/hw/audio.primary.mt6765.so
-vendor/lib/hw/audio.r_submix.mt6765.so
-vendor/lib/hw/audio.usb.mt6765.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 
-# Audio (Bin)
-vendor/bin/audiocmdservice_atci
-vendor/etc/init/audiocmdservice_atci.rc
-
-# Audio (MediaTek)
-vendor/lib/libMtkSpeechEnh.so
-vendor/lib/libbessound_hd_mtk_vendor.so
-vendor/lib/libcvsd_mtk.so
-vendor/lib/libifcutils_mtk.so
-vendor/lib/libmsbc_mtk.so
-
-# Audio (Configs)
+# Audio Configs
 vendor/etc/audio_param/AudioParamOptions.xml
 vendor/etc/audio_param/BtInfo_AudioParam.xml
 vendor/etc/audio_param/BtInfo_ParamUnitDesc.xml
@@ -289,6 +283,7 @@ vendor/lib64/libbt-vendor.so|b046a797432801caf400eb319cbff77f7caa798a
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so|d62dc09391d59363e1b78aebed4d05e7103b87ac
 
 # Camera
+vendor/bin/hw/camerahalserver
 vendor/bin/lib3a.ccu.dm
 vendor/bin/lib3a.ccu.pm
 vendor/bin/libccu_gc_gc02m10_ii.dm
@@ -335,6 +330,24 @@ vendor/bin/libccu_ov_ov02b_iiii.dm
 vendor/bin/libccu_ov_ov02b_iiii.pm
 vendor/bin/libccu_ov_ov02b_v.dm
 vendor/bin/libccu_ov_ov02b_v.pm
+vendor/etc/camera/golden.bin
+vendor/etc/camera/golden2.bin
+vendor/etc/camera/golden3.bin
+vendor/etc/camera/golden4.bin
+vendor/etc/camera/golden5.bin
+vendor/etc/camera/golden6.bin
+vendor/etc/camera/model/capture_model/cache_data
+vendor/etc/camera/model/capture_model/model_mdl_cache
+vendor/etc/camera/model/capture_model/segment_model
+vendor/etc/camera/model/preview_model/mask/cache_data
+vendor/etc/camera/model/preview_model/mask/model_mdl_cache
+vendor/etc/camera/model/preview_model/mask/segment_model
+vendor/etc/camera/model/preview_model/score/cache_data
+vendor/etc/camera/model/preview_model/score/model_mdl_cache
+vendor/etc/camera/model/preview_model/score/segment_model
+vendor/etc/camera/waDumpinputMainImg_3264x2448.nv21
+vendor/etc/camera/waDumpinputSubImg_1600x1200.nv21
+vendor/etc/init/camerahalserver.rc
 vendor/lib/gc_gc02m10_ii_IdxMgr.so
 vendor/lib/gc_gc02m10_ii_tuning.so
 vendor/lib/gc_gc02m1_ii_IdxMgr.so
@@ -418,6 +431,10 @@ vendor/lib/libSonyIMX519PdafLibraryWrapper.so
 vendor/lib/lib_lowlight.so
 vendor/lib/libabfadp.so
 vendor/lib/libacdk.so
+vendor/lib/libarcsoft_beautyshot.so
+vendor/lib/libarcsoft_high_dynamic_range.so
+vendor/lib/libarcsoft_low_light_hdr.so
+vendor/lib/libarcsoft_supernight.so
 vendor/lib/libc++_shared.so
 vendor/lib/libcam.feature_utils.so
 vendor/lib/libcam.hal3a.cctsvr.so
@@ -564,36 +581,21 @@ vendor/lib/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.security@1.0.so
 
-# Camera (Arcsoft)
-vendor/lib/libarcsoft_beautyshot.so
-vendor/lib/libarcsoft_high_dynamic_range.so
-vendor/lib/libarcsoft_low_light_hdr.so
-vendor/lib/libarcsoft_supernight.so
-
-# Camera (Bin)
-vendor/bin/hw/camerahalserver
-vendor/etc/init/camerahalserver.rc
-
-# Camera (Configs)
-vendor/etc/camera/golden.bin
-vendor/etc/camera/golden2.bin
-vendor/etc/camera/golden3.bin
-vendor/etc/camera/golden4.bin
-vendor/etc/camera/golden5.bin
-vendor/etc/camera/golden6.bin
-vendor/etc/camera/model/capture_model/cache_data
-vendor/etc/camera/model/capture_model/model_mdl_cache
-vendor/etc/camera/model/capture_model/segment_model
-vendor/etc/camera/model/preview_model/mask/cache_data
-vendor/etc/camera/model/preview_model/mask/model_mdl_cache
-vendor/etc/camera/model/preview_model/mask/segment_model
-vendor/etc/camera/model/preview_model/score/cache_data
-vendor/etc/camera/model/preview_model/score/model_mdl_cache
-vendor/etc/camera/model/preview_model/score/segment_model
-vendor/etc/camera/waDumpinputMainImg_3264x2448.nv21
-vendor/etc/camera/waDumpinputSubImg_1600x1200.nv21
-
 # Certs
+vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootCA.crt
+vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootG2.crt
+vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootG3.crt
+vendor/etc/ipsec/ipsec.d/cacerts/Entrust.net_Certification_Authority_2048.cer
+vendor/etc/ipsec/ipsec.d/cacerts/GeoTrust_PCA_G3_Root.der
+vendor/etc/ipsec/ipsec.d/cacerts/GeoTrust_Primary_CA.der
+vendor/etc/ipsec/ipsec.d/cacerts/GeoTrust_Primary_CA_G2_ECC.der
+vendor/etc/ipsec/ipsec.d/cacerts/Root-R3.cer
+vendor/etc/ipsec/ipsec.d/cacerts/Root_CA_1003.crt
+vendor/etc/ipsec/ipsec.d/cacerts/VeriSignClass3G4.der
+vendor/etc/ipsec/ipsec.d/cacerts/VeriSignClass3G5.der
+vendor/etc/ipsec/ipsec.d/cacerts/VeriSignUniversalRootCertification.der
+vendor/etc/ipsec/ipsec.d/cacerts/gold.cer
+vendor/etc/ipsec/ipsec.d/cacerts/thawte.der
 vendor/etc/security/cacerts/00673b5b.0
 vendor/etc/security/cacerts/04f60c28.0
 vendor/etc/security/cacerts/0d69c7e1.0
@@ -757,73 +759,6 @@ vendor/etc/security/cacerts_supl/lab/b805b58a.0
 vendor/etc/security/cacerts_supl/lab/ed7b215e.0
 vendor/etc/security/cacerts_supl/lab/ef4b31e6.0
 
-# Certs (ipsec)
-vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootCA.crt
-vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootG2.crt
-vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootG3.crt
-vendor/etc/ipsec/ipsec.d/cacerts/Entrust.net_Certification_Authority_2048.cer
-vendor/etc/ipsec/ipsec.d/cacerts/GeoTrust_PCA_G3_Root.der
-vendor/etc/ipsec/ipsec.d/cacerts/GeoTrust_Primary_CA.der
-vendor/etc/ipsec/ipsec.d/cacerts/GeoTrust_Primary_CA_G2_ECC.der
-vendor/etc/ipsec/ipsec.d/cacerts/Root-R3.cer
-vendor/etc/ipsec/ipsec.d/cacerts/Root_CA_1003.crt
-vendor/etc/ipsec/ipsec.d/cacerts/VeriSignClass3G4.der
-vendor/etc/ipsec/ipsec.d/cacerts/VeriSignClass3G5.der
-vendor/etc/ipsec/ipsec.d/cacerts/VeriSignUniversalRootCertification.der
-vendor/etc/ipsec/ipsec.d/cacerts/gold.cer
-vendor/etc/ipsec/ipsec.d/cacerts/thawte.der
-
-# Display - from Teracube 2e
-vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek|19dfaae0aa1b05cb7bfa3856ad6266b07b059e7b
-vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service|b0ae952c18fef47b7b45a6d9cb6bc5548597eac4
-vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc|dd48a1013b401d4ff2f23645709b299578c2e7cc
-vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc|02de6be7d4968679afd1278d8a95ff2280da293b
-vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|66ccda77fb3369be66f01366a6dc79eafdeb28de
-vendor/lib/hw/gralloc.rogue.so|c7313b187c0ecd02e9aeeddaa22fde5f08a3b028
-vendor/lib/hw/memtrack.mt6765.so|f53facee7224257af2b24dc8cf057e4ee954c9b0
-vendor/lib/hw/vendor.mediatek.hardware.pq@2.6-impl.so|0ad88148812e92bc0c12f513ff62a4d8c62aa88a
-vendor/lib/libDefaultFpsActor.so|cb3427903bcba398ac6ada5c40b05368428ae00f
-vendor/lib/libNoFpsActor.so|3c362f5c941d925cee131f6325c6acfeb4db61de
-vendor/lib/libgralloc_extra.so|b06cb354c5072829653826b1c80b7f6c30d35772
-vendor/lib/libgralloc_metadata.so|2a48a8166a939b473de5eb79e03328f7c15adccf
-vendor/lib/libgralloctypes_mtk.so|e235e44c2090f433a28b0bcf89ca206b25b75c8b
-vendor/lib/libion_mtk.so|4531c4a0fa16f4795a7427cb53a6d84d33653bc8
-vendor/lib/libion_ulit.so|b042f83ad1d5c869f3c5615a4d78961de0ad5a37
-vendor/lib/libmemtrack_GL.so|a4ee5cecc85c294ac7f09e1ba33d98c51d1baba2
-vendor/lib/libminiui.so|6bd8a996273818ebec5c9ff043cf03ef3ce5e661
-vendor/lib/libpq_cust_base.so|4c778041121cde62449e361fc5fc6c4cbcfb7e00
-vendor/lib/libpq_prot.so|5b870737429c829c00e4a630e06bf35927c2753d
-vendor/lib/vendor.mediatek.hardware.pq@2.0.so|0cb7e0ec063f3221578c2a906a7e0f43881b895c
-vendor/lib/vendor.mediatek.hardware.pq@2.1.so|ad8a01f3a9e9ed07f9ab6218acc4df21ae20aa4f
-vendor/lib/vendor.mediatek.hardware.pq@2.2.so|d552348cd9dcfabe520222d2668f14cdc3b307d0
-vendor/lib/vendor.mediatek.hardware.pq@2.3.so|c27ea1607fdbfd6fd7aa4139374f71ff5826fec7
-vendor/lib/vendor.mediatek.hardware.pq@2.4.so|2b013657a26df285acccba14ce93f98fabc7983b
-vendor/lib/vendor.mediatek.hardware.pq@2.5.so|11f5b18d08741e0c6fba0fd8274bca1179f85f94
-vendor/lib/vendor.mediatek.hardware.pq@2.6.so|cf4d8adbf6cb28dfbc7e2fbd9ac200f6c48240a9
-vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|1a2a0aaa42ef240012c67d8c0b6a8388e8a38e13
-vendor/lib64/hw/gralloc.rogue.so|3180e1865b05bf93a01bcba73f647947ebd414c5
-vendor/lib64/hw/hwcomposer.mt6765.so|a8637b5f85b048ab9a43c5dd6aa9b84151ef33ca
-vendor/lib64/hw/memtrack.mt6765.so|417cfb38dae316e7be14448ceca0fc5dffc543d6
-vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so|832202fe028cc7c3d7494483e2598ea9441cfb89
-vendor/lib64/libDefaultFpsActor.so|0146d712e16eaf71f9976aa9429c86f43eb8d9a4
-vendor/lib64/libNoFpsActor.so|a72a4ed0f0550e6435dfc026407cc33a3e02d0e2
-vendor/lib64/libgralloc_extra.so|c0cdafba1849e72cd202c548ea1599743b2d3941
-vendor/lib64/libgralloc_metadata.so|2a917aff4b1e9144c2d6a71fa3af4e2ca989f591
-vendor/lib64/libgralloctypes_mtk.so|1bde7985b9b2c23de613c77f1fce00592778a6b3
-vendor/lib64/libion_mtk.so|0f05253320add31338ba567427e1ccf0d5a5aafb
-vendor/lib64/libion_ulit.so|77cf7d32fe4381254fb7ee1df35cd1228c01d63b
-vendor/lib64/libmemtrack_GL.so|322d42fe82e6765d990d95b7541df78ae6c39ac5
-vendor/lib64/libminiui.so|f215c3bc3da5ddc341397843a6621fdccc09a05e
-vendor/lib64/libpq_cust_base.so|b87ee98ca30403466dace9a1a6968a01f5b40fac
-vendor/lib64/libpq_prot.so|a747810a2eac550205232c8a7dd1b401f40db611
-vendor/lib64/vendor.mediatek.hardware.pq@2.0.so|7a48a148c4f8d5cc687338f462255ff6a0f94b5e
-vendor/lib64/vendor.mediatek.hardware.pq@2.1.so|69d92f0007e0c00234687c9a677eb14421e43d86
-vendor/lib64/vendor.mediatek.hardware.pq@2.2.so|b825ffbb2773d0c09b418e05365f197ae3498e4c
-vendor/lib64/vendor.mediatek.hardware.pq@2.3.so|38c01b592b497a62cc6214df215d35641985a088
-vendor/lib64/vendor.mediatek.hardware.pq@2.4.so|ffd3113659fec1fdcd08d7b5b380160a719d18a0
-vendor/lib64/vendor.mediatek.hardware.pq@2.5.so|850548786fa99ba4275db1f69d59f329ca07b1cb
-vendor/lib64/vendor.mediatek.hardware.pq@2.6.so|b8bfc80ede29d22b1a92ba25990fbcf62fb40c01
-
 # Charger
 bin/kpoc_charger
 etc/init/kpoc_charger.rc
@@ -844,8 +779,6 @@ vendor/lib64/mediadrm/libwvdrmengine.so|b197d579899dac2d6a8dff2a98d44b7a61aa1b95
 # Engineer Mode
 vendor/bin/em_hidl
 vendor/etc/init/em_hidl_user.rc
-
-# Engineer Mode (Hardware)
 vendor/lib/vendor.mediatek.hardware.engineermode@1.0.so
 vendor/lib/vendor.mediatek.hardware.engineermode@1.1.so
 vendor/lib/vendor.mediatek.hardware.engineermode@1.2.so
@@ -906,16 +839,20 @@ vendor/firmware/soc3_0_ram_mcu_e1_hdr.bin
 # GPS
 vendor/bin/bip
 vendor/bin/charon
+vendor/bin/hw/android.hardware.gnss@2.1-service-mediatek
 vendor/bin/ipsec_mon
 vendor/bin/lbs_hidl_service
 vendor/bin/mtk_agpsd
 vendor/bin/starter
 vendor/bin/stroke
+vendor/etc/init/android.hardware.gnss@2.1-service-mediatek.rc
 vendor/etc/init/init.bip.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/lbs_hidl_service.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/slp_conf
+vendor/lib/hw/android.hardware.gnss@2.1-impl-mediatek.so
+vendor/lib/hw/gps.default.so
 vendor/lib/lbs_hidl_service-impl.so
 vendor/lib/libDR.so
 vendor/lib/libcharon-ss.so
@@ -926,15 +863,9 @@ vendor/lib/libmnl.so
 vendor/lib/libsimaka.so
 vendor/lib/libssl-mdapp.so
 vendor/lib/libstrongswan.so
-
-# GPS (Hardware)
-vendor/bin/hw/android.hardware.gnss@2.1-service-mediatek
-vendor/etc/init/android.hardware.gnss@2.1-service-mediatek.rc
-vendor/lib/hw/android.hardware.gnss@2.1-impl-mediatek.so
-vendor/lib/hw/gps.default.so
 vendor/lib/vendor.mediatek.hardware.lbs@1.0.so
 
-# GPS (Configs)
+# GPS Configs
 vendor/etc/gnss/agps_profiles_conf2.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_US.xml
@@ -961,23 +892,31 @@ vendor/lib/hw/libSoftGatekeeper.so|86d13f4097659098f9f337b40221a25b25ea0d0b
 vendor/lib64/hw/gatekeeper.beanpod.so|8b19e982a760fbbc01124bf33ac94c7a452a71cb
 vendor/lib64/hw/libSoftGatekeeper.so|13f388a6e20cb3e696ee53d444a0e2042834c021
 
-# Graphics
-vendor/etc/meow.cfg
-vendor/lib/egl/egl.cfg
-
 # Graphics - from Teracube 2e
+vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek|19dfaae0aa1b05cb7bfa3856ad6266b07b059e7b
 vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service|3c2bb2fceddbdf327772faa8542548809854d32f
+vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service|b0ae952c18fef47b7b45a6d9cb6bc5548597eac4
+vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc|dd48a1013b401d4ff2f23645709b299578c2e7cc
 vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc|6940f9990a4d771397dc8c41a31df2df4b6d0790
+vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc|02de6be7d4968679afd1278d8a95ff2280da293b
+vendor/etc/meow.cfg|59b2389725cc6805794fc4d1febbb5d6aa88e042
 -vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml|0c9f825551d32de14ca3d0515b545ea71300c5bb
+vendor/lib/egl/egl.cfg|e9cf0173f529306ae3bf95a91d8ac221745968d0
 vendor/lib/egl/libEGL_mtk.so|4c0ad8d2fcc44e857bd05a5f7262c52ea821e22a
 vendor/lib/egl/libGLES_meow.so|23d829a3ab2332070cec62939f897dfa5d37d346
 vendor/lib/egl/libGLESv1_CM_mtk.so|8f17889b3e3210c1473fa6e7d2a002d5592033e7
 vendor/lib/egl/libGLESv2_mtk.so|b98f6c374fab1a0eeda6a5bde391a206f0104151
 vendor/lib/egl/libMEOW_gift.so|6c65872935d0d981bac8da64f12e49fa274a39ec
 vendor/lib/egl/libMEOW_trace.so|fdb9fafc379afdadb830c9e8ffaac4b7c369ad27
+vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|66ccda77fb3369be66f01366a6dc79eafdeb28de
+vendor/lib/hw/gralloc.rogue.so|c7313b187c0ecd02e9aeeddaa22fde5f08a3b028
+vendor/lib/hw/memtrack.mt6765.so|f53facee7224257af2b24dc8cf057e4ee954c9b0
+vendor/lib/hw/vendor.mediatek.hardware.pq@2.6-impl.so|0ad88148812e92bc0c12f513ff62a4d8c62aa88a
 vendor/lib/hw/vulkan.mt6765.so|9724c4c8a719bada9988a9dee22969bb1b0ab1af
+vendor/lib/libDefaultFpsActor.so|cb3427903bcba398ac6ada5c40b05368428ae00f
 vendor/lib/libFrameRecord.so|6ed7e98b423edb6367a8b0a92ef2d44d9ecc449e
 vendor/lib/libIMGegl.so|88f1f9686a09e0026f0116a1ed05848031c13db9
+vendor/lib/libNoFpsActor.so|3c362f5c941d925cee131f6325c6acfeb4db61de
 vendor/lib/libOpenCL.so|bc79d4699a666d11a8b4a78e35f4dcafb5128eff
 vendor/lib/libPVRMtkutils.so|680d645aabb534c0dcac534938d4702c8cf56759
 vendor/lib/libPVROCL.so|c024b3f26faca484c575f7128c6a2ef13bde3720
@@ -987,19 +926,44 @@ vendor/lib/libged.so|a8698981d8bd437073ea1d26e110f3bd01f6fe29
 vendor/lib/libglslcompiler.so|db17e765e7cf0bc1f571a2206be3cd4e511c1fa1
 vendor/lib/libgpu_aux.so|6f8bada392baba53934a1edad5cda6ce59fa78a2
 vendor/lib/libgpud.so|7f0c04dfd9db12d9501a9fd5ef8cc92310e70349
+vendor/lib/libgralloc_extra.so|b06cb354c5072829653826b1c80b7f6c30d35772
+vendor/lib/libgralloc_metadata.so|2a48a8166a939b473de5eb79e03328f7c15adccf
+vendor/lib/libgralloctypes_mtk.so|e235e44c2090f433a28b0bcf89ca206b25b75c8b
+vendor/lib/libion_mtk.so|4531c4a0fa16f4795a7427cb53a6d84d33653bc8
+vendor/lib/libion_ulit.so|b042f83ad1d5c869f3c5615a4d78961de0ad5a37
+vendor/lib/libmemtrack_GL.so|a4ee5cecc85c294ac7f09e1ba33d98c51d1baba2
+vendor/lib/libminiui.so|6bd8a996273818ebec5c9ff043cf03ef3ce5e661
 vendor/lib/libmpvr.so|a3d86bed6f3546f27b2c472e975757c7d2fd3a2a
 vendor/lib/libpixelflinger.so|7a7e2179cecaf39614411c94c58513dfaf46e5a3
+vendor/lib/libpq_cust_base.so|4c778041121cde62449e361fc5fc6c4cbcfb7e00
+vendor/lib/libpq_prot.so|5b870737429c829c00e4a630e06bf35927c2753d
 vendor/lib/libsrv_um.so|8bc3ce608e7a807b6acde701a76de7bb7e019bb0
+vendor/lib/libufwriter.so|1a88b6b068f37fc00201031298d1bbd14825f386
+vendor/lib/libusc.so|bd24c061c5e3cf0b3f9cd84b4012ad20962305ed
 vendor/lib/vendor.mediatek.hardware.gpu@1.0.so|525497a7679919adeca9e8df91c9c936a710563b
+vendor/lib/vendor.mediatek.hardware.pq@2.0.so|0cb7e0ec063f3221578c2a906a7e0f43881b895c
+vendor/lib/vendor.mediatek.hardware.pq@2.1.so|ad8a01f3a9e9ed07f9ab6218acc4df21ae20aa4f
+vendor/lib/vendor.mediatek.hardware.pq@2.2.so|d552348cd9dcfabe520222d2668f14cdc3b307d0
+vendor/lib/vendor.mediatek.hardware.pq@2.3.so|c27ea1607fdbfd6fd7aa4139374f71ff5826fec7
+vendor/lib/vendor.mediatek.hardware.pq@2.4.so|2b013657a26df285acccba14ce93f98fabc7983b
+vendor/lib/vendor.mediatek.hardware.pq@2.5.so|11f5b18d08741e0c6fba0fd8274bca1179f85f94
+vendor/lib/vendor.mediatek.hardware.pq@2.6.so|cf4d8adbf6cb28dfbc7e2fbd9ac200f6c48240a9
 vendor/lib64/egl/libEGL_mtk.so|93d3cc52d48d5c5d931deebf6f0a1f1dc0151d95
 vendor/lib64/egl/libGLES_meow.so|d597714dd3e5e70f611b5c1fabb6b541723d4088
 vendor/lib64/egl/libGLESv1_CM_mtk.so|83d34b63e90b0d302079a651fe99024078740319
 vendor/lib64/egl/libGLESv2_mtk.so|3e4be56b935e80827beb2741366fb81b306d6f75
 vendor/lib64/egl/libMEOW_gift.so|98ddf8ce6fe2111b47aa71eceee4479f3533627f
 vendor/lib64/egl/libMEOW_trace.so|7c6ef311cf4ffba7af7e660e936427820d0767c8
+vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|1a2a0aaa42ef240012c67d8c0b6a8388e8a38e13
+vendor/lib64/hw/gralloc.rogue.so|3180e1865b05bf93a01bcba73f647947ebd414c5
+vendor/lib64/hw/hwcomposer.mt6765.so|a8637b5f85b048ab9a43c5dd6aa9b84151ef33ca
+vendor/lib64/hw/memtrack.mt6765.so|417cfb38dae316e7be14448ceca0fc5dffc543d6
+vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so|832202fe028cc7c3d7494483e2598ea9441cfb89
 vendor/lib64/hw/vulkan.mt6765.so|de4e51dee92d9a91b20052ec95406160dfa3d7f8
+vendor/lib64/libDefaultFpsActor.so|0146d712e16eaf71f9976aa9429c86f43eb8d9a4
 vendor/lib64/libFrameRecord.so|6d463d238bd52fc35218c864610be3bfebda4951
 vendor/lib64/libIMGegl.so|7bd53f6a9228cc25042bbb9040033ca2e5221956
+vendor/lib64/libNoFpsActor.so|a72a4ed0f0550e6435dfc026407cc33a3e02d0e2
 vendor/lib64/libOpenCL.so|5e54d0bb437bf0bd9eafc51738dd4bbb5fb138c1
 vendor/lib64/libPVRMtkutils.so|d9d6ef3e17e74d0286b3d56d210c5ce2e90d1fca
 vendor/lib64/libPVROCL.so|f5fe309e13dc58f9c194204df21f46a4a0a1453b
@@ -1009,16 +973,80 @@ vendor/lib64/libged.so|a5c6cb15ae077a198602b44fc33b94fb34536e19
 vendor/lib64/libglslcompiler.so|865edf0b4d6f5f1b18eefb76085bf8d72b35ad0f
 vendor/lib64/libgpu_aux.so|60f62146024454cb49f488845c0596b9ba9b09c4
 vendor/lib64/libgpud.so|dbacbef299d69f3ca942730efe3b11076f270a6a
+vendor/lib64/libgralloc_extra.so|c0cdafba1849e72cd202c548ea1599743b2d3941
+vendor/lib64/libgralloc_metadata.so|2a917aff4b1e9144c2d6a71fa3af4e2ca989f591
+vendor/lib64/libgralloctypes_mtk.so|1bde7985b9b2c23de613c77f1fce00592778a6b3
 vendor/lib64/libimageio.so|995eaaed4e721ca7a352aa2e55451bb075c3907e
 vendor/lib64/libimageio_plat_drv.so|ba574619d6dc5bc7e6fa15d1c868b9dcd1000ef0
 vendor/lib64/libimageio_plat_pipe.so|f4d0a3515c49c1296aa09918ece7c90d6fdcb3aa
+vendor/lib64/libion_mtk.so|0f05253320add31338ba567427e1ccf0d5a5aafb
+vendor/lib64/libion_ulit.so|77cf7d32fe4381254fb7ee1df35cd1228c01d63b
+vendor/lib64/libmemtrack_GL.so|322d42fe82e6765d990d95b7541df78ae6c39ac5
+vendor/lib64/libminiui.so|f215c3bc3da5ddc341397843a6621fdccc09a05e
 vendor/lib64/libmpvr.so|1c20d05b6b79b755f52173d0843b70f64044d82b
 vendor/lib64/libpixelflinger.so|3d932eec45e4133f91c47fb0d4dd92282cedee0b
-vendor/lib64/libufwriter.so|3fb3f69c2d32aab9bfa546fc97376069261167b2
+vendor/lib64/libpq_cust_base.so|b87ee98ca30403466dace9a1a6968a01f5b40fac
+vendor/lib64/libpq_prot.so|a747810a2eac550205232c8a7dd1b401f40db611
 vendor/lib64/libsrv_um.so|9ad413c5176a3c7d2fd30f092058c2562980f3e2
+vendor/lib64/libufwriter.so|3fb3f69c2d32aab9bfa546fc97376069261167b2
 vendor/lib64/libusc.so|8bee5fe51f8f38eb90141c67955162e77d9755d8
 vendor/lib64/libwifitest.so|e3eebbde7e588375ea4f1eb03e0e60cc8a396142
 vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so|0cbbf054f6476f8b6ee5a84da57dc388ce4b207a
+vendor/lib64/vendor.mediatek.hardware.pq@2.0.so|7a48a148c4f8d5cc687338f462255ff6a0f94b5e
+vendor/lib64/vendor.mediatek.hardware.pq@2.1.so|69d92f0007e0c00234687c9a677eb14421e43d86
+vendor/lib64/vendor.mediatek.hardware.pq@2.2.so|b825ffbb2773d0c09b418e05365f197ae3498e4c
+vendor/lib64/vendor.mediatek.hardware.pq@2.3.so|38c01b592b497a62cc6214df215d35641985a088
+vendor/lib64/vendor.mediatek.hardware.pq@2.4.so|ffd3113659fec1fdcd08d7b5b380160a719d18a0
+vendor/lib64/vendor.mediatek.hardware.pq@2.5.so|850548786fa99ba4275db1f69d59f329ca07b1cb
+vendor/lib64/vendor.mediatek.hardware.pq@2.6.so|b8bfc80ede29d22b1a92ba25990fbcf62fb40c01
+
+# IMS
+vendor/bin/volte_imcb:vendor/bin/volte_imcb.mt6765
+vendor/bin/volte_stack:vendor/bin/volte_stack.mt6765
+vendor/bin/volte_ua:vendor/bin/volte_ua.mt6765
+
+# IMS - from dandelion
+vendor/bin/dmc_core|ff85e28cc6f98224a6344be52b2247bf25503dae
+vendor/bin/epdg_wod|ef9b7972d60b6958e3250907d6ab78f6f224a59d
+vendor/bin/hw/vtservice_hidl|d505818a740e8f2dd49aee25b43ade53c0ed0aa5
+vendor/bin/mtk_pkm_service|4389916cf6e9231483e848d20ef39ece7f8baddd
+vendor/bin/muxreport|7baf75f5f583f22975356bd35af3932dc6def869
+vendor/bin/volte_imcb|385ac3f65b57b735d58f19e32031bf692a7b670b
+vendor/bin/volte_imsm_93|a2702e65d715705b92568136daa9780cfe66624a
+vendor/bin/volte_md_status|815bc17f5a3ff28f41d9621861845b9bc1e3fc09
+vendor/bin/volte_stack|ed7137329019811a94b716bc5615ecf6ee1b8ae4
+vendor/bin/volte_ua|2b3102875ad2456eaeb4bcbf43cbcb139d7108d8
+vendor/bin/wfca|36dfcffe63ae7831a1d48654518f5f97467836a5
+vendor/etc/init/dmc_core.rc|d33d5108033f9a701c69ad12b247ff300df2d875
+vendor/etc/init/gsm0710muxd.rc|4270e11cfcb97e9af386828b2ca4e81f54509f38
+vendor/etc/init/init.volte_imcb.rc|3c0942560baef055c30093b8edfa8f16b4e19a11
+vendor/etc/init/init.volte_imsm_93.rc|a3c41819d1a80b712b55e783dcb70458721634af
+vendor/etc/init/init.volte_md_status.rc|27b1de416a56741fef57c348e6245f974afc9605
+vendor/etc/init/init.volte_stack.rc|7f30e3a00e0f0f1f15abb01af48841cbdbd4c8eb
+vendor/etc/init/init.volte_ua.rc|0a0333c86796fa3d72e6290cdb7b6cc98fccbe17
+vendor/etc/init/init.vtservice_hidl.rc|f2e992214ed5bb99c2c2a135cf1f0996dba8a8a0
+vendor/etc/init/init.wfca.rc|053a9b70b214bd84a69acfb50729d5936300719f
+vendor/etc/init/init.wod.rc|314574ad7ed5d0facce4a1e4077a23ed9cdf6985
+vendor/etc/init/mtk_pkm_service.rc|5211f49d97dcee934961ff872c621c1fda68891d
+vendor/etc/init/muxreport.rc|c787dc0d7cbde63529f99f37917e568086288c4e
+vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so|5b69d7cfbf584aa8664f1659bb53c4e96d699af5
+vendor/lib/libasn1c_core.so|e917c6a23871585cd14662242cc9cfedff572016
+vendor/lib/libasn1c_mapi.so|42a82248b5fd9e93b8b35b80586e15ff1dc72795
+vendor/lib/libipsec_ims_shr.so|76160f3f756e2fdd7a17134ac1e264fd33b04680
+vendor/lib/libmnetlink_v104.so|0e97706d39d0d6c87da8b6d51d46025998c5aeff
+vendor/lib/libmtklimiter_vendor.so|52d2f8f1bb7f195e0001248ead492020ab75f290
+vendor/lib/libmtkshifter_vendor.so|a2e0747e74c4fe6189be8c95bf579e4bac65f4f6
+vendor/lib/libmtktinyxml.so|a5267a0e92c97c1597bbedf0b25988696093d5d7
+vendor/lib/libtranslator_mapi_v3.0.so|48a1a7971bbe8a02c95aa0a402e334272ef9664d
+vendor/lib/libtranslator_utils.so|d8f3097d77a588111100e5472f1d325c06754300
+vendor/lib/libverno.so|c0e7f04b93f85256448c008001f77154fc6e91ac
+vendor/lib/libvolte_core_shr.so|dcc2911441f461b50174313b2c2eade85f84b01b
+vendor/lib/libvolte_xdmc_shr.so|2f6c5d95c0a4c39e01146b51d47e32730bac2d37
+vendor/lib/libvt_custom.so|9226ebb9b4e29cc53033c1f9cc5be1b5e65a4c51
+vendor/lib/vendor.mediatek.hardware.dmc@1.0.so|f5278db247c3ef1c36c2b4c3b230120a811c64ff
+vendor/lib/vendor.mediatek.hardware.dmc@1.1.so|a2e59edd8ab68ac1ea59cba697b43cf936b53090
+vendor/lib/vendor.mediatek.hardware.dmc@1.2.so|10b75d83e868484af9b667fa7cdf31fd80e2abe7
+vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so|8f239b4b73943a494107ba05b68e6f9111208bbc
 
 # IMS (APK) - from https://github.com/xiaomi-mt6765-dev/ImsService/releases/tag/12.5.9.0
 -priv-app/ImsService/ImsService.apk|0ed42503470348c56e8191fa423d969849149fe4
@@ -1082,7 +1110,11 @@ vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so|556da2b5299f0
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so|3522e59a12e9ef7703bf2d282bbb5b8c5567a377
 
 # Media
+vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service
+vendor/bin/jpegtool
+vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc
 vendor/etc/mtk_omx_core.cfg
+vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib/libHEVCdec_sa.ca7.android.so
 vendor/lib/libJpgDecPipe.so
 vendor/lib/libJpgEncPipe.so
@@ -1094,6 +1126,7 @@ vendor/lib/libMtkOmxGsmDec.so
 vendor/lib/libMtkOmxMp3Dec.so
 vendor/lib/libMtkOmxVdecEx.so
 vendor/lib/libMtkOmxVenc.so
+vendor/lib/libSwJpgCodec.so
 vendor/lib/libbwc.so
 vendor/lib/libh264dec_customize.so
 vendor/lib/libh264dec_sa.ca7.so
@@ -1102,6 +1135,7 @@ vendor/lib/libh264dec_se.ca7.so
 vendor/lib/libh264enc_sa.ca7.so
 vendor/lib/libhevce_sb.ca7.android.so
 vendor/lib/libhwm.so
+vendor/lib/libhwminijail.so
 vendor/lib/libicd_decoder.so
 vendor/lib/libimageio.so
 vendor/lib/libimageio_plat_drv.so
@@ -1119,11 +1153,6 @@ vendor/lib/libvcodec_utility.so
 vendor/lib/libvcodecdrv.so
 vendor/lib/libvp8dec_sa.ca7.so
 vendor/lib/libvp9dec_sa.ca7.so
-
-# Media (Hardware)
-vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service
-vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc
-vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 
 # Modules (Init)
@@ -1181,40 +1210,47 @@ vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/fuelgauged_nvram_init.rc
 vendor/lib/libfgauge_gm30.so
 
-# Perf
-vendor/lib/libmtkperf_client_vendor.so
-vendor/lib/libperfctl_vendor.so
-
 # Power
 vendor/bin/hw/power_native_test_v_1_0
 vendor/bin/hw/power_native_test_v_1_1
-vendor/lib/libpowerhal.so
-vendor/lib/libpowerhalwrap_vendor.so
-
-# Power (Hardware)
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
+vendor/etc/fstb.cfg
+vendor/etc/init/bootperf.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 vendor/lib/hw/power.default.so
 vendor/lib/hw/power.mt6765.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.1-impl.so
+vendor/lib/libmtkperf_client_vendor.so
+vendor/lib/libperfctl_vendor.so
+vendor/lib/libpowerhal.so
+vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so
 vendor/lib/vendor.mediatek.hardware.mtkpower@1.1.so
 vendor/lib/vendor.mediatek.hardware.power@1.1.so
 vendor/lib/vendor.mediatek.hardware.power@2.0.so
 
 # Radio - from dandelion
+vendor/bin/cal_tool|64769bd3a83ed163c0c90b06c2405900ca853c63
 vendor/bin/ccci_fsd|29d8b1afaec78fe37930c586e3af54c14c78582b
 vendor/bin/ccci_mdinit|2bc1d76cb77def6d14fdb4b6d68764e7f8095198
 vendor/bin/ccci_rpcd|45998a7337dbeaeeb122ae41ac2190d8551b34d3
+vendor/bin/getgameserver|551ada62f5b3ab912b865719d5aac092036ae146
 vendor/bin/gsm0710muxd|32aefb3bc7b08638b45b4302270d2dfc14ab64d4
 vendor/bin/hw/mtkfusionrild|1e6a3cedf50c2c2292f219150da58abf15149b37
-vendor/bin/md_monitor|952857aea79f65e94324eaa20819f93f452af00d
+vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service|e8daac018799775de92dae6976b5aaaeb2f87dba
 vendor/bin/md_monitor_ctrl|cb8c5c248e15c68c32526108821fbca1653d05e4
+vendor/bin/md_monitor|952857aea79f65e94324eaa20819f93f452af00d
+vendor/bin/mnld|a2653cc4d0911268768e5629e66a29e3426d9575
+vendor/bin/mrdump_tool|56bba3bf0050e94380fc8f9d2f3acc2ac55f2321
 vendor/bin/netdagent|c39e6e82ffa2ac075e28a47e23b378fdb89f82c1
 vendor/bin/netdc|489abea20d66bb904b7186de4e9f305d79ce5424
-vendor/etc/apdb/APDB_MT6765_S01__W2043|84e8f39ac63f9d4c45e4485027a076f286f47ab8
+vendor/bin/rttv|56bba3bf0050e94380fc8f9d2f3acc2ac55f2321
+vendor/bin/stp_dump3|c0e05d67ac7bcf5b2296a0e7e86fddee9fe1677f
+vendor/bin/testgameserver|212a838182429c0b4a1cd125d6b189c6d63c186f
+vendor/etc/MNL_Config.xml|8c2602627326acb30b78f47ed9457dcc934c93f1
 vendor/etc/apdb/APDB_MT6765_S01__W2043_ENUM|dbed8a2e30bc022926caa7e10dd9ace8a5c34003
+vendor/etc/apdb/APDB_MT6765_S01__W2043|84e8f39ac63f9d4c45e4485027a076f286f47ab8
 vendor/etc/ecc_list.xml|801e025e124cda9156391d62dd033a0aca3b3efb
 vendor/etc/ecc_list_OP01.xml|e9ae3f6d4d066b081ca90ac38c40015255693ddb
 vendor/etc/ecc_list_OP02.xml|449406fd9ecbfd10a67a6c5cd1d43ddace407d7b
@@ -1224,6 +1260,7 @@ vendor/etc/ecc_list_OP17.xml|8921c3e7227c111eeb8c07a51a22d6a23abafb15
 vendor/etc/ecc_list_OP18.xml|ae57ae66140cbbe2c0c0d74cb2322cd6ed419ecf
 vendor/etc/ecc_list_OP20.xml|0696fe1b135df2e7f3479d58b3b5c90e4c82fc4a
 vendor/etc/ecc_list_preference.xml|b2b6cb7017dfd5be6ff03e324c77153f7babc037
+vendor/etc/init/getgameserver.rc|35c77d8c4d7d6707b4b2f4e26e1065ab345ab02c
 vendor/etc/init/init.cccifsd.rc|71cd95e45a0eec3511f097a77f9c13ad981c31d7
 vendor/etc/init/init.cccimdinit.rc|c30096c4fed4bc05c4de4147b6169161b37cf0cb
 vendor/etc/init/init.cccirpcd.rc|0c300b95b4462d36db9e1c9da731ac6ee5139578
@@ -1232,6 +1269,7 @@ vendor/etc/init/md_monitor.rc|393c8503a3351bb5d5750a4181baed82327699e9
 vendor/etc/init/mtkrild.rc|b3f9b3e94c552ab5597eed81c8fc7fa3f81bb677
 vendor/etc/init/netdagent.rc|8ce685b61f0aa036e6e77cd2b89da73378fb983f
 vendor/etc/init/networksetting.rc|0c62b60a581f5a63b5d5bcf28db6811f98df60c9
+vendor/etc/init/vendor.mediatek.hardware.mms@1.5-service.rc|95fb0f240e219b0626f3d7b4e872c8702bbff9a0
 vendor/etc/smsdbvisitor.xml|1126fe83c5adab3628b568ab5f1bebdb24f5d3fe
 vendor/etc/special_pws_channel.xml|c34755567d6ec1ac78bba0be6a7bc3f883960a1a
 vendor/etc/spn-conf-op09.xml|78cd53937c5fae37d7ba0b560773595bee87d159
@@ -1240,6 +1278,7 @@ vendor/etc/virtual-spn-conf-by-efgid1.xml|e3d5faa409f116906e9800aef4775fdefdd2e9
 vendor/etc/virtual-spn-conf-by-efpnn.xml|b1c8b5a4c3aa7ab112c1272417f2dea53f013e00
 vendor/etc/virtual-spn-conf-by-efspn.xml|57570f80a6f0458f4b7c8ff4aa57f38581f8b9c3
 vendor/etc/virtual-spn-conf-by-imsi.xml|9be2c28f6fcdb972b07a7f432bb7880113aaf2f2
+vendor/lib/hw/vendor.mediatek.hardware.mms@1.5-impl.so|ffee7c129bd5c5c2baad68789336038b48d6ad55
 vendor/lib/libcapctrl.so|7522debd547a949e2345e2d818c4bff466be8380
 vendor/lib/libcares_naptr.so|f2f73f0c343f0897857837adec91aba7ac6cd310
 vendor/lib/libcarrierconfig.so|c5bcb0c1312ed5a10e56da65aa966b2881ab3266
@@ -1267,11 +1306,6 @@ vendor/lib/libsysenv.so|9bcd41968251814c2209257173e02a8589fa8f04
 vendor/lib/libutinterface_custom_md.so|89ce62f1474aaeadd95c383bdb1b86136e420d50
 vendor/lib/libutinterface_md.so|95a7c533992c80ec9f3b41d7cd3777ffdf28156d
 vendor/lib/libwo.so|d254345152ddfbc30eaedd8c91d1d7fe92b0775c
-
-# Radio (Hardware) - from dandelion
-vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service|e8daac018799775de92dae6976b5aaaeb2f87dba
-vendor/etc/init/vendor.mediatek.hardware.mms@1.5-service.rc|95fb0f240e219b0626f3d7b4e872c8702bbff9a0
-vendor/lib/hw/vendor.mediatek.hardware.mms@1.5-impl.so|ffee7c129bd5c5c2baad68789336038b48d6ad55
 vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so|3483734052f81095a2337fb15d87dafedc4efe89
 vendor/lib/vendor.mediatek.hardware.mms@1.0.so|7d6c2568e9b447f6323c13f6b557a97c38211688
 vendor/lib/vendor.mediatek.hardware.mms@1.1.so|69458ef3f606af61cf1031d0f9359a774f551719
@@ -1282,56 +1316,6 @@ vendor/lib/vendor.mediatek.hardware.mms@1.5.so|7cd498effd2be064fb034bcf23ec77f9c
 vendor/lib/vendor.mediatek.hardware.mtkradioex@2.0.so|0692f60324bcc873a044b16e2f5991826289abb1
 vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so|30864b505d66438cb0ae06c8a0e02488c02d187a
 
-# Radio (IMS)
-vendor/bin/volte_imcb:vendor/bin/volte_imcb.mt6765
-vendor/bin/volte_stack:vendor/bin/volte_stack.mt6765
-vendor/bin/volte_ua:vendor/bin/volte_ua.mt6765
-
-# Radio (IMS) - from dandelion
-vendor/bin/dmc_core|ff85e28cc6f98224a6344be52b2247bf25503dae
-vendor/bin/epdg_wod|ef9b7972d60b6958e3250907d6ab78f6f224a59d
-vendor/bin/hw/vtservice_hidl|d505818a740e8f2dd49aee25b43ade53c0ed0aa5
-vendor/bin/mtk_pkm_service|4389916cf6e9231483e848d20ef39ece7f8baddd
-vendor/bin/muxreport|7baf75f5f583f22975356bd35af3932dc6def869
-vendor/bin/volte_imcb|385ac3f65b57b735d58f19e32031bf692a7b670b
-vendor/bin/volte_imsm_93|a2702e65d715705b92568136daa9780cfe66624a
-vendor/bin/volte_md_status|815bc17f5a3ff28f41d9621861845b9bc1e3fc09
-vendor/bin/volte_stack|ed7137329019811a94b716bc5615ecf6ee1b8ae4
-vendor/bin/volte_ua|2b3102875ad2456eaeb4bcbf43cbcb139d7108d8
-vendor/bin/wfca|36dfcffe63ae7831a1d48654518f5f97467836a5
-vendor/etc/init/dmc_core.rc|d33d5108033f9a701c69ad12b247ff300df2d875
-vendor/etc/init/gsm0710muxd.rc|4270e11cfcb97e9af386828b2ca4e81f54509f38
-vendor/etc/init/init.volte_imcb.rc|3c0942560baef055c30093b8edfa8f16b4e19a11
-vendor/etc/init/init.volte_imsm_93.rc|a3c41819d1a80b712b55e783dcb70458721634af
-vendor/etc/init/init.volte_md_status.rc|27b1de416a56741fef57c348e6245f974afc9605
-vendor/etc/init/init.volte_stack.rc|7f30e3a00e0f0f1f15abb01af48841cbdbd4c8eb
-vendor/etc/init/init.volte_ua.rc|0a0333c86796fa3d72e6290cdb7b6cc98fccbe17
-vendor/etc/init/init.vtservice_hidl.rc|f2e992214ed5bb99c2c2a135cf1f0996dba8a8a0
-vendor/etc/init/init.wfca.rc|053a9b70b214bd84a69acfb50729d5936300719f
-vendor/etc/init/init.wod.rc|314574ad7ed5d0facce4a1e4077a23ed9cdf6985
-vendor/etc/init/mtk_pkm_service.rc|5211f49d97dcee934961ff872c621c1fda68891d
-vendor/etc/init/muxreport.rc|c787dc0d7cbde63529f99f37917e568086288c4e
-vendor/lib/libasn1c_core.so|e917c6a23871585cd14662242cc9cfedff572016
-vendor/lib/libasn1c_mapi.so|42a82248b5fd9e93b8b35b80586e15ff1dc72795
-vendor/lib/libipsec_ims_shr.so|76160f3f756e2fdd7a17134ac1e264fd33b04680
-vendor/lib/libmnetlink_v104.so|0e97706d39d0d6c87da8b6d51d46025998c5aeff
-vendor/lib/libmtklimiter_vendor.so|52d2f8f1bb7f195e0001248ead492020ab75f290
-vendor/lib/libmtkshifter_vendor.so|a2e0747e74c4fe6189be8c95bf579e4bac65f4f6
-vendor/lib/libmtktinyxml.so|a5267a0e92c97c1597bbedf0b25988696093d5d7
-vendor/lib/libtranslator_mapi_v3.0.so|48a1a7971bbe8a02c95aa0a402e334272ef9664d
-vendor/lib/libtranslator_utils.so|d8f3097d77a588111100e5472f1d325c06754300
-vendor/lib/libverno.so|c0e7f04b93f85256448c008001f77154fc6e91ac
-vendor/lib/libvolte_core_shr.so|dcc2911441f461b50174313b2c2eade85f84b01b
-vendor/lib/libvolte_xdmc_shr.so|2f6c5d95c0a4c39e01146b51d47e32730bac2d37
-vendor/lib/libvt_custom.so|9226ebb9b4e29cc53033c1f9cc5be1b5e65a4c51
-
-# Radio (IMS - Hardware) - from dandelion
-vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so|5b69d7cfbf584aa8664f1659bb53c4e96d699af5
-vendor/lib/vendor.mediatek.hardware.dmc@1.0.so|f5278db247c3ef1c36c2b4c3b230120a811c64ff
-vendor/lib/vendor.mediatek.hardware.dmc@1.1.so|a2e59edd8ab68ac1ea59cba697b43cf936b53090
-vendor/lib/vendor.mediatek.hardware.dmc@1.2.so|10b75d83e868484af9b667fa7cdf31fd80e2abe7
-vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so|8f239b4b73943a494107ba05b68e6f9111208bbc
-
 # Radio (Interfaces) - from Teracube 2e
 vendor/lib64/vendor.mediatek.hardware.mms@1.0.so|090c4634e4dcc5d847fe899157178d5d8c4f0850
 vendor/lib64/vendor.mediatek.hardware.mms@1.1.so|c5af3194657d8f5af62377c177212eae55962aa6
@@ -1341,15 +1325,13 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.4.so|196a9ea5c39e738c60516142bd07ea8
 vendor/lib64/vendor.mediatek.hardware.mms@1.5.so|a55bda231ab55bf0275ac495cda03dff855102e0
 
 # Sensors
+vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
 vendor/bin/sensors_test
+vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc
 vendor/lib/hw/sensors.mt6765.so
 vendor/lib/libksensor.so
 vendor/lib/librgbwlightsensor.so
 vendor/lib/libsensor_custom.so
-
-# Sensors (Hardware)
-vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
-vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc
 
 # TEE - from merlin-11
 vendor/bin/bp_kmsetkey_ca|a1a519c74556f2b2498f7b2f804103e1ddd0ed59
@@ -1382,9 +1364,9 @@ vendor/etc/init/microtrust.rc
 
 # Thermal - from hawaiipl
 vendor/bin/hw/android.hardware.thermal@2.0-service.mtk|390ff4620190de47cab1b34bd928e41f74009cd8
-vendor/bin/thermal|3ca0b02a523feb2a93a78e97d26f7a114c458456
-vendor/bin/thermalloadalgod|ff67b9a2bc09048c76eaed52b4deed14b3c10f00
 vendor/bin/thermal_manager|f5ce8dbd14d6a37f838d76768abf87ed065a454e
+vendor/bin/thermalloadalgod|ff67b9a2bc09048c76eaed52b4deed14b3c10f00
+vendor/bin/thermal|3ca0b02a523feb2a93a78e97d26f7a114c458456
 vendor/etc/.tp/.ht120.mtc|aa4697696f0864cc8bd17303b1f6134d4c9aed2e
 vendor/etc/.tp/.thermal_policy_00|175dca314fea3aac7b66e9dd9570a05535ee5beb
 vendor/etc/.tp/.thermal_policy_03|175dca314fea3aac7b66e9dd9570a05535ee5beb
@@ -1393,8 +1375,8 @@ vendor/etc/.tp/thermal.conf|bce12c23428f71e66e4d79ed90b9c4fabb8cc0cf
 vendor/etc/.tp/thermal.off.conf|310a897927cff87ed6625fe56dec20544827a9d8
 vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc|37c636547e2153d82754b66849057d09078c226d
 vendor/etc/init/init.thermal.rc|cb4f259f720f2481a3e9b4d68d7c72193c554faa
-vendor/etc/init/init.thermalloadalgod.rc|d70cde3b8a1a1607f7a99475b3357a894907458f
 vendor/etc/init/init.thermal_manager.rc|764c19af5e285345a9fd5b75131fa9588b609d62
+vendor/etc/init/init.thermalloadalgod.rc|d70cde3b8a1a1607f7a99475b3357a894907458f
 vendor/lib/hw/android.hardware.thermal@2.0-impl.so|3faca09b5b2018c66701caf4f44900aac77a44f5
 vendor/lib/hw/thermal_hal.so|e007feb51b3fa440d874573c8a90166a78d90e75
 vendor/lib/libmtcloader.so|719b32cf73cd4407cfc4b51a56cb9d7059c28cf2
@@ -1426,26 +1408,3 @@ vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so|f82d498ce99ffc57951f6b8d6
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so|cbf9bd9a24c96e9af056b02ee4752a5a05e3bd47
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so|a2d1f545a8372a4812a5c075b8138b605c893cdd
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.2.so|4e468b73726587e3de1dd0324b291f32a2ef9406
-
-# Misc
-vendor/bin/cal_tool
-vendor/bin/getgameserver
-vendor/bin/jpegtool
-vendor/bin/mnld
-vendor/bin/mrdump_tool
-vendor/bin/rttv
-vendor/bin/stp_dump3
-vendor/bin/testgameserver
-vendor/etc/MNL_Config.xml
-vendor/etc/fstb.cfg
-vendor/etc/init/bootperf.rc
-vendor/etc/init/getgameserver.rc
-vendor/etc/pm_test_item_config.xml
-vendor/lib/libSwJpgCodec.so
-vendor/lib/libhwminijail.so
-vendor/lib/libopus.so
-vendor/lib/libtqvalidate.so
-vendor/lib/libufwriter.so
-vendor/lib/libusc.so
-vendor/lib/libvorbisidec.so
-vendor/lib/libvpx.so
