@@ -4,6 +4,7 @@
 # hawaiipl blobs from motorola/hawaiipl_g/hawaiipl:12/STB32.36-99-1/99-1:user/release-keys
 # merlin-11 blobs from Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.6.0.RJOINXM:user/release-keys
 # merlin-12 blobs from Redmi/merlin/merlin:12/SP1A.210812.016/V13.0.1.0.SJOCNXM:user/release-keys
+# water blobs from Redmi/water_global/water:12/SP1A.210812.016/V14.0.11.0.TGOMIXM:user/release-keys
 
 # AAL - from Teracube 2e
 vendor/lib/libaal_cust.so|914aa03da49a56873c50d8062f0946ff85a09de9
@@ -1202,25 +1203,25 @@ vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/fuelgauged_nvram_init.rc
 vendor/lib/libfgauge_gm30.so
 
-# Power
-vendor/bin/hw/power_native_test_v_1_0
-vendor/bin/hw/power_native_test_v_1_1
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
-vendor/etc/fstb.cfg
-vendor/etc/init/bootperf.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
-vendor/lib/hw/power.default.so
-vendor/lib/hw/power.mt6765.so
-vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.1-impl.so
-vendor/lib/libmtkperf_client_vendor.so
-vendor/lib/libperfctl_vendor.so
-vendor/lib/libpowerhal.so
-vendor/lib/libpowerhalwrap_vendor.so
-vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so
-vendor/lib/vendor.mediatek.hardware.mtkpower@1.1.so
-vendor/lib/vendor.mediatek.hardware.power@1.1.so
-vendor/lib/vendor.mediatek.hardware.power@2.0.so
+# Power - from water
+vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service|e2ce939b6e84d442bb9e288c7ea227afb547a0e1
+vendor/etc/fstb.cfg|90cf378e8db44447c03ab782a8c021c39011b352
+vendor/etc/init/bootperf.rc|060707733e600e7002878408d907ed9e7dd7d6f2
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc|76fa81615d2d856c5618d38079908ebc43a97aad
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc|1a7c82fde63ddf0815938f554550a05edb473f39
+vendor/lib/hw/power.default.so:vendor/lib/hw/power.mt6765.so|fd2f0abf470b8d834562cf4e15088bfe933a1225
+vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so|e13f225764a4c725fd4b86900b70e3ddc56820be
+vendor/lib/libmtkperf_client_vendor.so|e3dadca2bc5c4276c38bb009bdbd860724285c67
+vendor/lib/libperfctl_vendor.so|54a58b2d426c1f21c20c16f0631b5055e0a89d49
+vendor/lib/libpower_timer.so|de4af4373fec6d562de3a4b9c85856adaa70424b
+vendor/lib/libpowerhal.so|5dc40ed498f14e65c9eafc353087865c9c0c7444
+vendor/lib/libpowerhalwrap_vendor.so|0adbe34f858bf18850f2cb127282938da1e3ad7f
+vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so|ea51c6959827825f5afd2d3ff579fcd6feecac55
+vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so|dfcef5c8d5a234b6d71239820d155f18012fdce5
+vendor/lib/vendor.mediatek.hardware.mtkpower@1.1.so|bf295221dc94e2bdf34b22af8957d53f21f84aa7
+vendor/lib/vendor.mediatek.hardware.mtkpower@1.2.so|fe8da351ede5f86416945744351e30ac2230583a
+vendor/lib/vendor.mediatek.hardware.power@1.1.so|5f3b1bc9914647a8af890ecb29e436d7fd94c2bd
+vendor/lib/vendor.mediatek.hardware.power@2.0.so|b240193285c9bf82122b57203ec4895bc521ecbc
 
 # Radio - from dandelion
 vendor/bin/cal_tool|64769bd3a83ed163c0c90b06c2405900ca853c63
