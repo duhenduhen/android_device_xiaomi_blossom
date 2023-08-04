@@ -776,14 +776,6 @@ vendor/lib64/liboemcrypto.so|936a3b3ab6df239a0a36f36635749c2c78786225
 vendor/lib64/libwvhidl.so|b6b56aa9ae936b79c2a15f904ebf4923d9988e38
 vendor/lib64/mediadrm/libwvdrmengine.so|b197d579899dac2d6a8dff2a98d44b7a61aa1b95
 
-# Engineer Mode
-vendor/bin/em_hidl
-vendor/etc/init/em_hidl_user.rc
-vendor/lib/vendor.mediatek.hardware.engineermode@1.0.so
-vendor/lib/vendor.mediatek.hardware.engineermode@1.1.so
-vendor/lib/vendor.mediatek.hardware.engineermode@1.2.so
-vendor/lib/vendor.mediatek.hardware.engineermode@1.3.so
-
 # FM Radio - from merlin-11
 -system_ext/lib64/libfmjni.so:lib64/libfmjni.so|b7cee08f0698dd8358df5ac67e75f0e4a638e3b0
 
