@@ -45,6 +45,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     audio_policy.stub \
+    libalsautils_legacy \
     libaudiofoundation.vendor \
     libaudiopreprocessing \
     libtinycompress \
@@ -287,7 +288,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-mediatek:32
+    android.hardware.power-service-mediatek
 
 PRODUCT_PACKAGES += \
     android.hardware.power-V2-ndk.vendor \
