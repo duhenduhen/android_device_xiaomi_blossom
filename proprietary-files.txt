@@ -789,7 +789,6 @@ vendor/lib/hw/fingerprint.focaltech.default.so
 vendor/lib/hw/fingerprint.fpc.default.so
 
 # Firmware
-vendor/firmware/BT_FW.cfg
 vendor/firmware/Conf_MultipleTest_aa.ini
 vendor/firmware/Conf_MultipleTest_ab.ini
 vendor/firmware/Himax_firmware.bin
@@ -819,7 +818,6 @@ vendor/firmware/rgx.fw
 vendor/firmware/rgx.sh
 vendor/firmware/sec_s3nrn82_firmware.bin
 vendor/firmware/soc1_0_patch_mcu_1_1_hdr.bin
-vendor/firmware/soc1_0_ram_bt_1_1_hdr.bin
 vendor/firmware/soc1_0_ram_mcu_1_1_hdr.bin
 vendor/firmware/soc1_0_ram_wifi_1_1_hdr.bin
 vendor/firmware/soc3_0_ram_bt_1_1_hdr.bin
@@ -827,6 +825,10 @@ vendor/firmware/soc3_0_ram_bt_1a_1_hdr.bin
 vendor/firmware/soc3_0_ram_mcu_1_1_hdr.bin
 vendor/firmware/soc3_0_ram_mcu_1a_1_hdr.bin
 vendor/firmware/soc3_0_ram_mcu_e1_hdr.bin
+
+# Firmware (Bluetooth) - from m04ins-user 13 TP1A.220624.014 E045FXXS3CWG6 release-keys
+vendor/firmware/BT_FW.cfg|48ecc83e9d9c32fdf2e80b824d368234f724eae7
+vendor/firmware/soc1_0_ram_bt_1_1_hdr.bin|a944e7b346aa80cff4b916b224a0570412b7cb92
 
 # GPS
 vendor/bin/bip
