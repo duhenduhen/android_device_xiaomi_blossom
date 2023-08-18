@@ -255,7 +255,6 @@ vendor/etc/audio_param_x/VolumeGainMap_AudioParam.xml
 vendor/etc/audio_param_x/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param_x/Volume_AudioParam.xml
 vendor/etc/audio_param_x/Volume_ParamUnitDesc.xml
-vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_param/Speech_AudioParam.xml
 
 # Bluetooth - from Teracube 2e
