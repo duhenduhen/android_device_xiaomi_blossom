@@ -31,6 +31,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0
 endif
 
+# Alarm
+PRODUCT_PACKAGES += \
+    PowerOffAlarm
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
