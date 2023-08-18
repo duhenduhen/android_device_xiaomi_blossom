@@ -6,15 +6,11 @@
 # merlin-12 blobs from Redmi/merlin/merlin:12/SP1A.210812.016/V13.0.1.0.SJOCNXM:user/release-keys
 # water blobs from Redmi/water_global/water:12/SP1A.210812.016/V14.0.11.0.TGOMIXM:user/release-keys
 
-# AAL - from Teracube 2e
-vendor/lib/libaal_cust.so|914aa03da49a56873c50d8062f0946ff85a09de9
-vendor/lib/libaal_key.so|a167159cc3a281ca14cc1f052e2b42abe740dad3
-vendor/lib/libaal_mtk.so|e9787993232b64da09d39b459ce1c9da5afd5d61
-vendor/lib/libaalservice.so|b001b535b28905de3635ca6ae23a7ddc4bf13707
-vendor/lib64/libaal_cust.so|2d53a972e31d61084b5c55cd2b1f8a8449db6089
-vendor/lib64/libaal_key.so|02f1a6a1e7a474d8a6e9ff1655c5b4f34c386879
-vendor/lib64/libaal_mtk.so|294041d1baa32e865d633e16b2e1faee8d1c97be
-vendor/lib64/libaalservice.so|f0502ef5411fce7e65d0b532ab5cbf686d9bc364
+# AAL
+vendor/lib/libaal_cust.so
+vendor/lib/libaal_key.so
+vendor/lib/libaal_mtk.so
+vendor/lib/libaalservice.so
 
 # AEE - from merlin-11
 vendor/lib/libaedv.so|0338e7a75ab3727f1f2345e31c09809e0b1acc0c
@@ -885,13 +881,25 @@ vendor/lib/hw/libSoftGatekeeper.so|86d13f4097659098f9f337b40221a25b25ea0d0b
 vendor/lib64/hw/gatekeeper.beanpod.so|8b19e982a760fbbc01124bf33ac94c7a452a71cb
 vendor/lib64/hw/libSoftGatekeeper.so|13f388a6e20cb3e696ee53d444a0e2042834c021
 
+# Graphics
+vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
+vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
+vendor/lib/hw/vendor.mediatek.hardware.pq@2.6-impl.so
+vendor/lib/libpq_cust_base.so
+vendor/lib/libpq_prot.so
+vendor/lib/vendor.mediatek.hardware.pq@2.0.so
+vendor/lib/vendor.mediatek.hardware.pq@2.1.so
+vendor/lib/vendor.mediatek.hardware.pq@2.2.so
+vendor/lib/vendor.mediatek.hardware.pq@2.3.so
+vendor/lib/vendor.mediatek.hardware.pq@2.4.so
+vendor/lib/vendor.mediatek.hardware.pq@2.5.so
+vendor/lib/vendor.mediatek.hardware.pq@2.6.so
+
 # Graphics - from Teracube 2e
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek|19dfaae0aa1b05cb7bfa3856ad6266b07b059e7b
 vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service|3c2bb2fceddbdf327772faa8542548809854d32f
-vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service|b0ae952c18fef47b7b45a6d9cb6bc5548597eac4
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc|dd48a1013b401d4ff2f23645709b299578c2e7cc
 vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc|6940f9990a4d771397dc8c41a31df2df4b6d0790
-vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc|02de6be7d4968679afd1278d8a95ff2280da293b
 vendor/etc/meow.cfg|59b2389725cc6805794fc4d1febbb5d6aa88e042
 -vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml|0c9f825551d32de14ca3d0515b545ea71300c5bb
 vendor/lib/egl/egl.cfg|e9cf0173f529306ae3bf95a91d8ac221745968d0
@@ -904,7 +912,6 @@ vendor/lib/egl/libMEOW_trace.so|fdb9fafc379afdadb830c9e8ffaac4b7c369ad27
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|66ccda77fb3369be66f01366a6dc79eafdeb28de
 vendor/lib/hw/gralloc.rogue.so|c7313b187c0ecd02e9aeeddaa22fde5f08a3b028
 vendor/lib/hw/memtrack.mt6765.so|f53facee7224257af2b24dc8cf057e4ee954c9b0
-vendor/lib/hw/vendor.mediatek.hardware.pq@2.6-impl.so|0ad88148812e92bc0c12f513ff62a4d8c62aa88a
 vendor/lib/hw/vulkan.mt6765.so|9724c4c8a719bada9988a9dee22969bb1b0ab1af
 vendor/lib/libDefaultFpsActor.so|cb3427903bcba398ac6ada5c40b05368428ae00f
 vendor/lib/libFrameRecord.so|6ed7e98b423edb6367a8b0a92ef2d44d9ecc449e
@@ -928,19 +935,10 @@ vendor/lib/libmemtrack_GL.so|a4ee5cecc85c294ac7f09e1ba33d98c51d1baba2
 vendor/lib/libminiui.so|6bd8a996273818ebec5c9ff043cf03ef3ce5e661
 vendor/lib/libmpvr.so|a3d86bed6f3546f27b2c472e975757c7d2fd3a2a
 vendor/lib/libpixelflinger.so|7a7e2179cecaf39614411c94c58513dfaf46e5a3
-vendor/lib/libpq_cust_base.so|4c778041121cde62449e361fc5fc6c4cbcfb7e00
-vendor/lib/libpq_prot.so|5b870737429c829c00e4a630e06bf35927c2753d
 vendor/lib/libsrv_um.so|8bc3ce608e7a807b6acde701a76de7bb7e019bb0
 vendor/lib/libufwriter.so|1a88b6b068f37fc00201031298d1bbd14825f386
 vendor/lib/libusc.so|bd24c061c5e3cf0b3f9cd84b4012ad20962305ed
 vendor/lib/vendor.mediatek.hardware.gpu@1.0.so|525497a7679919adeca9e8df91c9c936a710563b
-vendor/lib/vendor.mediatek.hardware.pq@2.0.so|0cb7e0ec063f3221578c2a906a7e0f43881b895c
-vendor/lib/vendor.mediatek.hardware.pq@2.1.so|ad8a01f3a9e9ed07f9ab6218acc4df21ae20aa4f
-vendor/lib/vendor.mediatek.hardware.pq@2.2.so|d552348cd9dcfabe520222d2668f14cdc3b307d0
-vendor/lib/vendor.mediatek.hardware.pq@2.3.so|c27ea1607fdbfd6fd7aa4139374f71ff5826fec7
-vendor/lib/vendor.mediatek.hardware.pq@2.4.so|2b013657a26df285acccba14ce93f98fabc7983b
-vendor/lib/vendor.mediatek.hardware.pq@2.5.so|11f5b18d08741e0c6fba0fd8274bca1179f85f94
-vendor/lib/vendor.mediatek.hardware.pq@2.6.so|cf4d8adbf6cb28dfbc7e2fbd9ac200f6c48240a9
 vendor/lib64/egl/libEGL_mtk.so|93d3cc52d48d5c5d931deebf6f0a1f1dc0151d95
 vendor/lib64/egl/libGLES_meow.so|d597714dd3e5e70f611b5c1fabb6b541723d4088
 vendor/lib64/egl/libGLESv1_CM_mtk.so|83d34b63e90b0d302079a651fe99024078740319
@@ -951,7 +949,6 @@ vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|1a2a0aaa42
 vendor/lib64/hw/gralloc.rogue.so|3180e1865b05bf93a01bcba73f647947ebd414c5
 vendor/lib64/hw/hwcomposer.mt6765.so|a8637b5f85b048ab9a43c5dd6aa9b84151ef33ca
 vendor/lib64/hw/memtrack.mt6765.so|417cfb38dae316e7be14448ceca0fc5dffc543d6
-vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so|832202fe028cc7c3d7494483e2598ea9441cfb89
 vendor/lib64/hw/vulkan.mt6765.so|de4e51dee92d9a91b20052ec95406160dfa3d7f8
 vendor/lib64/libDefaultFpsActor.so|0146d712e16eaf71f9976aa9429c86f43eb8d9a4
 vendor/lib64/libFrameRecord.so|6d463d238bd52fc35218c864610be3bfebda4951
