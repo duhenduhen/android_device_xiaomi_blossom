@@ -13,14 +13,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
-     vibrator is capable of subtle vibrations -->
-    <bool name="config_vibrateOnIconAnimation">true</bool>
-
-    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
-    <integer name="config_screenRecorderMaxFramerate">60</integer>
-
-    <!-- Whether we use large screen shade header which takes only one row compared to QS header -->
-    <bool name="config_use_large_screen_shade_header">true</bool>
+    <!-- QS -->
+    <dimen name="qs_panel_padding_top">12dp</dimen>
 
 </resources>
