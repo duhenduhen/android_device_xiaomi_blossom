@@ -524,7 +524,7 @@
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results.
     -->
-    <string name="config_mainBuiltInDisplayCutout">M -38,0 L -38,64 L 38,64 L 38,0 Z</string>
+    <string name="config_mainBuiltInDisplayCutout">M 0,0 H -50 V 55 H 50 V 0 H 0 Z</string>
 
     <!-- Set the package name for location extra packages -->
     <string-array name="config_locationExtraPackageNames" translatable="false">
