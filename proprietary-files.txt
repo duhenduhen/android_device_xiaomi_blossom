@@ -23,8 +23,6 @@ vendor/lib/libudf.so|7cdbb5c5c616dbbec6afcd75d5cc41f915ff82d6
 vendor/lib64/libudf.so|66324571c3f69057b250bce3b0d58c386da0c25b
 
 # Audio
-vendor/bin/audiocmdservice_atci
-vendor/etc/init/audiocmdservice_atci.rc
 vendor/lib/hw/audio.primary.mt6765.so
 vendor/lib/hw/audio.r_submix.mt6765.so
 vendor/lib/hw/audio.usb.mt6765.so
@@ -1028,10 +1026,8 @@ vendor/etc/sec_s3nrn82_rfreg.bin
 vendor/lib/nfc_nci_sec.so
 
 # NVRAM - from Teracube 2e
-vendor/bin/atcid|c0137c01d46704fe0b7432a0257160245ffa51d6
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service|8f8b1c931ce4859f58867bf4bf320fcae47bb22b
 vendor/bin/nvram_daemon|930d853e4d9b8eb0231ce0a8a721d1cca18e7025
-vendor/etc/init/atcid.rc|001abe08dd220ae80e5ed4df3ef57ac90b98034f
 vendor/etc/init/nvram_daemon.rc|02c739c622f871b7ec801755f64d063eee91ba77
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc|328d76546b36b7f67f48dff0fad46a419188a7f7
 vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|6ce8eb984e7f821c79ea1fde8bd1470641b881fd
