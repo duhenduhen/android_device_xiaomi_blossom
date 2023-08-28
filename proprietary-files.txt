@@ -639,9 +639,7 @@ vendor/etc/ipsec/strongswan.conf
 
 # Gatekeeper - from merlin-11
 vendor/lib/hw/gatekeeper.beanpod.so|50ecee638835be73863125bcc03198b10ff5f10f
-vendor/lib/hw/libSoftGatekeeper.so|86d13f4097659098f9f337b40221a25b25ea0d0b
 vendor/lib64/hw/gatekeeper.beanpod.so|8b19e982a760fbbc01124bf33ac94c7a452a71cb
-vendor/lib64/hw/libSoftGatekeeper.so|13f388a6e20cb3e696ee53d444a0e2042834c021
 
 # Graphics
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
