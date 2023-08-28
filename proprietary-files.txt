@@ -1147,7 +1147,7 @@ vendor/lib/libapmonitor_vendor.so|843e4069839ab908b6b32352a8c76cedfb5f5ef9
 vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so|3864a337951855116e10f762c11a640923d2bc5f
 vendor/lib64/libapmonitor_vendor.so|83fb2d41dce28257573762afedb5298f7c118c87
 vendor/lib64/libwapi.so|7d78113be20c8641e24e24b03ef9c77d09298169
--vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so|e2f6ff7a054982880b9902cae684bcf0dad509fb
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so|e2f6ff7a054982880b9902cae684bcf0dad509fb
 vendor/lib64/libwifitest.so|e3eebbde7e588375ea4f1eb03e0e60cc8a396142
 vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so|f82d498ce99ffc57951f6b8d69a8218967b5ebcd
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so|cbf9bd9a24c96e9af056b02ee4752a5a05e3bd47

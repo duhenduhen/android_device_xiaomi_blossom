@@ -85,9 +85,6 @@ function blob_fixup {
 	vendor/lib/libMtkOmxVdecEx.so)
             "${PATCHELF}" --replace-needed "libui.so" "libui-v32.so" "$2"
             ;;
-	vendor/lib*/libwifi-hal-mtk.so)
-            "$PATCHELF" --set-soname libwifi-hal-mtk.so "${2}"
-            ;;
 	vendor/lib*/libmtkcam_featurepolicy.so)
             # evaluateCaptureConfiguration()
             xxd -p "${2}" | sed "s/90e0034e87740b9/90e003428028052/g" | xxd -r -p > "${2}".patched
