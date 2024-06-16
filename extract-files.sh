@@ -99,6 +99,9 @@ function blob_fixup {
         lib/libimsma.so)
             "${PATCHELF}" --replace-needed "libsink.so" "libsink-mtk.so" "${2}"
             ;;
+        lib/libsource.so)
+            grep -q libshim_ui.so "$2" || "$PATCHELF" --add-needed libshim_ui.so "$2"
+            ;;
     esac
 }
 
