@@ -123,8 +123,7 @@ PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.r_submix.default \
     audio.usb.default \
-    audio_policy.stub \
-    libldacBT_bco
+    audio_policy.stub
 
 PRODUCT_PACKAGES += \
     MtkInCallService
