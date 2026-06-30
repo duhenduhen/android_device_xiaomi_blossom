@@ -52,3 +52,7 @@
 /(system\/vendor|vendor)/bin/volte_ua.angelicain u:object_r:volte_ua_exec:s0
 /(system\/vendor|vendor)/bin/volte_imsm_93.angelicain u:object_r:volte_imsm_93_exec:s0
 /(system\/vendor|vendor)/bin/volte_md_status.angelicain u:object_r:volte_md_status_exec:s0
+
+/(system\/vendor|vendor)/bin/volte_imcb  u:object_r:volte_mount_point_file:s0
+/(system\/vendor|vendor)/bin/volte_stack u:object_r:volte_mount_point_file:s0
+/(system\/vendor|vendor)/bin/volte_ua    u:object_r:volte_mount_point_file:s0

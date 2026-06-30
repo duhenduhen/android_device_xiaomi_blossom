@@ -1,0 +1,3 @@
+type volte_mount_point_file, file_type, vendor_file_type;
+
+allow init volte_mount_point_file:file mounton;
