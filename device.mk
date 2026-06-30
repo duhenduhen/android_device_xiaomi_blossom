@@ -390,7 +390,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Runtime Resource Overlays
 PRODUCT_PACKAGES += \
-    DialerOverlayBlossom \
     FrameworksResOverlayBlossom \
     SettingsOverlayBlossom \
     SettingsProviderOverlayBlossom \
