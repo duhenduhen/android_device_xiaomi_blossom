@@ -22,33 +22,12 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Determines whether the shell features all run on another thread. -->
-    <bool name="config_enableShellMainThread">true</bool>
-
     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
      vibrator is capable of subtle vibrations -->
     <bool name="config_vibrateOnIconAnimation">true</bool>
 
-    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
-    <integer name="config_screenRecorderMaxFramerate">30</integer>
-
     <!-- If not empty, sets the AVC codec profile level used for the internal screen recorder.
          Possible values: 3, 3.1, 3.2, 4, 4.1, 4.2 -->
     <string name="config_screenRecorderAVCProfileLevel" translatable="false">3.1</string>
-
-    <!-- Whether to enable HEVC toggle for screenrecord -->
-    <bool name="config_screenRecordHEVC">false</bool>
-
-    <!-- Color of the UDFPS pressed view -->
-    <color name="config_udfpsColor">#00ffffff</color>
-
-    <!-- Whether to play turbulence noise after clicking the play button -->
-    <bool name="config_turbulenceNoise">false</bool>
-
-    <!-- Whether to enable dimming navigation buttons when wallpaper is not visible, should be
-         enabled for OLED devices to reduce/prevent burn in on the navigation bar (because of the
-         black background and static button placements) and disabled for all other devices to
-         prevent wasting cpu cycles on the dimming animation -->
-    <bool name="config_navigation_bar_enable_auto_dim_no_visible_wallpaper">false</bool>
 
 </resources>
