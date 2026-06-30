@@ -392,7 +392,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     FrameworksResOverlayBlossom \
     SettingsOverlayBlossom \
-    SettingsProviderOverlayBlossom \
     SystemUIOverlayBlossom \
     TelephonyOverlayBlossom \
     WifiResOverlayBlossom
