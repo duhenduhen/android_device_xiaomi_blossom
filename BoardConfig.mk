@@ -11,15 +11,6 @@ DEVICE_PATH := device/xiaomi/blossom
 # A/B
 AB_OTA_UPDATER := false
 
-# OTA
-TARGET_OTA_ASSERT_DEVICE := dandelion,angelica,angelican,cattail,angelicain,blossom
-
-# Build
-BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_PREBUILT_ELF_FILES := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -41,34 +32,6 @@ ART_BUILD_TARGET_NDEBUG := true
 ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
-
-# Platform
-TARGET_BOARD_PLATFORM := mt6765
-TARGET_BOOTLOADER_BOARD_NAME := blossom
-
-BOARD_HAS_MTK_HARDWARE := true
-BOARD_HAVE_MTK_FM := true
-
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
-TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop
-
-# Init
-TARGET_RECOVERY_DEVICE_MODULES := libinit_blossom
-
-# Malloc
-MALLOC_LOW_MEMORY := true
-
-# Kernel
-TARGET_KERNEL_CONFIG := blossom_defconfig # no file, only make build system happy
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel # automatically copied
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img # for mkbootimg only
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img # automatically copied
-TARGET_FORCE_PREBUILT_KERNEL := true # dont really build with our imcomplete "source"
 
 # Bootloader
 BOARD_BOOT_HEADER_VERSION := 2
@@ -104,6 +67,38 @@ BOARD_KERNEL_CMDLINE += nodebugmon
 BOARD_KERNEL_CMDLINE += noirqdebug
 BOARD_KERNEL_CMDLINE += kasan=off
 
+# Build
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+
+# Dynamic Partitions
+BOARD_ROOT_EXTRA_FOLDERS += metadata
+BOARD_USES_METADATA_PARTITION := true
+
+BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := true
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 4827643904 # (BOARD_SUPER_PARTITION_SIZE - 4 * 1024 * 1024)
+BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
+BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm system_ext
+
+# Init
+TARGET_RECOVERY_DEVICE_MODULES := libinit_blossom
+
+# Kernel
+TARGET_KERNEL_CONFIG := blossom_defconfig # no file, only make build system happy
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel # automatically copied
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img # for mkbootimg only
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img # automatically copied
+TARGET_FORCE_PREBUILT_KERNEL := true # dont really build with our imcomplete "source"
+
+# Malloc
+MALLOC_LOW_MEMORY := true
+
+# OTA
+TARGET_OTA_ASSERT_DEVICE := dandelion,angelica,angelican,cattail,angelicain,blossom
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -133,18 +128,38 @@ TARGET_USERIMAGES_SPARSE_EROFS_DISABLED := true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 TARGET_USERIMAGES_SPARSE_F2FS_DISABLED := true
 
-# Dynamic Partitions
-BOARD_ROOT_EXTRA_FOLDERS += metadata
-BOARD_USES_METADATA_PARTITION := true
+# Platform
+TARGET_BOARD_PLATFORM := mt6765
+TARGET_BOOTLOADER_BOARD_NAME := blossom
 
-BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := true
--include vendor/lineage/config/BoardConfigReservedSize.mk
-BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 4827643904 # (BOARD_SUPER_PARTITION_SIZE - 4 * 1024 * 1024)
-BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
-BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm system_ext
+BOARD_HAS_MTK_HARDWARE := true
+BOARD_HAVE_MTK_FM := true
+
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop
+
+# Recovery
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6765
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
+
+# Security Patch Level
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+
+# SELinux
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -166,16 +181,6 @@ BOARD_AVB_VBMETA_VENDOR_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := 1
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
-# Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6765
-
-# Security Patch Level
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
-
 # VINTF
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
@@ -184,12 +189,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/framework_compatibi
 # Wi-Fi
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
-# SELinux
-include device/mediatek/sepolicy_vndr/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-
-# Wi-Fi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mt66xx
