@@ -177,7 +177,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service.samsung \
+    android.hardware.nfc@1.2-service \
     com.android.nfc_extras \
     Tag
 
