@@ -4,92 +4,15 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enable userspace reboot
-$(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
+# Additional native libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/public.libraries.vendor.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# Dynamic Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION := false
-
-# Properties
-include $(LOCAL_PATH)/vendor_logtag.mk
-
-# Shipping API Level
-PRODUCT_SHIPPING_API_LEVEL := 29
-
+# ART
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := \
     frameworks/base/boot/boot-image-profile.txt \
     frameworks/base/boot/boot-image-profile-extra.txt
-
-# Do not generate libartd.
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-
-# Strip the local variable table and the local variable type table to reduce
-# the size of the system image. This has no bearing on stack traces, but will
-# leave less information available via JDWP.
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-
-# Reduce system server verbosity.
-PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
-PRODUCT_OTHER_JAVA_DEBUG_INFO := false
-
-# Speed profile services and wifi-service to reduce RAM and storage
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1600
-TARGET_SCREEN_WIDTH := 720
-TARGET_BOOT_ANIMATION_RES := 720
-
-# Screen density
-PRODUCT_AAPT_CONFIG := xhdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
-
-# Init
-$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_blossom)
-
-# HACK: Avoid usb crash
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-    persist.adb.nonblocking_ffs=0 \
-    ro.adb.nonblocking_ffs=0
-
-# Rootdir
-PRODUCT_PACKAGES += \
-    fstab.mt6765 \
-    fstab.mt6762 \
-    fstab.mt6765_ramdisk \
-    fstab.mt6762_ramdisk \
-    init.blossom.power.rc \
-    init.connectivity.rc \
-    init.modem.rc \
-    init.mt6765.rc \
-    init.mt6762.rc \
-    init.mt6765.usb.rc \
-    init.project.rc \
-    init.sensor_1_0.rc \
-    ueventd.mtk.rc \
-    init.angelica.volte.rc \
-    init.angelicain.volte.rc \
-    init.angelican.volte.rc \
-    init.cattail.volte.rc \
-    init.target.rc
-
-# Recovery
-PRODUCT_PACKAGES += \
-    init.recovery.mt6765.rc \
-    init.recovery.mt6762.rc
-
-# fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl.custom \
-    fastbootd
-
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service.basic \
-    android.hardware.usb@1.0.vendor:64
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -128,9 +51,38 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libstagefright_softomx_plugin.vendor
 
-# Lights
+# Biometrics
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.blossom
+    android.hardware.biometrics.fingerprint@2.1.vendor:32
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1600
+TARGET_SCREEN_WIDTH := 720
+TARGET_BOOT_ANIMATION_RES := 720
+
+# Cgroup
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
+
+# Device properties
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/odm,$(TARGET_COPY_OUT_ODM)/etc/properties) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/product,$(TARGET_COPY_OUT_PRODUCT)/etc/properties) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/system,$(TARGET_COPY_OUT_SYSTEM)/etc/properties) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/system_ext,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/properties) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/vendor,$(TARGET_COPY_OUT_VENDOR)/etc/properties)
+
+# Disable async MTE on system_server
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.arm64.memtag.system_server=off
 
 # Display
 TARGET_SCREEN_DENSITY := 280
@@ -145,21 +97,50 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     disable_configstore
 
-# Charger
-PRODUCT_PACKAGES += \
-    libsuspend
+# Do not generate libartd.
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
+# DRM
 PRODUCT_PACKAGES += \
-    charger_res_images_vendor
+    libmockdrmcryptoplugin
 
-# PowerOffAlarm
-PRODUCT_PACKAGES += \
-    PowerOffAlarm
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := false
 
-# Radio
+# Enable userspace reboot
+$(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
+
+# fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio-V1.4-java
+    android.hardware.fastboot@1.1-impl.custom \
+    fastbootd
+
+# FM Radio
+PRODUCT_PACKAGES += \
+    FMRadio
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
+# HACK: Avoid usb crash
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
+    persist.adb.nonblocking_ffs=0 \
+    ro.adb.nonblocking_ffs=0
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service
+
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhidltransport.vendor
 
 # IMS
 PRODUCT_BOOT_JARS += \
@@ -171,39 +152,28 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-base \
     mediatek-telephony-common
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+
 # IncFS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=yes
 
-# Watchdog
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_blossom)
+
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/uinput-focaltech.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-focaltech.kl \
+    $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.blossom
+
+# Mobile data
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hw_timeout_multiplier=6
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
-
-# Device properties
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/odm,$(TARGET_COPY_OUT_ODM)/etc/properties) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/product,$(TARGET_COPY_OUT_PRODUCT)/etc/properties) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/system,$(TARGET_COPY_OUT_SYSTEM)/etc/properties) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/system_ext,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/properties) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/vendor,$(TARGET_COPY_OUT_VENDOR)/etc/properties)
-
-# Wi-Fi
-PRODUCT_PACKAGES += \
-    wpa_supplicant \
-    hostapd \
-    lib_driver_cmd_mt66xx \
-    libwifi-hal-wrapper \
-    android.hardware.wifi-service
-
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
-
-# Biometrics
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor:32
+    ro.com.android.mobiledata=false
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -213,33 +183,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
-
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.mediatek
-
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/thermal,$(TARGET_COPY_OUT_VENDOR)/etc)
-
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr
-
-PRODUCT_PACKAGES += \
-    libmtkperf_client_vendor \
-    libmtkperf_client
-
-PRODUCT_PACKAGES += \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -286,6 +229,24 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.xml \
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.pixel-libperfmgr
+
+PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor \
+    libmtkperf_client
+
+PRODUCT_PACKAGES += \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+# PowerOffAlarm
+PRODUCT_PACKAGES += \
+    PowerOffAlarm
+
 # Prebuilts - Kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)-kernel/dtb.img:dtb.img \
@@ -312,58 +273,63 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_truly_fw.bin:recovery/root/vendor/firmware/novatek_ts_truly_fw.bin \
     vendor/xiaomi/blossom/proprietary/vendor/firmware/novatek_ts_truly_mp.bin:recovery/root/vendor/firmware/novatek_ts_truly_mp.bin
 
-# FM Radio
+# Properties
+include $(LOCAL_PATH)/vendor_logtag.mk
+
+# Radio
 PRODUCT_PACKAGES += \
-    FMRadio
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio-V1.4-java
 
-# HIDL
+# Recovery
 PRODUCT_PACKAGES += \
-    libhidltransport \
-    libhidltransport.vendor
+    init.recovery.mt6765.rc \
+    init.recovery.mt6762.rc
 
-# VNDK
+# Reduce system server verbosity.
+PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+PRODUCT_OTHER_JAVA_DEBUG_INFO := false
+
+# Rootdir
 PRODUCT_PACKAGES += \
-    libutils.vendor
+    fstab.mt6765 \
+    fstab.mt6762 \
+    fstab.mt6765_ramdisk \
+    fstab.mt6762_ramdisk \
+    init.blossom.power.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6765.rc \
+    init.mt6762.rc \
+    init.mt6765.usb.rc \
+    init.project.rc \
+    init.sensor_1_0.rc \
+    ueventd.mtk.rc \
+    init.angelica.volte.rc \
+    init.angelicain.volte.rc \
+    init.angelican.volte.rc \
+    init.cattail.volte.rc \
+    init.target.rc
 
-# DRM
+# Runtime Resource Overlays
 PRODUCT_PACKAGES += \
-    libmockdrmcryptoplugin
+    FrameworksResOverlayBlossom \
+    SettingsOverlayBlossom \
+    SystemUIOverlayBlossom \
+    TelephonyOverlayBlossom \
+    WifiResOverlayBlossom
 
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.mediatek
-
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/uinput-focaltech.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-focaltech.kl \
-    $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
-
-# Cgroup
-PRODUCT_COPY_FILES += \
-    system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
-    $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
-
-# Additional native libraries
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/public.libraries.vendor.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
-# Disable async MTE on system_server
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.arm64.memtag.system_server=off
-
-# Mobile data
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.android.mobiledata=false
+# Screen density
+PRODUCT_AAPT_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
 
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/seccomp/,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy)
+
+# Shipping API Level
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -375,13 +341,48 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)/power-libperfmgr \
     $(LOCAL_PATH)
 
-# Runtime Resource Overlays
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
+# Strip the local variable table and the local variable type table to reduce
+# the size of the system image. This has no bearing on stack traces, but will
+# leave less information available via JDWP.
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+
+# Thermal
 PRODUCT_PACKAGES += \
-    FrameworksResOverlayBlossom \
-    SettingsOverlayBlossom \
-    SystemUIOverlayBlossom \
-    TelephonyOverlayBlossom \
-    WifiResOverlayBlossom
+    android.hardware.thermal-service.mediatek
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/thermal,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.3-service.basic \
+    android.hardware.usb@1.0.vendor:64
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
+
+# VNDK
+PRODUCT_PACKAGES += \
+    libutils.vendor
+
+# Watchdog
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hw_timeout_multiplier=6
+
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    wpa_supplicant \
+    hostapd \
+    lib_driver_cmd_mt66xx \
+    libwifi-hal-wrapper \
+    android.hardware.wifi-service
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
