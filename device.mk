@@ -326,7 +326,7 @@ PRODUCT_COPY_FILES += \
 
 # FM Radio
 PRODUCT_PACKAGES += \
-    RevampedFMRadio
+    FMRadio
 
 # HIDL
 PRODUCT_PACKAGES += \
