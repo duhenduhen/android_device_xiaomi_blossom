@@ -34,9 +34,6 @@ ro.vendor.df.effect.conflict=1
 sys.paper_mode_max_level=255
 vendor.display.enable_default_color_mode=0
 
-# fdsan
-debug.fdsan=0
-
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
