@@ -8,6 +8,9 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/blossom
 
+# A/B
+AB_OTA_UPDATER := false
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := dandelion,angelica,angelican,cattail,angelicain,blossom
 

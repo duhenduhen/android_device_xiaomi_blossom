@@ -374,31 +374,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.arm64.memtag.system_server=off
 
-# Updater
-AB_OTA_UPDATER := false
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.recovery_update=false
-
 # Mobile data
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.mobiledata=false
-
-# Miku UI (not really) - optional apps
-# these shouldve been in source but eh
-ifeq ($(TARGET_SHIP_FOSSBROWSER),true)
-PRODUCT_PACKAGES += \
-    FOSSBrowser
-endif
-
-ifeq ($(TARGET_SHIP_LOS_BASICS),true)
-PRODUCT_PACKAGES += \
-    Glimpse \
-    Jelly
-endif
-
-PRODUCT_LOCALES += \
-    vi_VN \
-    id_ID
 
 # Seccomp
 PRODUCT_COPY_FILES += \
