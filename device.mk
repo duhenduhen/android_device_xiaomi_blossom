@@ -44,9 +44,6 @@ PRODUCT_OTHER_JAVA_DEBUG_INFO := false
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
-# Malloc
-PRODUCT_DISABLE_SCUDO := true
-
 # Preopt critical applications
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
