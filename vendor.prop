@@ -122,9 +122,6 @@ ro.lmk.use_minfree_levels=true
 ro.lmk.use_new_strategy=true
 ro.lmk.filecache_min_kb=153600
 
-# Logd
-ro.logd.kernel=false
-
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.vendor.mtk_config_max_dram_size=0x800000000
