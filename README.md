@@ -3,8 +3,7 @@ Unified device tree for Xiaomi Redmi 9A family devices (blossom)
 
 ```
 #
-# Copyright (C) 2023 The LineageOS Project
-#
+# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 ```
