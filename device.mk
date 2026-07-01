@@ -126,11 +126,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
-# HACK: Avoid usb crash
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-    persist.adb.nonblocking_ffs=0 \
-    ro.adb.nonblocking_ffs=0
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
