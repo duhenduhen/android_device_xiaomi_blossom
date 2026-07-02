@@ -105,7 +105,7 @@ vendor/lib64/libwapi.so
 # IMS (System)
 framework/mediatek-common.jar
 framework/mediatek-framework.jar
-framework/mediatek-ims-base.jar
+framework/mediatek-ims-base.jar|58df53a50b49c105f51af0c2ad409300faa47898
 framework/mediatek-ims-common.jar
 framework/mediatek-ims-extension-plugin.jar
 framework/mediatek-ims-legacy.jar
@@ -117,7 +117,7 @@ lib64/libmtkavenhancements.so
 lib64/libmtk_vt_wrapper.so:system_ext/lib64/libmtk_vt_wrapper.so;DISABLE_DEPS
 lib64/libvcodec_cap.so:system_ext/lib64/libvcodec_cap.so
 lib64/libvcodec_capenc.so:system_ext/lib64/libvcodec_capenc.so
-priv-app/ImsService/ImsService.apk
+priv-app/ImsService/ImsService.apk|1f8703909d4a1685f952d07c272b65afa1853b0b
 system_ext/lib/vendor.mediatek.hardware.mtkradioex@2.0.so
 system_ext/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
