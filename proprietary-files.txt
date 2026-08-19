@@ -1142,3 +1142,6 @@ vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so|f82d498ce99ffc57951f6b8d6
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so|cbf9bd9a24c96e9af056b02ee4752a5a05e3bd47
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so|a2d1f545a8372a4812a5c075b8138b605c893cdd
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.2.so|4e468b73726587e3de1dd0324b291f32a2ef9406
+
+# VNDK
+system/lib/libutils.so:vendor/lib/libutils-v30.so
