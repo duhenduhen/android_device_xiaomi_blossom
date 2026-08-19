@@ -757,7 +757,6 @@ vendor/bin/volte_stack:vendor/bin/volte_stack.mt6765
 vendor/bin/volte_ua:vendor/bin/volte_ua.mt6765
 
 # IMS - from dandelion
-vendor/bin/dmc_core|ff85e28cc6f98224a6344be52b2247bf25503dae
 vendor/bin/epdg_wod|0b4a67a0817f975cb00b589577e6872eb2e23f78
 vendor/bin/hw/vtservice_hidl|d505818a740e8f2dd49aee25b43ade53c0ed0aa5
 vendor/bin/mtk_pkm_service|4389916cf6e9231483e848d20ef39ece7f8baddd
@@ -768,7 +767,6 @@ vendor/bin/volte_md_status|b66bddbd200fa7df6e53e2b967e450f41d71a343
 vendor/bin/volte_stack|fc0ad9784be18d0ba7d6bd1d70133ef4635ddb29
 vendor/bin/volte_ua|8936058d12c86aee871c7748338f081b05152022
 vendor/bin/wfca|113b88af7cb3f19c8bc0a485663eb0a67891fd56
-vendor/etc/init/dmc_core.rc|d33d5108033f9a701c69ad12b247ff300df2d875
 vendor/etc/init/gsm0710muxd.rc|4270e11cfcb97e9af386828b2ca4e81f54509f38
 vendor/etc/init/init.volte_imcb.rc|3c0942560baef055c30093b8edfa8f16b4e19a11
 vendor/etc/init/init.volte_imsm_93.rc|a3c41819d1a80b712b55e783dcb70458721634af
