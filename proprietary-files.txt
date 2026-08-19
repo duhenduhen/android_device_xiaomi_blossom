@@ -54,6 +54,7 @@ vendor/lib/libstereoinfoaccessor_vsdof.so
 
 # Audio - from sys_oplus_mssi_64_cn-user 11 RP1A.200720.011 1675947631259 release-keys
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so|3fbe8411fa37e64116bf2c93734349b343266e15
+
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so|7247c3d608d23fa3b659bf2ccbcad628653aebe3
 
 # Audio Configs
@@ -950,11 +951,8 @@ vendor/etc/init/fuelgauged_nvram_init.rc
 vendor/lib/libfgauge_gm30.so
 
 # Power - from water
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service|e2ce939b6e84d442bb9e288c7ea227afb547a0e1
 vendor/etc/fstb.cfg|90cf378e8db44447c03ab782a8c021c39011b352
 vendor/etc/init/bootperf.rc|060707733e600e7002878408d907ed9e7dd7d6f2
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc|76fa81615d2d856c5618d38079908ebc43a97aad
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc|1a7c82fde63ddf0815938f554550a05edb473f39
 vendor/lib/hw/power.default.so:vendor/lib/hw/power.mt6765.so|fd2f0abf470b8d834562cf4e15088bfe933a1225
 vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so|e13f225764a4c725fd4b86900b70e3ddc56820be
 vendor/lib/libmtkperf_client_vendor.so|e3dadca2bc5c4276c38bb009bdbd860724285c67
