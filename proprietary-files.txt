@@ -814,7 +814,7 @@ etc/init/init.vtservice.rc|abcbc3ffc316b8f1cedffa949aac3b46670d64bc
 -framework/mediatek-telephony-base.jar|91b75617d032b5179b32a18f6082357612fd6e0e
 -framework/mediatek-telephony-common.jar|f3e08928f86e08ab3c60abf263cb0bd251e17d3e
 lib/libcomutils.so|3105433e30fbfa19945f22c64832f762fc0f559a
-lib/libimsma.so|b0078f5f44cec67584c7fdd42ba475546e1db6b8
+lib/libimsma.so|a8cebf973270631764cab8259866884edb1209f7
 lib/libimsma_adapt.so|0832a7e521c1c4c96f585e6102fa9d7fdfa1a210
 lib/libimsma_rtp.so|669a8bcd6cbe29c83e07525419af98e249bcc5a5
 lib/libimsma_socketwrapper.so|44f042ce96a8fd1e3022880ba5dcbe3a23283eb7
@@ -822,7 +822,7 @@ lib/libmtk_vt_service.so|1706ce6e7e50ff5f60e40cbdc0688100e3fc253c
 lib/libmtk_vt_wrapper.so;DISABLE_DEPS|f9088d2422b4a6e5668d32498a6e03acdb1addfc
 lib/libmtkavenhancements.so|31d9e681359447e4abaafcb5c29fe21191241b1e
 lib/libsignal.so|79abd79460f3c257787618a3070d67b03ac794a0
-lib/libsink.so|14c21fec8f24cbbd8640da472e03e2a551c8efa6
+lib/libsink.so:lib/libsink-mtk.so;FIX_SONAME|14c21fec8f24cbbd8640da472e03e2a551c8efa6
 lib/libsource.so|3e598ed27b8f9e22e0204653b246cb74cf9583a9
 lib/libvcodec_cap.so|7aad6e6d58d021009c2fedc31dc4f6a646e2f5a2
 lib/libvcodec_capenc.so|f7950db108c77be5ee3650fc5e80f6afd0fc8f50

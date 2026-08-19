@@ -96,6 +96,9 @@ function blob_fixup {
         lib/libsink.so)
             "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
             ;;
+        lib/libimsma.so)
+            "${PATCHELF}" --replace-needed "libsink.so" "libsink-mtk.so" "${2}"
+            ;;
     esac
 }
 
