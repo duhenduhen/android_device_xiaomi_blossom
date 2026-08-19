@@ -538,9 +538,6 @@ vendor/lib64/liboemcrypto.so|936a3b3ab6df239a0a36f36635749c2c78786225
 vendor/lib64/libwvhidl.so|b6b56aa9ae936b79c2a15f904ebf4923d9988e38
 vendor/lib64/mediadrm/libwvdrmengine.so|b197d579899dac2d6a8dff2a98d44b7a61aa1b95
 
-# FM Radio - from merlin-11
--system_ext/lib64/libfmjni.so:lib64/libfmjni.so|b7cee08f0698dd8358df5ac67e75f0e4a638e3b0
-
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/hw/vendor.focaltech.fingerprint@1.0-service
