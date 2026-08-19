@@ -793,10 +793,7 @@ vendor/lib/libverno.so|aecf7160b72359ecc9761ce827eddfaab921f1ca
 vendor/lib/libvolte_core_shr.so|5f57be437a3eb65832ae42b07ffa1969c44e4caf
 vendor/lib/libvolte_xdmc_shr.so|4f77fb2bb0722aafe88244e7551a18771087c51a
 vendor/lib/libvt_custom.so|9226ebb9b4e29cc53033c1f9cc5be1b5e65a4c51
-vendor/lib/vendor.mediatek.hardware.dmc@1.0.so|f5278db247c3ef1c36c2b4c3b230120a811c64ff
-vendor/lib/vendor.mediatek.hardware.dmc@1.1.so|a2e59edd8ab68ac1ea59cba697b43cf936b53090
-vendor/lib/vendor.mediatek.hardware.dmc@1.2.so|10b75d83e868484af9b667fa7cdf31fd80e2abe7
-vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so|8f239b4b73943a494107ba05b68e6f9111208bbc
+vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor|8f239b4b73943a494107ba05b68e6f9111208bbc
 
 # IMS (APK) - from https://github.com/xiaomi-mt6765-dev/ImsService/releases/tag/12.5.11.0
 -priv-app/ImsService/ImsService.apk|4836dee43adf09e5a615f29ab3aec98f88327a57
@@ -827,8 +824,6 @@ lib/libsource.so|3e598ed27b8f9e22e0204653b246cb74cf9583a9
 lib/libvcodec_cap.so|7aad6e6d58d021009c2fedc31dc4f6a646e2f5a2
 lib/libvcodec_capenc.so|f7950db108c77be5ee3650fc5e80f6afd0fc8f50
 lib/libvt_avsync.so|7bc3c6d7d10e68280a5f139043bf0e822ced6800
-system_ext/lib/vendor.mediatek.hardware.dmc@1.1.so|0e3fc13a525e23a132ec83b157d8bce483f99bdc
-system_ext/lib/vendor.mediatek.hardware.dmc@1.2.so|d3c850e5fa6627b41ee4780a77c68b32a6e2be37
 system_ext/lib/vendor.mediatek.hardware.mtkradioex@2.0.so|19d96b4faaed074da1b06b50e85d5893a2707495
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so|f29a0eaafc759c9efde177924b19e1f79a38ea3f
 
@@ -838,11 +833,7 @@ lib64/libmtkavenhancements.so|99bd2aeb1743c0da9b8b11d489c739e76e8273e9
 lib64/libvcodec_cap.so|919fb2d985e7c28200e9f5b90fe7c7a5ae8f5848
 lib64/libvcodec_capenc.so|01b8c4b442d0928c99529f0b76e38782e866980b
 system_ext/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so|fc4562926f3f383846c108294bfe195e2ef98f55
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|ff1114f257e65efbdfdf4b17543ec6772ccd1bb2
-
-# IMS (System) - from merlin-11
-system_ext/lib64/vendor.mediatek.hardware.dmc@1.1.so|d6eba1f59a2a9110ee268506720098631bb3da2b
-system_ext/lib64/vendor.mediatek.hardware.dmc@1.2.so|a823399c34da9cc6da3ae57a635acfdca44d31bb
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|ff1114f257e65efbdfdf4b17543ec6772ccd1bb2;MODULE_SUFFIX=_system_ext
 
 # Keymaster - from merlin-11
 vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod|f01a08c86d12db23fccf3b681f4c9c57ea805d42
@@ -933,7 +924,6 @@ vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc|328d76546b36b7f67f4
 vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|6ce8eb984e7f821c79ea1fde8bd1470641b881fd
 vendor/lib/libcustom_nvram.so|6086130f374dcd2fa466ac63526dbfb18bef66ec
 vendor/lib/libfile_op.so|60874fc5d25b6ac06cc83cd5fd05be4e2c06b854
-vendor/lib/libhwm.so|24d8eb708653d5a976ed4d88257e3fd57d22b051
 vendor/lib/libnvram.so|a13182a5e7fe16b485524983ef2d0becbd107b1b
 vendor/lib/libnvram_daemon_callback.so|c5b93e48668d419573c7e9da0d72707575189ab5
 vendor/lib/libnvram_platform.so|e891cc275475987b1f95cf40dc86ac1845570caa
@@ -943,7 +933,6 @@ vendor/lib/vendor.mediatek.hardware.nvram@1.1.so|8e888c2f7f317062f2f4e71c75903b8
 vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|f35f6ccad0584f3de90dce80fbf6a3fba75d8a66
 vendor/lib64/libcustom_nvram.so|fe7c01e1936f8853309c6f9fe203939dbe03a8c9
 vendor/lib64/libfile_op.so|468ca25aef90a2ff889499d48662ec6328df8be6
-vendor/lib64/libhwm.so|6184978dedaed7e3520904cbb2d5ae4fc7dc6d66
 vendor/lib64/libnvram.so|31d858956ba1a630b3ebbf2dfa961202db5db103
 vendor/lib64/libnvram_daemon_callback.so|b828b4d80ce2c48d8f42e5b6b96cf7750c0f567c
 vendor/lib64/libnvram_platform.so|e025a7c974bdfacd2e8746c673ee3b740822c452
@@ -1058,7 +1047,7 @@ vendor/lib/vendor.mediatek.hardware.mms@1.2.so|739e172494ecf49498483e21648a33020
 vendor/lib/vendor.mediatek.hardware.mms@1.3.so|d5a6aaa3e0109436c6408d33ec3203841aa9ca46
 vendor/lib/vendor.mediatek.hardware.mms@1.4.so|1e90fd78debc61a1be9105b892d7ac155e48b104
 vendor/lib/vendor.mediatek.hardware.mms@1.5.so|7cd498effd2be064fb034bcf23ec77f9cc46e82a
-vendor/lib/vendor.mediatek.hardware.mtkradioex@2.0.so|0692f60324bcc873a044b16e2f5991826289abb1
+vendor/lib/vendor.mediatek.hardware.mtkradioex@2.0.so;MODULE_SUFFIX=_vendor|0692f60324bcc873a044b16e2f5991826289abb1
 vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so|30864b505d66438cb0ae06c8a0e02488c02d187a
 
 # Radio (Interfaces) - from Teracube 2e
