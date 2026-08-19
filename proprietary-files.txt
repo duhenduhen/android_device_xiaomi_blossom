@@ -683,7 +683,7 @@ vendor/lib/libFrameRecord.so|6ed7e98b423edb6367a8b0a92ef2d44d9ecc449e
 vendor/lib/libIMGegl.so|88f1f9686a09e0026f0116a1ed05848031c13db9
 vendor/lib/libNoFpsActor.so|3c362f5c941d925cee131f6325c6acfeb4db61de
 vendor/lib/libOpenCL.so|bc79d4699a666d11a8b4a78e35f4dcafb5128eff
-vendor/lib/libPVRMtkutils.so|680d645aabb534c0dcac534938d4702c8cf56759
+vendor/lib/libPVRMtkutils.so;DISABLE_DEPS|680d645aabb534c0dcac534938d4702c8cf56759
 vendor/lib/libPVROCL.so|c024b3f26faca484c575f7128c6a2ef13bde3720
 vendor/lib/libPVRScopeServices.so|2d3012fb8023a9538b82fc951dd23d0aecb54e38
 vendor/lib/libdpframework.so|abba513ad5e21c4fb353fb342dc06a15ed6661d1
@@ -700,7 +700,7 @@ vendor/lib/libmemtrack_GL.so|a4ee5cecc85c294ac7f09e1ba33d98c51d1baba2
 vendor/lib/libminiui.so|6bd8a996273818ebec5c9ff043cf03ef3ce5e661
 vendor/lib/libmpvr.so|a3d86bed6f3546f27b2c472e975757c7d2fd3a2a
 vendor/lib/libpixelflinger.so|7a7e2179cecaf39614411c94c58513dfaf46e5a3
-vendor/lib/libsrv_um.so|8bc3ce608e7a807b6acde701a76de7bb7e019bb0
+vendor/lib/libsrv_um.so;DISABLE_DEPS|8bc3ce608e7a807b6acde701a76de7bb7e019bb0
 vendor/lib/libufwriter.so|409d086f08002f36af727fd6dbc4754c2b4173fa
 vendor/lib/libusc.so|bd1371008af846b38b056f08f01bb6327340e330
 vendor/lib/vendor.mediatek.hardware.gpu@1.0.so|525497a7679919adeca9e8df91c9c936a710563b
@@ -720,7 +720,7 @@ vendor/lib64/libFrameRecord.so|6d463d238bd52fc35218c864610be3bfebda4951
 vendor/lib64/libIMGegl.so|7bd53f6a9228cc25042bbb9040033ca2e5221956
 vendor/lib64/libNoFpsActor.so|a72a4ed0f0550e6435dfc026407cc33a3e02d0e2
 vendor/lib64/libOpenCL.so|5e54d0bb437bf0bd9eafc51738dd4bbb5fb138c1
-vendor/lib64/libPVRMtkutils.so|d9d6ef3e17e74d0286b3d56d210c5ce2e90d1fca
+vendor/lib64/libPVRMtkutils.so;DISABLE_DEPS|d9d6ef3e17e74d0286b3d56d210c5ce2e90d1fca
 vendor/lib64/libPVROCL.so|f5fe309e13dc58f9c194204df21f46a4a0a1453b
 vendor/lib64/libPVRScopeServices.so|b33353f7bb973bb4289e0dc9a4db153947822162
 vendor/lib64/libdpframework.so|10504ac52fe373593160a3f7ec1c766d57d44f1e
@@ -731,9 +731,9 @@ vendor/lib64/libgpud.so|dbacbef299d69f3ca942730efe3b11076f270a6a
 vendor/lib64/libgralloc_extra.so|c0cdafba1849e72cd202c548ea1599743b2d3941
 vendor/lib64/libgralloc_metadata.so|2a917aff4b1e9144c2d6a71fa3af4e2ca989f591
 vendor/lib64/libgralloctypes_mtk.so|1bde7985b9b2c23de613c77f1fce00592778a6b3
-vendor/lib64/libimageio.so|995eaaed4e721ca7a352aa2e55451bb075c3907e
-vendor/lib64/libimageio_plat_drv.so|ba574619d6dc5bc7e6fa15d1c868b9dcd1000ef0
-vendor/lib64/libimageio_plat_pipe.so|f4d0a3515c49c1296aa09918ece7c90d6fdcb3aa
+vendor/lib64/libimageio.so;DISABLE_DEPS|995eaaed4e721ca7a352aa2e55451bb075c3907e
+vendor/lib64/libimageio_plat_drv.so;DISABLE_DEPS|ba574619d6dc5bc7e6fa15d1c868b9dcd1000ef0
+vendor/lib64/libimageio_plat_pipe.so;DISABLE_DEPS|f4d0a3515c49c1296aa09918ece7c90d6fdcb3aa
 vendor/lib64/libion_mtk.so|0f05253320add31338ba567427e1ccf0d5a5aafb
 vendor/lib64/libion_ulit.so|77cf7d32fe4381254fb7ee1df35cd1228c01d63b
 vendor/lib64/libmemtrack_GL.so|322d42fe82e6765d990d95b7541df78ae6c39ac5
@@ -742,7 +742,7 @@ vendor/lib64/libmpvr.so|1c20d05b6b79b755f52173d0843b70f64044d82b
 vendor/lib64/libpixelflinger.so|3d932eec45e4133f91c47fb0d4dd92282cedee0b
 vendor/lib64/libpq_cust_base.so|b87ee98ca30403466dace9a1a6968a01f5b40fac
 vendor/lib64/libpq_prot.so|a747810a2eac550205232c8a7dd1b401f40db611
-vendor/lib64/libsrv_um.so|9ad413c5176a3c7d2fd30f092058c2562980f3e2
+vendor/lib64/libsrv_um.so;DISABLE_DEPS|9ad413c5176a3c7d2fd30f092058c2562980f3e2
 vendor/lib64/libufwriter.so|3fb3f69c2d32aab9bfa546fc97376069261167b2
 vendor/lib64/libusc.so|8bee5fe51f8f38eb90141c67955162e77d9755d8
 vendor/lib64/libwifitest.so|e3eebbde7e588375ea4f1eb03e0e60cc8a396142
@@ -819,7 +819,7 @@ lib/libimsma_adapt.so|0832a7e521c1c4c96f585e6102fa9d7fdfa1a210
 lib/libimsma_rtp.so|669a8bcd6cbe29c83e07525419af98e249bcc5a5
 lib/libimsma_socketwrapper.so|44f042ce96a8fd1e3022880ba5dcbe3a23283eb7
 lib/libmtk_vt_service.so|1706ce6e7e50ff5f60e40cbdc0688100e3fc253c
-lib/libmtk_vt_wrapper.so|f9088d2422b4a6e5668d32498a6e03acdb1addfc
+lib/libmtk_vt_wrapper.so;DISABLE_DEPS|f9088d2422b4a6e5668d32498a6e03acdb1addfc
 lib/libmtkavenhancements.so|31d9e681359447e4abaafcb5c29fe21191241b1e
 lib/libsignal.so|79abd79460f3c257787618a3070d67b03ac794a0
 lib/libsink.so|14c21fec8f24cbbd8640da472e03e2a551c8efa6
@@ -831,7 +831,7 @@ system_ext/lib/vendor.mediatek.hardware.mtkradioex@2.0.so|19d96b4faaed074da1b06b
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so|f29a0eaafc759c9efde177924b19e1f79a38ea3f
 
 # IMS (System) - from Teracube 2e
-lib64/libmtk_vt_wrapper.so|ea5fa815845ce6c84e81220fc7e5f0660e517a50
+lib64/libmtk_vt_wrapper.so;DISABLE_DEPS|ea5fa815845ce6c84e81220fc7e5f0660e517a50
 lib64/libmtkavenhancements.so|99bd2aeb1743c0da9b8b11d489c739e76e8273e9
 lib64/libvcodec_cap.so|919fb2d985e7c28200e9f5b90fe7c7a5ae8f5848
 lib64/libvcodec_capenc.so|01b8c4b442d0928c99529f0b76e38782e866980b
@@ -881,9 +881,9 @@ vendor/lib/libhevce_sb.ca7.android.so
 vendor/lib/libhwm.so
 vendor/lib/libhwminijail.so
 vendor/lib/libicd_decoder.so
-vendor/lib/libimageio.so
-vendor/lib/libimageio_plat_drv.so
-vendor/lib/libimageio_plat_pipe.so
+vendor/lib/libimageio.so;DISABLE_DEPS
+vendor/lib/libimageio_plat_drv.so;DISABLE_DEPS
+vendor/lib/libimageio_plat_pipe.so;DISABLE_DEPS
 vendor/lib/libjpeg-alpha-oal_vendor.so
 vendor/lib/libjpeg-alpha_vendor.so
 vendor/lib/libmhalImageCodec.so
