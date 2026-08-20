@@ -787,8 +787,6 @@ vendor/lib/libmnetlink_v104.so|0e97706d39d0d6c87da8b6d51d46025998c5aeff
 vendor/lib/libmtklimiter_vendor.so|52d2f8f1bb7f195e0001248ead492020ab75f290
 vendor/lib/libmtkshifter_vendor.so|a2e0747e74c4fe6189be8c95bf579e4bac65f4f6
 vendor/lib/libmtktinyxml.so|a5267a0e92c97c1597bbedf0b25988696093d5d7
-vendor/lib/libtranslator_mapi_v3.0.so|48a1a7971bbe8a02c95aa0a402e334272ef9664d
-vendor/lib/libtranslator_utils.so|d8f3097d77a588111100e5472f1d325c06754300
 vendor/lib/libverno.so|aecf7160b72359ecc9761ce827eddfaab921f1ca
 vendor/lib/libvolte_core_shr.so|5f57be437a3eb65832ae42b07ffa1969c44e4caf
 vendor/lib/libvolte_xdmc_shr.so|4f77fb2bb0722aafe88244e7551a18771087c51a
@@ -1029,7 +1027,6 @@ vendor/lib/libmtkrillog.so|9e44d22210a7fc87d71c314a14e567431e613c9e
 vendor/lib/libmtkrilutils.so|55edc78a52c843509d11baf78a4966b3684a09b3
 vendor/lib/libmtksysutils.so|e79563dfe1f0e9e638e46aa697c6e55f445289a2
 vendor/lib/libmtkutils.so|2c52c4988e4becf4634c2175bb0ee8c0524ef4d1
-vendor/lib/libpkm.so|6bde7817fa10d5ceeae0cda53121b2c1a8174671
 vendor/lib/libratconfig.so|3d5d610923e0bba5f48332a0145c3c935626cc26
 vendor/lib/librilfusion.so|7bc46eafc0a041b1f8a52d1fc2baa9c7cc1484ca
 vendor/lib/libstorage_otp.so|63a4ec8207f6a3329d534b5e39bb61c8511329f7
@@ -1037,7 +1034,6 @@ vendor/lib/libsysenv.so|9bcd41968251814c2209257173e02a8589fa8f04
 vendor/lib/libutinterface_custom_md.so|72be855efab7b66b35e326bbebf6f080f12eceef
 vendor/lib/libutinterface_md.so|3f334dec4a9020ed990553e404074bc38d5565eb
 vendor/lib/libwo.so|e5d2c5db05ad4a5ee3c2a3ae816e9ea431105ad3
-vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so|3483734052f81095a2337fb15d87dafedc4efe89
 vendor/lib/vendor.mediatek.hardware.mms@1.0.so|7d6c2568e9b447f6323c13f6b557a97c38211688
 vendor/lib/vendor.mediatek.hardware.mms@1.1.so|69458ef3f606af61cf1031d0f9359a774f551719
 vendor/lib/vendor.mediatek.hardware.mms@1.2.so|739e172494ecf49498483e21648a330205afc3de
@@ -1123,13 +1119,9 @@ vendor/bin/wmt_launcher|d11c065c19a322f61821ad78ba7d27e8ded3dacb
 vendor/bin/wmt_loader|e095e09057aab66d5d59200189a01e7247c3fabe
 vendor/etc/init/init_connectivity.rc|504eb6339024e86d4b14c2640c991eec4075b5b6
 vendor/etc/init/wlan_assistant.rc|32ed0c40b58acc747c83bf467dde7f72634e9732
-vendor/lib/libapmonitor_vendor.so|843e4069839ab908b6b32352a8c76cedfb5f5ef9
-vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so|3864a337951855116e10f762c11a640923d2bc5f
-vendor/lib64/libapmonitor_vendor.so|83fb2d41dce28257573762afedb5298f7c118c87
 vendor/lib64/libwapi.so|7d78113be20c8641e24e24b03ef9c77d09298169
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so|e2f6ff7a054982880b9902cae684bcf0dad509fb
 vendor/lib64/libwifitest.so|e3eebbde7e588375ea4f1eb03e0e60cc8a396142
-vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so|f82d498ce99ffc57951f6b8d69a8218967b5ebcd
 
 # VNDK
 system/lib/libutils.so:vendor/lib/libutils-v30.so

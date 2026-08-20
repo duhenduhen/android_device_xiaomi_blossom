@@ -115,11 +115,6 @@
         <fqname>@2.0::IThermal/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.apmonitor</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::IApmService/apm_hidl_service</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.atci</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IAtcid/default</fqname>
@@ -165,11 +160,6 @@
         <fqname>@1.0::ILbs/mtk_mnld2mtklogger</fqname>
         <fqname>@1.0::ILbs/mtk_mnld2nlputils</fqname>
         <fqname>@1.0::ILbs/mtk_mtklogger2mnld</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.mdmonitor</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IMDMonitorService/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mms</name>
