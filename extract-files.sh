@@ -102,6 +102,12 @@ function blob_fixup {
         lib/libsource.so)
             grep -q libshim_ui.so "$2" || "$PATCHELF" --add-needed libshim_ui.so "$2"
             ;;
+        vendor/bin/mnld|vendor/lib64/libcam.utils.sensorprovider.so)
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-v31.so" "${2}"
+            ;;
+		vendor/lib/libaalservice.so)
+			"${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-v31.so" "${2}"
+			;;
     esac
 }
 

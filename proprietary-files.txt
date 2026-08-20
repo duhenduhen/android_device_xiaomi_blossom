@@ -1056,6 +1056,7 @@ vendor/lib/hw/sensors.mt6765.so
 vendor/lib/libksensor.so
 vendor/lib/librgbwlightsensor.so
 vendor/lib/libsensor_custom.so
+vendor/lib/libsensorndkbridge.so:vendor/lib/libsensorndkbridge-v31.so;FIX_SONAME
 
 # TEE - from merlin-11
 vendor/bin/bp_kmsetkey_ca|a1a519c74556f2b2498f7b2f804103e1ddd0ed59
