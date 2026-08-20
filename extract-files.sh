@@ -108,6 +108,9 @@ function blob_fixup {
 		vendor/lib/libaalservice.so)
 			"${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-v31.so" "${2}"
 			;;
+        system/lib/libsource.so)
+            grep -q libui_shim.so "$2" || "$PATCHELF" --add-needed libui_shim.so "$2"
+            ;;
     esac
 }
 

@@ -412,7 +412,8 @@ PRODUCT_PACKAGES += \
     libshim_beanpod \
     libshim_showlogo \
     libshim_ui \
-    libshim_vtservice
+    libshim_vtservice \
+    libui_shim
 
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
