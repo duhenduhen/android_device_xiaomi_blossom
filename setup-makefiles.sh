@@ -30,6 +30,7 @@ source "${HELPER}"
 
 function vendor_imports() {
     cat <<EOF >>"$1"
+		"device/xiaomi/blossom",
 		"hardware/mediatek",
 		"hardware/mediatek/libmtkperf_client",
 EOF
