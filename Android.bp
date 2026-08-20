@@ -6,3 +6,10 @@
 
 soong_namespace {
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_mtk_codec_interface",
+    interfaces: [
+        "vendor.mediatek.hardware.mtkcodecservice@1.1::IMtkCodecService",
+    ],
+}
