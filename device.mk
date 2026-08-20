@@ -219,6 +219,9 @@ PRODUCT_PACKAGES += \
     libkeystore-wifi-hidl \
     libkeystore-engine-wifi-hidl
 
+# Libinit
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_xiaomi_blossom)
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.blossom

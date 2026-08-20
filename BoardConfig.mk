@@ -44,7 +44,6 @@ TARGET_SCREEN_DENSITY := 320
 BOARD_HAVE_MTK_FM := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_blossom
 TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_blossom
 
 # Kernel
