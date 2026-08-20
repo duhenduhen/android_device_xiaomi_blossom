@@ -968,8 +968,6 @@ vendor/bin/getgameserver|551ada62f5b3ab912b865719d5aac092036ae146
 vendor/bin/gsm0710muxd|32aefb3bc7b08638b45b4302270d2dfc14ab64d4
 vendor/bin/hw/mtkfusionrild|1e6a3cedf50c2c2292f219150da58abf15149b37
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service|e8daac018799775de92dae6976b5aaaeb2f87dba
-vendor/bin/md_monitor_ctrl|cb8c5c248e15c68c32526108821fbca1653d05e4
-vendor/bin/md_monitor|5b63b6926784d4ae1d603d73b036bc735fa4e0ec
 vendor/bin/mnld|6230a640b4f782be7e79ca2d058dae819521fd5c
 vendor/bin/mrdump_tool|56bba3bf0050e94380fc8f9d2f3acc2ac55f2321
 vendor/bin/netdagent|c39e6e82ffa2ac075e28a47e23b378fdb89f82c1
@@ -994,7 +992,6 @@ vendor/etc/init/init.cccifsd.rc|71cd95e45a0eec3511f097a77f9c13ad981c31d7
 vendor/etc/init/init.cccimdinit.rc|c30096c4fed4bc05c4de4147b6169161b37cf0cb
 vendor/etc/init/init.cccirpcd.rc|0c300b95b4462d36db9e1c9da731ac6ee5139578
 vendor/etc/init/init.md_apps.rc|d4d53515362ca38f097eed1ece3aaf133677b682
-vendor/etc/init/md_monitor.rc|393c8503a3351bb5d5750a4181baed82327699e9
 vendor/etc/init/mtkrild.rc|b3f9b3e94c552ab5597eed81c8fc7fa3f81bb677
 vendor/etc/init/netdagent.rc|8ce685b61f0aa036e6e77cd2b89da73378fb983f
 vendor/etc/init/networksetting.rc|0c62b60a581f5a63b5d5bcf28db6811f98df60c9
