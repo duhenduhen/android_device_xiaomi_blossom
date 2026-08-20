@@ -1121,11 +1121,8 @@ vendor/lib64/libmtcloader.so|1ed3d9e605b83705725b3ffb9cb7486b8484422b
 vendor/bin/wlan_assistant|79b03b7525d0cd46f1235787d532acfc628951f4
 vendor/bin/wmt_launcher|d11c065c19a322f61821ad78ba7d27e8ded3dacb
 vendor/bin/wmt_loader|e095e09057aab66d5d59200189a01e7247c3fabe
-vendor/etc/init/android.hardware.wifi.supplicant-service.rc|72d2b6a5e0f74bb1b8bceb5d11935b15c09814cb
-vendor/etc/init/hostapd.android.rc|a11c6ea552094117e9c5a65ffafa2820a949f638
 vendor/etc/init/init_connectivity.rc|504eb6339024e86d4b14c2640c991eec4075b5b6
 vendor/etc/init/wlan_assistant.rc|32ed0c40b58acc747c83bf467dde7f72634e9732
--vendor/etc/vintf/manifest/manifest.xml:vendor/etc/vintf/manifest/wpa_supplicant.xml|7d001b90cd039d1ecd49c9e33bc08794665d1c8c
 vendor/lib/libapmonitor_vendor.so|843e4069839ab908b6b32352a8c76cedfb5f5ef9
 vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so|3864a337951855116e10f762c11a640923d2bc5f
 vendor/lib64/libapmonitor_vendor.so|83fb2d41dce28257573762afedb5298f7c118c87
@@ -1133,9 +1130,6 @@ vendor/lib64/libwapi.so|7d78113be20c8641e24e24b03ef9c77d09298169
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so|e2f6ff7a054982880b9902cae684bcf0dad509fb
 vendor/lib64/libwifitest.so|e3eebbde7e588375ea4f1eb03e0e60cc8a396142
 vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so|f82d498ce99ffc57951f6b8d69a8218967b5ebcd
-vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so|cbf9bd9a24c96e9af056b02ee4752a5a05e3bd47
-vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so|a2d1f545a8372a4812a5c075b8138b605c893cdd
-vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.2.so|4e468b73726587e3de1dd0324b291f32a2ef9406
 
 # VNDK
 system/lib/libutils.so:vendor/lib/libutils-v30.so
