@@ -1088,7 +1088,6 @@ vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 vendor/etc/init/microtrust.rc
 
 # Thermal - from hawaiipl
-vendor/bin/hw/android.hardware.thermal@2.0-service.mtk|2201c319b8d26b7c86be912d0642de68a622a48e
 vendor/bin/thermal_manager|f5ce8dbd14d6a37f838d76768abf87ed065a454e
 vendor/bin/thermalloadalgod|ff67b9a2bc09048c76eaed52b4deed14b3c10f00
 vendor/bin/thermal|3ca0b02a523feb2a93a78e97d26f7a114c458456
@@ -1098,15 +1097,12 @@ vendor/etc/.tp/.thermal_policy_03|175dca314fea3aac7b66e9dd9570a05535ee5beb
 vendor/etc/.tp/.thermal_policy_05|175dca314fea3aac7b66e9dd9570a05535ee5beb
 vendor/etc/.tp/thermal.conf|bce12c23428f71e66e4d79ed90b9c4fabb8cc0cf
 vendor/etc/.tp/thermal.off.conf|310a897927cff87ed6625fe56dec20544827a9d8
-vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc|37c636547e2153d82754b66849057d09078c226d
 vendor/etc/init/init.thermal.rc|cb4f259f720f2481a3e9b4d68d7c72193c554faa
 vendor/etc/init/init.thermal_manager.rc|764c19af5e285345a9fd5b75131fa9588b609d62
 vendor/etc/init/init.thermalloadalgod.rc|d70cde3b8a1a1607f7a99475b3357a894907458f
-vendor/lib/hw/android.hardware.thermal@2.0-impl.so|3faca09b5b2018c66701caf4f44900aac77a44f5
 vendor/lib/hw/thermal_hal.so|e007feb51b3fa440d874573c8a90166a78d90e75
 vendor/lib/libmtcloader.so|719b32cf73cd4407cfc4b51a56cb9d7059c28cf2
 vendor/lib/libthermalalgo.so|dc265e571499a77eef86088acf9c428e8800a2c3
-vendor/lib64/hw/android.hardware.thermal@2.0-impl.so|ef3e4f56f72f62e8391d5862486b55d7748123c3
 vendor/lib64/hw/thermal_hal.so|bccfa3668267ce18fefc65dc852328b4561e8c85
 vendor/lib64/libifcutils_mtk.so|1c7349f53461402e5114b4ef1e1b2ffffd8db631
 vendor/lib64/libmtcloader.so|1ed3d9e605b83705725b3ffb9cb7486b8484422b
